@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>posting_box</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                makeOptions();
+            });
+
+            function makeOptions() {
+                $.ajax({
+                    type: "GET",
+                    url: "/birds",
+                    data: {},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                            let birds = response["birds"]
+                            for (let i = 0; i < birds.length; i++) {
+                                let birdName = birds[i]['name'];
+                                let tempHtml = `  <option>${birdName}</option>`
+                                $('#exampleFormControlSelect2').append(tempHtml);
+                            }
+                        }
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "/gus",
+                    data: {},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                            let gus = response['gus'];
+                            for (let i = 0; i < gus.length; i++) {
+                                let guName = gus[i]['gu'];
+                                let guPark = gus[i]['name'];
+                                // console.log(guName);
+                                let tempHtml = `<option>${guName}</option>`
+                                let tempHtml2 = `<option>${guPark}</option>`
+                                $('#select_gu_name').append(tempHtml);
+                                $('#select_park_name').append(tempHtml2);
+
+                            }
+                        }
+                    }
+                });
+            }
+
+            function savePost() {
+                let guName=$('#select_gu_name').val();
+                let parkName=$('#select_park_name').val();
+                let birds=$('#exampleFormControlTextarea1').val();
+                let review=$('#exampleFormControlTextarea2').val();
+                // console.log(guName,parkName,birds,review);
+                $.ajax({
+                    type: "POST",
+                    url: "/post",
+                    data: {'gu_give': guName,'park_give':parkName,'bird_give':birds,'review_give':review},
+                    success: function (response) {
+                        if (response['result'] == 'success') {
+
+                            alert(response['msg'])
+                            // 3. 변경된 정보를 반영하기 위해 새로고침합니다.
+                            window.location.reload()
+                        }
+                    }
+                });
+
+            }
+        </script>
+
+
+        <style>
+            .posting_box {
+                border: 1px solid black;
+                width: 1000px;
+                height: 800px;
+            }
+
+            .box-container {
+                display: flex;
+            }
+
+            #box1 {
+                border: 1px solid blue;
+                width: 900px;
+                height: 200px;
+            }
+
+            #search {
+                border: 1px solid royalblue;
+                width: 900px;
+                height: 100px;
+                display: flex;
+            }
+
+            #bird_box {
+                border: 1px solid brown;
+                width: 450px;
+                height: 200px;
+                overflow: scroll;
+            }
+
+            #box3 {
+                border: 1px solid green;
+                width: 450px;
+                height: 200px;
+            }
+
+            #box4 {
+                border: 1px solid green;
+                width: 900px;
+                height: 200px;
+            }
+
+            #exampleFormControlSelect2 {
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="posting_box">
+            <div id="box1">
+                <select class="custom-select" id="select_gu_name">
+                    <option selected value=""> -- 지역을 선택하세요 --</option>
+                    <!--                    <option value="1">1</option>-->
+                    <!--                    <option value="2">2</option>-->
+                    <!--                    <option value="3">3</option>-->
+                </select>
+
+
+                <select class="custom-select" id="select_park_name">
+                    <option selected value=""> -- 공원을 선택하세요 --</option>
+                    <!--                    <option value="1">1</option>-->
+                    <!--                    <option value="2">2</option>-->
+                    <!--                    <option value="3">3</option>-->
+                </select>
+            </div>
+            <div id="search">
+                <div class="search_box">
+                    <input type="text" placeholder="검색어를 입력해주세요.">
+                </div>
+                <div class="button">
+                    <button>검색</button>
+                </div>
+
+            </div>
+            <div class="box-container">
+                <div id="bird_box">
+                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <!--                        <option>1</option>-->
+                        <!--                        <option>2</option>-->
+
+                    </select>
+                </div>
+                <div id="box3">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="box4">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                </div>
+            </div>
+            <button onclick="savePost()">기록하기</button>
+        </div>
+
+
+    </body>
+</html>
