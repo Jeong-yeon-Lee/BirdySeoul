@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
+</head>
+<body>
+<div id="map" style="width:100%;height:400px;"></div>
+
+<script>
+// var mapOptions = {
+//     center: new naver.maps.LatLng(37.580674, 127.007505),
+//     zoom: 15
+// };
+//
+// var map = new naver.maps.Map('map', {
+//     center: new naver.maps.LatLng(37.580674, 127.007505),
+//     zoom: 15
+// });
+// var map = new naver.maps.Map('map', mapOptions);
+// map.setMapTypeId(naver.maps.MapTypeId.HYBRID);
+
+var map = new naver.maps.Map('map', {
+    center: new naver.maps.LatLng(37.580674, 127.007505),
+    zoom: 15,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+        style: naver.maps.MapTypeControlStyle.DROPDOWN
+    }
+});
+
+var openStreetMapType = new naver.maps.ImageMapType({
+    name: 'OSM',
+    minZoom: 0,
+    maxZoom: 19,
+    tileSize: new naver.maps.Size(256, 256),
+    projection: naver.maps.EPSG3857,
+    repeatX: true,
+    tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    provider: [{
+        title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
+        link: "http://www.openstreetmap.org/copyright"
+    }]
+});
+
+map.mapTypes.set('osm', openStreetMapType);
+map.setMapTypeId('osm');
+
+</script>
+</body>
+</html>
