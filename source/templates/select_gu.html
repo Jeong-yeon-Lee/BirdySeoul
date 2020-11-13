@@ -34,7 +34,7 @@
 
             function showGuParks() {
                 $('#parkList').empty();
-                let guName=$('#exampleFormControlSelect1').val();
+                let guName = $('#exampleFormControlSelect1').val();
                 console.log(guName);
 
                 $.ajax({
@@ -45,20 +45,60 @@
                         if (response["result"] == "success") {
                             let parks = response['parks']
                             // console.log(parks);
-                            for (let i = 0; i <parks.length; i++){
-                                let parkName=parks[i]['name'];
+                            for (let i = 0; i < parks.length; i++) {
+                                let parkName = parks[i]['name'];
                                 // console.log(parkName)
-                               let tempHtml=`<ul><a href="park"><li>${parkName}</li></a></ul>`
+                                let tempHtml = `<ul><a href="park"><li>${parkName}</li></a></ul>`
                                 $('#parkList').append(tempHtml);
 
                             }
 
-                                }
+                        }
                     }
                 })
+
+
+                $.ajax({
+                    type: "GET",
+                    url: '/api/gus_list',
+                    data: {},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                            let gus = response['gus'];
+                            let guArr = []
+                            for (let i = 0; i < gus.length; i++) {
+                                let guName = gus[i]['gu'];
+                                guArr.push(guName);
+                            }
+
+                            let guExist = new Array();
+                            let check = true;
+                            for (let i = 0; i < guArr.length; i++) {
+                                check = true;
+                                for (value in guExist) {
+                                    if (guExist[value] === guArr[i]) {
+                                        check = false;
+                                    }
+                                }
+                                if (check) {
+                                    guExist.push(guArr[i]);
+                                }
+                            }
+                                for (let i = 0; i < guExist.length; i++) {
+                                    let guList = guExist[i];
+                                    // console.log(guList)
+                                    let tempHtml = `<option>${guList}</option>`
+                                    $('#exampleFormControlSelect1').append(tempHtml);
+                                }
+
+                            }
+
+                        }
+
+                })
+
+
             }
-
-
 
 
         </script>
@@ -133,25 +173,25 @@
             <div class="three">
                 <button onclick="showGuParks()">종로구</button>
                 <button>중구</button>
-  <label for="exampleFormControlSelect1">--지역선택--</label>
-    <select class="form-control" id="exampleFormControlSelect1" onchange="showGuParks()">
-      <option>종로구</option>
-      <option>관악구</option>
-      <option>중구</option>
-      <option>성동구</option>
-      <option>중랑구</option>
-    </select>
+                <label for="exampleFormControlSelect1">--지역선택--</label>
+                <select class="form-control" id="exampleFormControlSelect1" onchange="showGuParks()">
+                    <!--                    <option>종로구</option>-->
+                    <!--                    <option>관악구</option>-->
+                    <!--                    <option>중구</option>-->
+                    <!--                    <option>성동구</option>-->
+                    <!--                    <option>중랑구</option>-->
+                </select>
 
             </div>
             <!--            <div class="four">Four</div>-->
             <!--            <div class="five">Five</div>-->
             <div class="parkList" id="parkList">
-<!--                <ul>-->
-<!--                                        <li>낙산공원</li>-->
-<!--                                        <li>와룡공원</li>-->
-<!--                                        <li>탑골공원</li>-->
+                <!--                <ul>-->
+                <!--                                        <li>낙산공원</li>-->
+                <!--                                        <li>와룡공원</li>-->
+                <!--                                        <li>탑골공원</li>-->
 
-<!--                </ul>-->
+                <!--                </ul>-->
             </div>
         </div>
     </body>
