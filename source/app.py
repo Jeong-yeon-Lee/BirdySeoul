@@ -103,8 +103,10 @@ def make_post():
 def a_post():
     return render_template('show_a_post.html')
 
-
-
+#######################################################
+@app.route('/map')
+def test_map():
+    return render_template('test_map.html')
 
 
 
