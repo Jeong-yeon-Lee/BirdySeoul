@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>show_all_birds</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
+              rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                makeOptions();
+                showPosts();
+
+            });
+
+            function makeOptions() {
+                $.ajax({
+                    type: "GET",
+                    url: "/api/option",
+                    data: {},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                            let gus = response["gus"];
+                            for (let i = 0; i < gus.length; i++) {
+                                let gu = gus[i]['gu'];
+                                let park = gus[i]['name'];
+                                let tempHtml = `<option >${gu}</option>`;
+                                let tempHtml2 = `<option >${park}</option>`;
+                                $('#select_gu_name').append(tempHtml);
+                                $('#select_park_name').append(tempHtml2);
+
+                            }
+                        }
+                    }
+                })
+            }
+
+            function showPosts() {
+                $.ajax({
+                    type: "GET",
+                    url: "/api/all_post",
+                    data: {},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                           let posts=response["posts"];
+                           for(let i=0; i<posts.length;i++){
+                               let post=posts[i];
+                               let bird=post['bird'];
+                               let gu=post['gu'];
+                               let park=post['park'];
+                               let review=post['review'];
+                               let tempHtml=`
+                               <div class="card">
+                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">${park}</h4>
+                    <h5 class="card-title">${gu}</h5>
+                    <p class="card-text">${review}</p>
+                    <p class="card-text"><small class="text-muted">${bird}</small></p>
+                </div>
+                    `
+                               $('#card-deck').append(tempHtml);
+                           }
+                        }
+                    }
+                })
+            }
+
+
+        </script>
+
+        <style>
+            h1 {
+                font-family: 'Balsamiq Sans', cursive;
+                text-align: center;
+            }
+
+            .jumbotron {
+                background-image: url("../static/temp_back.jpg");
+                background-size: cover;
+            }
+
+            .dropdown {
+                text-align: center;
+            }
+
+
+            .card-deck {
+                margin-top: 30px;
+            }
+
+            button {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <a href="/"><h1 class="display-4">Birdy Seoul</h1></a>
+                <!--    <p class="lead">리뷰들을 모아볼 수 있는 페이지!</p>-->
+            </div>
+        </div>
+
+        <select class="custom-select" id="select_gu_name">
+            <option selected value=""> -- 지역을 선택하세요 --</option>
+            <!--                    <option value="1">1</option>-->
+            <!--                    <option value="2">2</option>-->
+            <!--                    <option value="3">3</option>-->
+        </select>
+
+
+        <select class="custom-select" id="select_park_name">
+            <option selected value=""> -- 공원을 선택하세요 --</option>
+            <!--                    <option value="1">1</option>-->
+            <!--                    <option value="2">2</option>-->
+            <!--                    <option value="3">3</option>-->
+        </select>
+        <button onclick="showPosts()">조회</button>
+
+
+        <div class="card-deck" id="card-deck">
+<!--            <div class="card">-->
+<!--                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to-->
+<!--                        additional content. This content is a little bit longer.</p>-->
+<!--                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card">-->
+<!--                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    <p class="card-text">This card has supporting text below as a natural lead-in to additional-->
+<!--                        content.</p>-->
+<!--                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card">-->
+<!--                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
+<!--                        additional content. This card has even longer content than the first to show that equal height-->
+<!--                        action.</p>-->
+<!--                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </body>
+</html>
