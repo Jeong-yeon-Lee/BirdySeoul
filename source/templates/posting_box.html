@@ -79,7 +79,7 @@
 
             function selectPark() {
                 $('#select_park_name').empty();
-                 let selectGu = $('#select_gu_name').val();
+                let selectGu = $('#select_gu_name').val();
                 $.ajax({
                     type: "GET",
                     url: `/api/park_list?gu_give=${selectGu}`,
@@ -90,8 +90,8 @@
                             console.log('체인지 함수 실행!!')
                             for (let i = 0; i < gus.length; i++) {
                                 let parks = gus[i]['name'];
-                              let tempHtml=`<option>${parks}</option>`
-                                    $('#select_park_name').append(tempHtml);
+                                let tempHtml = `<option>${parks}</option>`
+                                $('#select_park_name').append(tempHtml);
 
                             }
 
@@ -104,15 +104,17 @@
 
 
             function savePost() {
+                let url=$('#basic-url').val();
                 let guName = $('#select_gu_name').val();
                 let parkName = $('#select_park_name').val();
                 let birds = $('#exampleFormControlTextarea1').val();
                 let review = $('#exampleFormControlTextarea2').val();
+                let date=$('#exampleFormControlInput1').val();
                 // console.log(guName,parkName,birds,review);
                 $.ajax({
                     type: "POST",
                     url: "/api/posting",
-                    data: {'gu_give': guName, 'park_give': parkName, 'bird_give': birds, 'review_give': review},
+                    data: {'url_give':url, 'gu_give': guName, 'park_give': parkName, 'bird_give': birds, 'review_give': review, 'date_give':date},
                     success: function (response) {
                         if (response['result'] == 'success') {
 
@@ -125,10 +127,10 @@
 
             }
 
-            function writeBirds(){
-                let selectBird=$('#exampleFormControlSelect2').val();
-                let selectOneBird=selectBird[0];
-                let tempHtml=`${selectOneBird}\n`
+            function writeBirds() {
+                let selectBird = $('#exampleFormControlSelect2').val();
+                let selectOneBird = selectBird[0];
+                let tempHtml = `${selectOneBird}\n`
                 $('#exampleFormControlTextarea1').append(tempHtml);
             }
         </script>
@@ -199,16 +201,26 @@
                     <!--                    <option value="2">2</option>-->
                     <!--                    <option value="3">3</option>-->
                 </select>
-            </div>
-<!--            <div id="search">-->
-<!--                <div class="search_box">-->
-<!--                    <input type="text" placeholder="검색어를 입력해주세요.">-->
-<!--                </div>-->
-<!--                <div class="button">-->
-<!--                    <button>검색</button>-->
-<!--                </div>-->
 
-<!--            </div>-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">이미지 url</span>
+                    </div>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+<input type="date" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <!--            <div id="search">-->
+            <!--                <div class="search_box">-->
+            <!--                    <input type="text" placeholder="검색어를 입력해주세요.">-->
+            <!--                </div>-->
+            <!--                <div class="button">-->
+            <!--                    <button>검색</button>-->
+            <!--                </div>-->
+
+            <!--            </div>-->
+
+
             <div class="box-container">
                 <div id="bird_box">
                     <select multiple class="form-control" id="exampleFormControlSelect2" onchange="writeBirds()">

@@ -24,6 +24,7 @@
                 makeOptions();
                 showPosts();
 
+
             });
 
             function makeOptions() {
@@ -33,50 +34,163 @@
                     data: {},
                     success: function (response) {
                         if (response["result"] == "success") {
-                            let gus = response["gus"];
+                            let gus = response['gus'];
+                            let guArr = []
                             for (let i = 0; i < gus.length; i++) {
-                                let gu = gus[i]['gu'];
-                                let park = gus[i]['name'];
-                                let tempHtml = `<option >${gu}</option>`;
-                                let tempHtml2 = `<option >${park}</option>`;
+                                let guName = gus[i]['gu'];
+                                guArr.push(guName);
+
+                            }
+
+                            let guExist = new Array();
+                            let check = true;
+                            for (let i = 0; i < guArr.length; i++) {
+                                check = true;
+                                for (value in guExist) {
+                                    if (guExist[value] == guArr[i]) {
+                                        check = false;
+                                    }
+                                }
+                                if (check) {
+                                    guExist.push(guArr[i]);
+                                }
+
+                            }
+                            // console.log(guExist);
+                            for (let i = 0; i < guExist.length; i++) {
+                                let guList = guExist[i];
+                                let tempHtml = `<option>${guList}</option>`
                                 $('#select_gu_name').append(tempHtml);
+                            }
+
+                            for (let i = 0; i < gus.length; i++) {
+                                let park = gus[i]['name'];
+                                let tempHtml = `<option>${park}</option>`
+                                $('#select_park_name').append(tempHtml);
+
+                            }
+
+
+                        }
+                    }
+
+                })
+
+            }
+
+
+            function selectPark() {
+                $('#select_park_name').empty();
+                let selectGu = $('#select_gu_name').val();
+                $.ajax({
+                    type: "GET",
+                    url: `/api/park_list?gu_give=${selectGu}`,
+                    data: {},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                            let gus = response['gus'];
+                            console.log('체인지 함수 실행!!')
+                            for (let i = 0; i < gus.length; i++) {
+                                let parks = gus[i]['name'];
+                                let tempHtml2 = `<option>${parks}</option>`
                                 $('#select_park_name').append(tempHtml2);
 
                             }
+
                         }
                     }
-                })
+                });
+
+
             }
 
             function showPosts() {
+                $('#cards-box').empty();
                 $.ajax({
                     type: "GET",
                     url: "/api/all_post",
                     data: {},
                     success: function (response) {
                         if (response["result"] == "success") {
-                           let posts=response["posts"];
-                           for(let i=0; i<posts.length;i++){
-                               let post=posts[i];
-                               let bird=post['bird'];
-                               let gu=post['gu'];
-                               let park=post['park'];
-                               let review=post['review'];
-                               let tempHtml=`
+                            let posts = response["posts"];
+                            for (let i = 0; i < posts.length; i++) {
+                                let post = posts[i];
+                                let url = post['url'];
+                                let bird = post['bird'];
+                                let gu = post['gu'];
+                                let park = post['park'];
+                                let review = post['review'];
+                                let date = post['date'];
+                                // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
+                                // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
+                                let tempHtml = `
                                <div class="card">
-                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">${park}</h4>
-                    <h5 class="card-title">${gu}</h5>
-                    <p class="card-text">${review}</p>
-                    <p class="card-text"><small class="text-muted">${bird}</small></p>
-                </div>
-                    `
-                               $('#card-deck').append(tempHtml);
-                           }
+                        <img class="card-img-top" src="${url}" alt="Card image cap">
+                        <div class="card-body">
+                        <a href="a_post"><h4 class="card-title">${park}</h4></a>
+                            <h5 class="card-title">${gu}</h5>
+                            <p class="card-text">${review}</p>
+                                <p class="card-text"><small class="text-muted">${bird}</small></p>
+                                <p class="card-text" id="date"><small>${date}</small></p>
+                        </div>`
+                                $('#cards-box').append(tempHtml);
+                            }
                         }
+
+
                     }
                 })
+            }
+
+            function showSelectedPosts(){
+                $('#cards-box').empty();
+                let selectedParkName=$('#select_park_name').val();
+                $.ajax({
+                    type: "GET",
+                    url: `/api/selected_park_post?park_give=${selectedParkName}`,
+                    data: {},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                            let posts = response["posts"];
+                            for (let i = 0; i < posts.length; i++) {
+                                let post = posts[i];
+                                let url = post['url'];
+                                let bird = post['bird'];
+                                let gu = post['gu'];
+                                let park = post['park'];
+                                let review = post['review'];
+                                let date = post['date'];
+                                // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
+                                // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
+                                let tempHtml = `
+                               <div class="card">
+                        <img class="card-img-top" src="${url}" alt="Card image cap">
+                        <div class="card-body">
+                        <a href="a_post"><h4 class="card-title">${park}</h4></a>
+                            <h5 class="card-title">${gu}</h5>
+                            <p class="card-text">${review}</p>
+                                <p class="card-text"><small class="text-muted">${bird}</small></p>
+                                <p class="card-text" id="date"><small>${date}</small></p>
+                        </div>`
+                                $('#cards-box').append(tempHtml);
+                            }
+                        }
+
+
+                    }
+                })
+
+
+
+
+
+
+
+
+
+
+
+
             }
 
 
@@ -93,14 +207,14 @@
                 background-size: cover;
             }
 
-            .dropdown {
-                text-align: center;
-            }
+            /*.dropdown {*/
+            /*    text-align: center;*/
+            /*}*/
 
 
-            .card-deck {
-                margin-top: 30px;
-            }
+            /*.card-deck {*/
+            /*    margin-top: 30px;*/
+            /*}*/
 
             button {
                 text-align: center;
@@ -115,7 +229,7 @@
             </div>
         </div>
 
-        <select class="custom-select" id="select_gu_name">
+        <select class="custom-select" id="select_gu_name" onchange="selectPark()">
             <option selected value=""> -- 지역을 선택하세요 --</option>
             <!--                    <option value="1">1</option>-->
             <!--                    <option value="2">2</option>-->
@@ -129,38 +243,22 @@
             <!--                    <option value="2">2</option>-->
             <!--                    <option value="3">3</option>-->
         </select>
-        <button onclick="showPosts()">조회</button>
+        <button onclick="showSelectedPosts()">조회</button>
 
 
-        <div class="card-deck" id="card-deck">
-<!--            <div class="card">-->
-<!--                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title">Card title</h5>-->
-<!--                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to-->
-<!--                        additional content. This content is a little bit longer.</p>-->
-<!--                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="card">-->
-<!--                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title">Card title</h5>-->
-<!--                    <p class="card-text">This card has supporting text below as a natural lead-in to additional-->
-<!--                        content.</p>-->
-<!--                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="card">-->
-<!--                <img class="card-img-top" src="../static/temp_park.jpg" alt="Card image cap">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title">Card title</h5>-->
-<!--                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
-<!--                        additional content. This card has even longer content than the first to show that equal height-->
-<!--                        action.</p>-->
-<!--                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-<!--                </div>-->
-<!--            </div>-->
+        <div id="cards-box" class="card-columns">
+            <!--                <div class="card">-->
+            <!--                    <img class="card-img-top"-->
+            <!--                         src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"-->
+            <!--                         alt="Card image cap">-->
+            <!--                    <div class="card-body">-->
+            <!--                        <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>-->
+            <!--                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>-->
+            <!--                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+        </div>
         </div>
     </body>
 </html>

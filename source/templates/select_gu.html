@@ -24,6 +24,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
               rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--        네이버 지도-->
         <script type="text/javascript"
                 src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
 
@@ -32,10 +33,14 @@
             $(document).ready(function () {
                 // $("#parkList").html("");
                 showGuParks();
+                nMap();
 
+            });
+
+            function nMap() {
                 var map = new naver.maps.Map('map', {
-                    center: new naver.maps.LatLng(37.580674, 127.007505),
-                    zoom: 15,
+                    center: new naver.maps.LatLng(37.593447, 126.975096),
+                    zoom: 13,
                     mapTypeControl: true,
                     mapTypeControlOptions: {
                         style: naver.maps.MapTypeControlStyle.DROPDOWN
@@ -58,7 +63,9 @@
 
                 map.mapTypes.set('osm', openStreetMapType);
                 map.setMapTypeId('osm');
-            });
+
+            }
+
 
             function showGuParks() {
                 $('#parkList').empty();
@@ -129,6 +136,14 @@
             }
         </script>
         <style>
+            /*html, body {*/
+            /*    height: 100%;*/
+            /*    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);*/
+            /*    background-size: cover;*/
+            /*    background-repeat: no-repeat;*/
+            /*    background-attachment: fixed;*/
+            /*}*/
+
             .wrapper {
                 border: 1px solid green;
                 display: grid;
@@ -188,6 +203,12 @@
                 font-family: 'Balsamiq Sans', cursive;
                 text-align: center;
             }
+
+            #button1 {
+                top: 373px;
+                left: 393px;
+                position: absolute;
+            }
         </style>
     </head>
 
@@ -199,11 +220,9 @@
             </div>
             <div id="map"></div>
             <div class="three">
-                <button onclick="showGuParks()">종로구</button>
-                <button>중구</button>
-                <label for="exampleFormControlSelect1">--지역선택--</label>
+                <button id="button1">종로구</button>
                 <select class="form-control" id="exampleFormControlSelect1" onchange="showGuParks()">
-                    <!--                    <option>종로구</option>-->
+                    <option>---지역을 선택하세요:)---</option>
                     <!--                    <option>관악구</option>-->
                     <!--                    <option>중구</option>-->
                     <!--                    <option>성동구</option>-->

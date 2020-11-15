@@ -24,44 +24,81 @@
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
               rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript"
+                src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
         <script>
-         $(document).ready(function () {
+            $(document).ready(function () {
                 showParkPosts();
-
+                nMap();
             });
 
+            function nMap() {
+                var map = new naver.maps.Map('map', {
+                    center: new naver.maps.LatLng(37.580836, 127.007505),
+                    zoom: 17,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: naver.maps.MapTypeControlStyle.DROPDOWN
+                    }
+                });
 
-         function showParkPosts(){
-              $('#card-columns').empty();
-             // let parkName=val()
-              $.ajax({
+                var openStreetMapType = new naver.maps.ImageMapType({
+                    name: 'OSM',
+                    minZoom: 0,
+                    maxZoom: 19,
+                    tileSize: new naver.maps.Size(256, 256),
+                    projection: naver.maps.EPSG3857,
+                    repeatX: true,
+                    tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    provider: [{
+                        title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
+                        link: "http://www.openstreetmap.org/copyright"
+                    }]
+                });
+
+                map.mapTypes.set('osm', openStreetMapType);
+                map.setMapTypeId('osm');
+
+            }
+
+
+            function showParkPosts() {
+                $('#card-columns').empty();
+                // let parkName=val()
+                // let imgUrl=""
+                $.ajax({
                     type: "GET",
                     url: "/api/post?park_give=낙산공원",
                     data: {},
                     success: function (response) {
                         if (response["result"] == "success") {
-                           let posts=response["park_posts"];
-                           for(let i=0; i<posts.length;i++){
-                               let post=response["park_posts"][i];
-                               let bird=post['bird'];
-                               let gu=post['gu'];
-                               let park=post['park'];
-                               let review=post['review'];
-                               let tempHtml=`
+                            let posts = response["park_posts"];
+                            for (let i = 0; i < posts.length; i++) {
+                                let post = response["park_posts"][i];
+                                let url = post['url'];
+                                let bird = post['bird'];
+                                let gu = post['gu'];
+                                let park = post['park'];
+                                let review = post['review'];
+                                let date=post['date'];
+                                // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
+                                // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
+                                let tempHtml = `
                                <div class="card">
-                        <img class="card-img-top" src="../static/temp_birds.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="${url}" alt="Card image cap">
                         <div class="card-body">
-                        <h4 class="card-title">${park}</h4>
+                        <a href="a_post"><h4 class="card-title">${park}</h4></a>
                             <h5 class="card-title">${gu}</h5>
-                            <a href="a_post"><p class="card-text">${review}</p></a>
+                            <p class="card-text">${review}</p>
                                 <p class="card-text"><small class="text-muted">${bird}</small></p>
+                                <p class="card-text" id="date"><small>${date}</small></p>
                         </div>`
-                               $('#card-columns').append(tempHtml);
-                           }
+                                $('#card-columns').append(tempHtml);
+                            }
                         }
                     }
                 })
-         }
+            }
         </script>
 
 
@@ -74,13 +111,15 @@
                 border: 1px solid goldenrod;
             }
 
-            .one {
+            #map {
                 border: 1px solid blue;
+                width: 100%;
+                height: 100%;
                 grid-column: 1 / 2;
                 grid-row: 1/4;
-                background-image: url("../static/temp_park.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
+                /*background-image: url("../static/temp_park.jpg");*/
+                /*background-size: cover;*/
+                /*background-repeat: no-repeat;*/
             }
 
             .two {
@@ -113,11 +152,14 @@
             /*    grid-column: 3;*/
             /*    grid-row: 4;*/
             /*}*/
+            #date{
+                color:cadetblue;
+            }
         </style>
     </head>
     <body>
         <div class="wrapper">
-            <div class="one">공원 지도 이미지</div>
+            <div id="map"></div>
             <div class="two">
                 <h1>Birdy Seoul</h1>
             </div>
@@ -130,7 +172,7 @@
                     <li>무료입장</li>
 
                 </ul>
-                <button>기록하기</button>
+                <button onclick="location.href='posting'">기록하기</button>
             </div>
             <div class="four">
                 <div class="card-columns" id="card-columns">
