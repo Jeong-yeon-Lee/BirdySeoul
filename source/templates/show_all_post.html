@@ -18,6 +18,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
               rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+              rel="stylesheet">
 
         <script>
             $(document).ready(function () {
@@ -142,9 +146,9 @@
                 })
             }
 
-            function showSelectedPosts(){
+            function showSelectedPosts() {
                 $('#cards-box').empty();
-                let selectedParkName=$('#select_park_name').val();
+                let selectedParkName = $('#select_park_name').val();
                 $.ajax({
                     type: "GET",
                     url: `/api/selected_park_post?park_give=${selectedParkName}`,
@@ -181,40 +185,35 @@
                 })
 
 
-
-
-
-
-
-
-
-
-
-
             }
 
 
         </script>
 
         <style>
+            #title {
+                font-family: 'Russo One', sans-serif;
+                width: 100%;
+                height: 300px;
+                border: 1px solid white;
+                background-image: url("/static/pica.jpg");
+                background-size: 300px 200px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
             h1 {
-                font-family: 'Balsamiq Sans', cursive;
+                font-size: 100px;
+                color: springgreen;
+                opacity: 0.6;
                 text-align: center;
+
+
+                margin-top: 82px;
+
+
             }
 
-            .jumbotron {
-                background-image: url("../static/temp_back.jpg");
-                background-size: cover;
-            }
-
-            /*.dropdown {*/
-            /*    text-align: center;*/
-            /*}*/
-
-
-            /*.card-deck {*/
-            /*    margin-top: 30px;*/
-            /*}*/
 
             button {
                 text-align: center;
@@ -222,11 +221,8 @@
         </style>
     </head>
     <body>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <a href="/"><h1 class="display-4">Birdy Seoul</h1></a>
-                <!--    <p class="lead">리뷰들을 모아볼 수 있는 페이지!</p>-->
-            </div>
+        <div id="title">
+            <a href="/"><h1>Birdy Seoul</h1></a>
         </div>
 
         <select class="custom-select" id="select_gu_name" onchange="selectPark()">

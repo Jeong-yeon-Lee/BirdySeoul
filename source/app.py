@@ -1,6 +1,16 @@
 from flask import Flask, render_template, jsonify, request
 from pymongo import MongoClient
+import requests
+from bs4 import BeautifulSoup
 
+##
+open_url = 'http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1114052000'
+
+res = requests.get(open_url)
+soup = BeautifulSoup(res.content, 'html.parser')
+
+data = soup.find_all('item')
+##
 app = Flask(__name__)
 
 client = MongoClient('localhost', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
@@ -69,6 +79,14 @@ def show_park_posts():
     return jsonify({'result': 'success', 'park_posts': result})
 
 
+@app.route('/api/park_info', methods=['GET'])
+def show_park_info():
+    park_receive = request.args.get('park_give')
+    print(park_receive)
+    result = list(db.park_info.find({'name': park_receive}, {'_id': 0}))
+    return jsonify({'result': 'success', 'park_info': result})
+
+
 ### 5. posting_box
 @app.route('/posting')
 def posting_box():
@@ -126,6 +144,39 @@ def a_post():
 @app.route('/map')
 def test_map():
     return render_template('test_map.html')
+
+
+### xy 좌표
+@app.route('/api/gu_xy', methods=['GET'])
+def gu_xy():
+    gu_receive = request.args.get('gu_give')
+    result = list(db.gu_xy.find({'gu': gu_receive}, {'_id': 0}))
+    return jsonify({'result': 'success', 'xy': result})
+
+
+@app.route('/api/park_xy', methods=['GET'])
+def park_xy():
+    park_receive = request.args.get('park_give')
+    result = list(db.park_xy.find({'park': park_receive}, {'_id': 0}))
+    return jsonify({'result': 'success', 'xy': result})
+
+
+### 실시간 날씨정보
+
+@app.route('/api/weather', methods=['GET'])
+def get_weather():
+    for item in data:
+        weather = item.find_all('wfkor')
+        today_now = str(weather[-1].text)
+        return today_now
+
+now_list = []
+now_weather = get_weather()
+now_list.append(now_weather)
+def give_weather():
+    for now in now_list:
+        return jsonify({'result': 'success', 'today_now': now})
+
 
 
 if __name__ == '__main__':

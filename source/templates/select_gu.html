@@ -24,6 +24,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
               rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+              rel="stylesheet">
+
+
         <!--        네이버 지도-->
         <script type="text/javascript"
                 src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
@@ -37,9 +43,30 @@
 
             });
 
-            function nMap() {
+            function gu_xy() {
+                let guName = $('#exampleFormControlSelect1').val();
+                $.ajax({
+                    type: "GET",
+                    url: `/api/gu_xy?gu_give=${guName}`,
+                    data: {},
+                    success: function (response) {
+                        // console.log(response)
+                        let gu_xy = response['xy'];
+                        for (let i = 0; i < gu_xy.length; i++) {
+                            let x = gu_xy[i]['x'];
+                            let y = gu_xy[i]['y'];
+                            console.log(x, y);
+                            nMap(x, y);
+                        }
+
+                    }
+                })
+            }
+
+
+            function nMap(x, y) {
                 var map = new naver.maps.Map('map', {
-                    center: new naver.maps.LatLng(37.593447, 126.975096),
+                    center: new naver.maps.LatLng(x, y),
                     zoom: 13,
                     mapTypeControl: true,
                     mapTypeControlOptions: {
@@ -70,8 +97,7 @@
             function showGuParks() {
                 $('#parkList').empty();
                 let guName = $('#exampleFormControlSelect1').val();
-                console.log(guName);
-
+                // console.log(guName);
                 $.ajax({
                     type: "GET",
                     url: `/api/gu?gu_give=${guName}`,
@@ -83,7 +109,7 @@
                             for (let i = 0; i < parks.length; i++) {
                                 let parkName = parks[i]['name'];
                                 // console.log(parkName)
-                                let tempHtml = `<ul><a href="park"><li>${parkName}</li></a></ul>`
+                                let tempHtml = `<ul><a href="park?park_give=${parkName}"><li>${parkName}</li></a></ul>`
                                 $('#parkList').append(tempHtml);
 
                             }
@@ -153,10 +179,14 @@
             }
 
             .one {
-                border: 1px solid blue;
+                border: 1px solid white;
                 grid-column: 1 / 4;
                 grid-row: 1;
                 padding-top: 20px;
+                background-image: url("/static/pica.jpg");
+                background-size: 180px 130px;
+                background-position: center;
+                background-repeat: no-repeat;
             }
 
             #map {
@@ -176,6 +206,7 @@
                 grid-row: 2 / 10;
                 background-image: url("../static/seoul.png");
                 background-size: contain;
+                background-position: center;
                 background-repeat: no-repeat;
 
             }
@@ -200,8 +231,12 @@
             }
 
             h1 {
-                font-family: 'Balsamiq Sans', cursive;
+                font-family: 'Russo One', sans-serif;
+                font-size: 80px;
+                color: springgreen;
+                opacity: 0.6;
                 text-align: center;
+                text-decoration: none;
             }
 
             #button1 {
@@ -209,6 +244,15 @@
                 left: 393px;
                 position: absolute;
             }
+
+            a {
+                text-decoration: none
+            }
+
+            a:hover {
+                text-decoration: none !important
+            }
+
         </style>
     </head>
 
@@ -220,8 +264,7 @@
             </div>
             <div id="map"></div>
             <div class="three">
-                <button id="button1">종로구</button>
-                <select class="form-control" id="exampleFormControlSelect1" onchange="showGuParks()">
+                <select class="form-control" id="exampleFormControlSelect1" onchange="showGuParks(),gu_xy()">
                     <option>---지역을 선택하세요:)---</option>
                     <!--                    <option>관악구</option>-->
                     <!--                    <option>중구</option>-->

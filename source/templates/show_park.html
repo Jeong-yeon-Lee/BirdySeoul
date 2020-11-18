@@ -24,17 +24,59 @@
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
               rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+              rel="stylesheet">
+
         <script type="text/javascript"
                 src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
         <script>
+
+            function get_query() {
+                var url = document.location.href;
+                var qs = url.substring(url.indexOf('?') + 1).split('&');
+                for (var i = 0, result = {}; i < qs.length; i++) {
+                    qs[i] = qs[i].split('=');
+                    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+                }
+                return result;
+            }
+
+
             $(document).ready(function () {
-                showParkPosts();
-                nMap();
+                let query = get_query();
+                showParkPosts(query);
+                park_xy(query);
+                showParkInfo();
             });
 
-            function nMap() {
+
+            function park_xy() {
+                let query = get_query();
+                let queryPark = query['park_give'];
+                $.ajax({
+                    type: "GET",
+                    url: `/api/park_xy?park_give=${queryPark}`,
+                    data: {},
+                    success: function (response) {
+                        // console.log(response)
+                        let park_xy = response['xy'];
+                        for (let i = 0; i < park_xy.length; i++) {
+                            let x = park_xy[i]['x'];
+                            let y = park_xy[i]['y'];
+                            console.log(x, y);
+                            nMap(x, y);
+                        }
+
+                    }
+                })
+            }
+
+
+            function nMap(x, y) {
                 var map = new naver.maps.Map('map', {
-                    center: new naver.maps.LatLng(37.580836, 127.007505),
+                    center: new naver.maps.LatLng(x, y),
                     zoom: 17,
                     mapTypeControl: true,
                     mapTypeControlOptions: {
@@ -64,11 +106,13 @@
 
             function showParkPosts() {
                 $('#card-columns').empty();
+                let query = get_query();
+                let queryPark = query['park_give'];
                 // let parkName=val()
                 // let imgUrl=""
                 $.ajax({
                     type: "GET",
-                    url: "/api/post?park_give=낙산공원",
+                    url: `/api/post?park_give=${queryPark}`,
                     data: {},
                     success: function (response) {
                         if (response["result"] == "success") {
@@ -80,14 +124,14 @@
                                 let gu = post['gu'];
                                 let park = post['park'];
                                 let review = post['review'];
-                                let date=post['date'];
+                                let date = post['date'];
                                 // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
                                 // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
                                 let tempHtml = `
                                <div class="card">
-                        <img class="card-img-top" src="${url}" alt="Card image cap">
+                       <img class="card-img-top" src="${url}" alt="Card image cap">
                         <div class="card-body">
-                        <a href="a_post"><h4 class="card-title">${park}</h4></a>
+                        <h4 class="card-title">${park}</h4>
                             <h5 class="card-title">${gu}</h5>
                             <p class="card-text">${review}</p>
                                 <p class="card-text"><small class="text-muted">${bird}</small></p>
@@ -99,6 +143,36 @@
                     }
                 })
             }
+
+            function showParkInfo() {
+                let query = get_query();
+                let queryPark = query['park_give'];
+                $.ajax({
+                    type: "GET",
+                    url: `/api/park_info?park_give=${queryPark}`,
+                    data: {},
+                    success: function (response) {
+                        let park_infos = response['park_info'];
+                        for (let i = 0; i < park_infos.length; i++) {
+                            let parkName = park_infos[i]['name'];
+                            let parkAddress = park_infos[i]['address'];
+                            let parkPhone = park_infos[i]['phone'];
+                            console.log(parkName, parkAddress, parkPhone);
+                            let tempHtml = `<h2>${parkName}</h2>
+                                                <ul>
+                                                    <li>${parkAddress}</li>
+                                                    <li>${parkPhone}</li>
+                                                </ul>
+<button onclick="location.href='posting'">기록하기</button>`;
+                            $('#park_info_box').append(tempHtml);
+                        }
+
+                    }
+                })
+
+
+            }
+
         </script>
 
 
@@ -126,7 +200,11 @@
                 border: 1px solid blue;
                 grid-column: 2 / 4;
                 grid-row: 1/2;
-                font-family: 'Balsamiq Sans', cursive;
+                background-image: url("/static/pica.jpg");
+                background-size: 180px 130px;
+                background-position: center;
+                background-repeat: no-repeat;
+
             }
 
             .three {
@@ -141,6 +219,15 @@
                 grid-row: 2/10;
             }
 
+            h1 {
+                font-family: 'Russo One', sans-serif;
+                font-size: 80px;
+                color: springgreen;
+                opacity: 0.6;
+                text-align: center;
+                text-decoration: none;
+            }
+
             /*.five {*/
             /*    border: 1px solid blue;*/
             /*    grid-column: 2;*/
@@ -152,8 +239,17 @@
             /*    grid-column: 3;*/
             /*    grid-row: 4;*/
             /*}*/
-            #date{
-                color:cadetblue;
+
+            #date {
+                color: cadetblue;
+            }
+
+            a {
+                text-decoration: none
+            }
+
+            a:hover {
+                text-decoration: none !important
             }
         </style>
     </head>
@@ -161,61 +257,22 @@
         <div class="wrapper">
             <div id="map"></div>
             <div class="two">
-                <h1>Birdy Seoul</h1>
+                <a href="/"><h1>Birdy Seoul</h1></a>
             </div>
-            <div class="three">
-                <h3>낙산공원</h3>
-                <ul>
-                    <li>02-743-7985</li>
-                    <li>서울 종로구 낙산길 41</li>
-                    <li>매일 00:00 - 24:00</li>
-                    <li>무료입장</li>
+            <div class="three" id="park_info_box">
+                <!--                <h3>낙산공원</h3>-->
+                <!--                <ul>-->
+                <!--                    <li>02-743-7985</li>-->
+                <!--                    <li>서울 종로구 낙산길 41</li>-->
+                <!--                    <li>매일 00:00 - 24:00</li>-->
+                <!--                    <li>무료입장</li>-->
 
-                </ul>
-                <button onclick="location.href='posting'">기록하기</button>
+                <!--                </ul>-->
+
             </div>
             <div class="four">
                 <div class="card-columns" id="card-columns">
-                    <div class="card">
-                        <img class="card-img-top" src="../static/temp_birds.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title that wraps to a new line</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="../static/temp_birds.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title that wraps to a new line</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="../static/temp_birds.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title that wraps to a new line</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="../static/temp_birds.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title that wraps to a new line</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="../static/temp_birds.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title that wraps to a new line</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
+
                 </div>
                 <!--            <div class="five">Five</div>-->
                 <!--            <div class="six">Six</div>-->
