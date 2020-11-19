@@ -2,14 +2,30 @@ from flask import Flask, render_template, jsonify, request
 from pymongo import MongoClient
 import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver
+
+path = "C:/Users/marsh/chromedriver_win32/chromedriver.exe"
+driver = webdriver.Chrome(path)
+driver.implicitly_wait(10)
+# #크롬 안띄우고 해보는 코드...
+# chrome_options=webdriver.ChromeOptions()
+# chrome_options.add_argument('headless')
+# chrome_options.add_argument("--disable-gpu")
+
+driver.get(
+    "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%ED%98%84%EC%9E%AC%EC%84%9C%EC%9A%B8%EB%82%A0%EC%94%A8&oquery=%ED%98%84%EC%9E%AC+%EC%84%9C%EC%9A%B8+%EB%82%A0%EC%94%A8&tqi=UJRvUsprvhGssgA2scKssssstlC-201880")
+weather_infos = driver.find_elements_by_css_selector(
+    '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info')
+mise_infos = driver.find_elements_by_css_selector(
+    '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.sub_info')
 
 ##
-open_url = 'http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1114052000'
-
-res = requests.get(open_url)
-soup = BeautifulSoup(res.content, 'html.parser')
-
-data = soup.find_all('item')
+# open_url = 'http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1114052000'
+#
+# res = requests.get(open_url)
+# soup = BeautifulSoup(res.content, 'html.parser')
+#
+# data = soup.find_all('item')
 ##
 app = Flask(__name__)
 
@@ -164,19 +180,61 @@ def park_xy():
 ### 실시간 날씨정보
 
 @app.route('/api/weather', methods=['GET'])
-def get_weather():
-    for item in data:
-        weather = item.find_all('wfkor')
-        today_now = str(weather[-1].text)
-        return today_now
+# def get_weather():
+#     for item in data:
+#         weather = item.find_all('wfkor')
+#         today_now = str(weather[-1].text)
+#         return today_now
+#
+# now_list = []
+# now_weather = get_weather()
+# now_list.append(now_weather)
+# def give_weather():
+#     for now in now_list:
+#         return jsonify({'result': 'success', 'today_now': now})
 
-now_list = []
-now_weather = get_weather()
-now_list.append(now_weather)
-def give_weather():
-    for now in now_list:
-        return jsonify({'result': 'success', 'today_now': now})
+#####
 
+def weather_all():
+    weather_now = []
+    for weather_info in weather_infos:
+        now_temp = weather_info.find_element_by_css_selector(
+            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info > div > p > span.todaytemp').text
+        now_temp_kor = weather_info.find_element_by_css_selector(
+            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info > div > ul > li:nth-child(1) > p').text
+        now_rain = weather_info.find_element_by_css_selector(
+            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info > div > ul > li:nth-child(3) > span').text
+        low = weather_info.find_element_by_css_selector(
+            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info > div > ul > li:nth-child(2) > span.merge > span.min > span').text
+        high = weather_info.find_element_by_css_selector(
+            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info > div > ul > li:nth-child(2) > span.merge > span.max > span').text
+
+        weather_now.append(now_temp)
+        weather_now.append(now_temp_kor)
+        weather_now.append(now_rain)
+        weather_now.append(low)
+        weather_now.append(high)
+
+    for mise_info in mise_infos:
+        mise = mise_info.find_element_by_css_selector(
+            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.sub_info > div > dl > dd>.num').text.replace(
+            '㎍/㎥', '')
+        mise_int = int(mise)
+        if mise_int >= 0 and mise_int <= 30:
+            weather_now.append(str(mise_int) + '㎍/㎥' + ' ' + '좋음!')
+        elif mise_int >= 31 and mise_int <= 80:
+            weather_now.append(str(mise_int) + '㎍/㎥' + ' ' + '보통~')
+        else:
+            weather_now.append(str(mise_int) + '㎍/㎥' + ' ' + '나쁨!')
+
+    return jsonify({'result': 'success', 'today_now':weather_now})
+
+
+#왜 안되지이이이이이
+# def give_weather():
+#     today_now = weather_all()
+#     print(today_now)
+#     return jsonify({'result': 'success', 'today_now':today_now})
 
 
 if __name__ == '__main__':

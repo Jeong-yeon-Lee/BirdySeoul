@@ -28,6 +28,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
               rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 
 
         <!--        네이버 지도-->
@@ -39,7 +40,7 @@
             $(document).ready(function () {
                 // $("#parkList").html("");
                 showGuParks();
-                nMap();
+                nMap(37.560101, 126.995831);
 
             });
 
@@ -109,7 +110,7 @@
                             for (let i = 0; i < parks.length; i++) {
                                 let parkName = parks[i]['name'];
                                 // console.log(parkName)
-                                let tempHtml = `<ul><a href="park?park_give=${parkName}"><li>${parkName}</li></a></ul>`
+                                let tempHtml = `<ul><a href="park?park_give=${parkName}" id="tempList" ><li>${parkName}</li></a></ul>`
                                 $('#parkList').append(tempHtml);
 
                             }
@@ -162,16 +163,12 @@
             }
         </script>
         <style>
-            /*html, body {*/
-            /*    height: 100%;*/
-            /*    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);*/
-            /*    background-size: cover;*/
-            /*    background-repeat: no-repeat;*/
-            /*    background-attachment: fixed;*/
-            /*}*/
+            body{
+                padding: 20px;
+            }
 
             .wrapper {
-                border: 1px solid green;
+                border: 1px solid white;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 10px;
@@ -190,7 +187,9 @@
             }
 
             #map {
-                border: 1px solid blue;
+                border: 6px solid #6de7a9;
+                border-radius: 15px;
+
                 width: 100%;
                 height: 100%;
                 grid-column: 3 / 4;
@@ -201,13 +200,16 @@
             }
 
             .three {
-                border: 1px solid blue;
+                border: 3px solid #6de7a9;
+                background-color: #e4f3e9;
+                border-radius: 15px;
                 grid-column: 1/3;
-                grid-row: 2 / 10;
+                grid-row: 2 / 8;
                 background-image: url("../static/seoul.png");
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
+                padding: 10px;
 
             }
 
@@ -224,10 +226,12 @@
             /*}*/
 
             .parkList {
-                border: 1px solid blue;
+                border: 3px solid #6de7a9;
+                border-radius: 15px;
                 grid-column: 3;
-                grid-row: 5/10;
+                grid-row: 5/8;
                 text-align: center;
+                padding: 40px;
             }
 
             h1 {
@@ -239,11 +243,11 @@
                 text-decoration: none;
             }
 
-            #button1 {
-                top: 373px;
-                left: 393px;
-                position: absolute;
-            }
+            /*#button1 {*/
+            /*    top: 373px;*/
+            /*    left: 393px;*/
+            /*    position: absolute;*/
+            /*}*/
 
             a {
                 text-decoration: none
@@ -253,6 +257,11 @@
                 text-decoration: none !important
             }
 
+            #tempList{
+                color:#525eaa;
+                text-decoration: none;
+                font-family: 'Nanum Gothic', sans-serif;
+            }
         </style>
     </head>
 
@@ -265,7 +274,7 @@
             <div id="map"></div>
             <div class="three">
                 <select class="form-control" id="exampleFormControlSelect1" onchange="showGuParks(),gu_xy()">
-                    <option>---지역을 선택하세요:)---</option>
+                    <option>---지역을 선택하세요🐥---</option>
                     <!--                    <option>관악구</option>-->
                     <!--                    <option>중구</option>-->
                     <!--                    <option>성동구</option>-->

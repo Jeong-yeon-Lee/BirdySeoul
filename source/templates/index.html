@@ -26,33 +26,46 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
               rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <script>
-             $(document).ready(function () {
-                 showWeather();
+            $(document).ready(function () {
+                showWeather();
             });
 
-            function showWeather(){
-                  $.ajax({
+            function showWeather() {
+                $('#weather').empty();
+                $.ajax({
                     type: "GET",
                     url: "/api/weather",
                     data: {},
                     success: function (response) {
-                        let tempHtml=`<p>${response}</p>`;
-                       $('#weather').append(tempHtml);
-
+                        let today_now = response['today_now'];
+                        let now_temp = today_now[0];
+                        let now_temp_kor = today_now[1];
+                        let now_rain = today_now[2];
+                        let high = today_now[3];
+                        let low = today_now[4];
+                        let mise = today_now[5];
+                        let tempHtml =
+                            `<h2 id="info1">${now_temp}℃</h2>
+                                <div id="info2">
+                                    <p style="margin-bottom: 1px; font-size:17px">${now_temp_kor}</p>
+                                    <div id="lowHigh" style="margin-bottom: 1px;font-size:15px;">
+                                        <span style="color:#3333dc;">${low}</span>
+                                        <span>/</span>
+                                        <span style="color:#c94343;">${high}</span>
+                                    </div>
+                                    <p style="margin-bottom: 1px;font-size:15px">미세먼지: ${mise}</p>
+                                    <small>${now_rain}</small>
+                                </div>`
+                        $('#weather').append(tempHtml);
                     }
+
                 })
 
-
-
-
             }
-
-
-
-
 
 
         </script>
@@ -81,20 +94,23 @@
             }
 
             #weather {
-                margin-left: 250px;
+                font-family: 'Nanum Gothic', sans-serif;
+                display: flex;
+                margin-left: 100px;
                 /*margin-right: 100px;*/
                 text-align: center;
                 border-radius: 15px;
                 background-color: springgreen;
                 opacity: 0.6;
-                width: 150px;
-                height: 100px;
+                width: 300px;
+                height: 120px;
             }
 
             #buttons {
                 display: flex;
                 width: 628px;
                 padding-left: 23px;
+                margin-left: 30px;
 
 
                 /*border: 1px solid black;*/
@@ -121,12 +137,13 @@
             .button {
                 width: 200px;
                 height: 45px;
-                font-family: 'Nanum Myeongjo', serif;
+                /*font-family: 'Nanum Myeongjo', serif;*/
+                font-family: 'Nanum Gothic', sans-serif;
                 font-size: 20px;
                 text-transform: uppercase;
                 letter-spacing: 2.5px;
                 font-weight: 500;
-                color: #000;
+                color: #525eaa;
                 background-color: #fff;
                 border: none;
                 border-radius: 45px;
@@ -144,6 +161,22 @@
                 color: #fff;
                 transform: translateY(-7px);
             }
+
+            h2 {
+                display: flex;
+                margin-right: 15px;
+                margin-left: 15px;
+                margin-top: 40px;
+
+            }
+
+
+            #info2 {
+
+                margin-top: 10px
+
+            }
+
         </style>
     </head>
     <body>
@@ -153,9 +186,17 @@
 
         <div class="container">
             <div id="weather">
-                <h3>9℃</h3>
-                <p>맑음</p>
-                </p>
+                <!--                <h2 id="info1">9℃</h2>-->
+                <!--                <div id="info2">-->
+                <!--                    <p style="margin-bottom: 1px; font-size:18px">맑음, 어제보다 추워여</p>-->
+                <!--                    <div id="lowHigh" style="margin-bottom: 1px;font-size:15px;">-->
+                <!--                        <span style="color:#3333dc;">최저</span>-->
+                <!--                        <span>/</span>-->
+                <!--                        <span style="color:#c94343;">최고</span>-->
+                <!--                    </div>-->
+                <!--                    <p style="margin-bottom: 1px;font-size:15px">미세먼지: 미세먼지 좋음</p>-->
+                <!--                    <small>시간당 강수량:</small>-->
+                <!--                </div>-->
             </div>
             <div id="buttons">
                 <div class="wrap">

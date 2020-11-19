@@ -22,6 +22,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
               rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 
         <script>
             $(document).ready(function () {
@@ -191,6 +195,10 @@
         </script>
 
         <style>
+            body {
+                padding: 20px;
+            }
+
             #title {
                 font-family: 'Russo One', sans-serif;
                 width: 100%;
@@ -215,46 +223,103 @@
             }
 
 
-            button {
-                text-align: center;
+            #select {
+                border: 3px solid #6de7a9;
+                border-radius: 15px;
+                padding: 10px;
+                font-family: 'Nanum Gothic', sans-serif;
+                margin: auto;
+                width: 50%;
+                height: 50%;
             }
+
+            #cards {
+                border: 3px solid #6de7a9;
+                background-color: #e4f3e9;
+                border-radius: 15px;
+                padding: 15px;
+                margin-top: 20px;
+            }
+
+            /*버튼 퍼온거*/
+            .wrap {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .button {
+                width: 150px;
+                height: 30px;
+                /*font-family: 'Nanum Myeongjo', serif;*/
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 18px;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                font-weight: 500;
+                color: #525eaa;
+                background-color: #fff;
+                border: none;
+                border-radius: 45px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                outline: none;
+                margin: 10px;
+            }
+
+            .button:hover {
+                background-color: springgreen;
+                opacity: 0.6;
+                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+                color: #fff;
+                transform: translateY(-7px);
+            }
+
         </style>
     </head>
     <body>
         <div id="title">
             <a href="/"><h1>Birdy Seoul</h1></a>
         </div>
-
-        <select class="custom-select" id="select_gu_name" onchange="selectPark()">
-            <option selected value=""> -- 지역을 선택하세요 --</option>
-            <!--                    <option value="1">1</option>-->
-            <!--                    <option value="2">2</option>-->
-            <!--                    <option value="3">3</option>-->
-        </select>
-
-
-        <select class="custom-select" id="select_park_name">
-            <option selected value=""> -- 공원을 선택하세요 --</option>
-            <!--                    <option value="1">1</option>-->
-            <!--                    <option value="2">2</option>-->
-            <!--                    <option value="3">3</option>-->
-        </select>
-        <button onclick="showSelectedPosts()">조회</button>
+        <div id="select">
+            <select class="custom-select" id="select_gu_name" onchange="selectPark()">
+                <option selected value=""> -- 지역을 선택하세요🐥 --</option>
+                <!--                    <option value="1">1</option>-->
+                <!--                    <option value="2">2</option>-->
+                <!--                    <option value="3">3</option>-->
+            </select>
 
 
-        <div id="cards-box" class="card-columns">
-            <!--                <div class="card">-->
-            <!--                    <img class="card-img-top"-->
-            <!--                         src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"-->
-            <!--                         alt="Card image cap">-->
-            <!--                    <div class="card-body">-->
-            <!--                        <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>-->
-            <!--                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>-->
-            <!--                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-
+            <select class="custom-select" id="select_park_name">
+                <option selected value=""> -- 공원을 선택하세요🐥 --</option>
+                <!--                    <option value="1">1</option>-->
+                <!--                    <option value="2">2</option>-->
+                <!--                    <option value="3">3</option>-->
+            </select>
+            <div id="buttons">
+                <div class="wrap">
+                    <button class="button" onclick="showSelectedPosts()">조회하기</button>
+                    <button class="button" onclick="location.href='posting'">기록하기</button>
+                </div>
+            </div>
         </div>
+
+        <div id="cards">
+            <div id="cards-box" class="card-columns">
+                <!--                <div class="card">-->
+                <!--                    <img class="card-img-top"-->
+                <!--                         src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"-->
+                <!--                         alt="Card image cap">-->
+                <!--                    <div class="card-body">-->
+                <!--                        <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>-->
+                <!--                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>-->
+                <!--                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+            </div>
         </div>
     </body>
 </html>

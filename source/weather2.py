@@ -1,9 +1,4 @@
 from selenium import webdriver
-from pymongo import MongoClient  # pymongo를 임포트 하기
-
-client = MongoClient('localhost', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
-db = client.myproject
-
 path = "C:/Users/marsh/chromedriver_win32/chromedriver.exe"
 driver = webdriver.Chrome(path)  # 브라우저를 켜는 함수
 
@@ -16,7 +11,7 @@ mise_infos = driver.find_elements_by_css_selector(
     '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.sub_info')
 
 
-def weather_all:
+def weather_all():
     for weather_info in weather_infos:
         now_temp = weather_info.find_element_by_css_selector(
             '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.main_info > div > p > span.todaytemp').text
@@ -34,8 +29,20 @@ def weather_all:
     for mise_info in mise_infos:
         mise_all = []
         mise = mise_info.find_element_by_css_selector(
-            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.sub_info > div > dl > dd.lv2 > span.num').text
-        mise_all.append(mise)
-        if mise >= 0 and mise <= 30:
-            mise_all.append('좋음!')
+            '#main_pack > section.sc_new.cs_weather._weather > div > div.api_cs_wrap > div.weather_box > div.weather_area._mainArea > div.today_area._mainTabContent > div.sub_info > div > dl > dd>.num').text.replace('㎍/㎥','')
+        print(mise)
+        mise_int=int(mise)
+        if mise_int >= 0 and mise_int <= 30:
+            mise_all.append(str(mise_int)+'㎍/㎥'+' '+'좋음!')
+        elif mise_int >=31 and mise_int <=80:
+            mise_all.append(str(mise_int)+'㎍/㎥'+' '+'보통~')
+        else:
+            mise_all.append(str(mise_int)+'㎍/㎥'+' '+'나쁨!')
+        print(mise_all)
+
+
+
+weather_all()
+
+
 

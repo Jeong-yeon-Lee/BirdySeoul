@@ -28,7 +28,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
               rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
         <script type="text/javascript"
                 src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
         <script>
@@ -158,12 +158,15 @@
                             let parkAddress = park_infos[i]['address'];
                             let parkPhone = park_infos[i]['phone'];
                             console.log(parkName, parkAddress, parkPhone);
-                            let tempHtml = `<h2>${parkName}</h2>
-                                                <ul>
+                            let tempHtml = `<h2 style="text-align: center; font-weight: bolder">${parkName}</h2>
+                                                <ul style="margin-top: 25px">
                                                     <li>${parkAddress}</li>
                                                     <li>${parkPhone}</li>
                                                 </ul>
-<button onclick="location.href='posting'">기록하기</button>`;
+                            <div id="buttons">
+                                            <div class="wrap">
+                                                <button class="button" onclick="location.href='posting'">기록하기</button>
+                                            </div>`;
                             $('#park_info_box').append(tempHtml);
                         }
 
@@ -177,46 +180,59 @@
 
 
         <style>
+            body {
+                padding: 20px;
+            }
+
             .wrapper {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                grid-gap: 10px;
+                grid-gap: 15px;
                 grid-auto-rows: minmax(100px, auto);
-                border: 1px solid goldenrod;
+                border: 1px solid white;
             }
 
             #map {
-                border: 1px solid blue;
+                border: 6px solid #6de7a9;
+                border-radius: 15px;
                 width: 100%;
                 height: 100%;
                 grid-column: 1 / 2;
-                grid-row: 1/4;
+                grid-row: 2/5;
+
                 /*background-image: url("../static/temp_park.jpg");*/
                 /*background-size: cover;*/
                 /*background-repeat: no-repeat;*/
             }
 
             .two {
-                border: 1px solid blue;
-                grid-column: 2 / 4;
+                border: 1px solid white;
+                grid-column: 1 / 4;
                 grid-row: 1/2;
                 background-image: url("/static/pica.jpg");
-                background-size: 180px 130px;
+                background-size: 160px 110px;
                 background-position: center;
                 background-repeat: no-repeat;
 
             }
 
             .three {
-                border: 1px solid blue;
+                border: 3px solid #6de7a9;
+                border-radius: 15px;
+                font-family: 'Nanum Gothic', sans-serif;
+                color: #525eaa;
                 grid-column: 1 / 2;
-                grid-row: 4 / 10;
+                grid-row: 5 / 7;
+                padding: 20px;
             }
 
             .four {
-                border: 1px solid blue;
+                border: 3px solid #6de7a9;
+                background-color: #e4f3e9;
+                border-radius: 15px;
                 grid-column: 2/4;
-                grid-row: 2/10;
+                grid-row: 2/8;
+                padding: 10px;
             }
 
             h1 {
@@ -251,8 +267,47 @@
             a:hover {
                 text-decoration: none !important
             }
+
+            /*버튼 퍼온거*/
+            .wrap {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .button {
+                width: 130px;
+                height: 25px;
+                /*font-family: 'Nanum Myeongjo', serif;*/
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size: 15px;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                font-weight: 500;
+                color: #525eaa;
+                background-color: #fff;
+                border: none;
+                border-radius: 45px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                outline: none;
+                margin: 30px;
+            }
+
+            .button:hover {
+                background-color: springgreen;
+                opacity: 0.6;
+                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+                color: #fff;
+                transform: translateY(-7px);
+            }
+
+
         </style>
     </head>
+
     <body>
         <div class="wrapper">
             <div id="map"></div>
