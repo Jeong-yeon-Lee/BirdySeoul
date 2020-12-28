@@ -1,133 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-              integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-              crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-                crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-                integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-                crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
-              rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
-              rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-        <script type="text/javascript"
-                src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
-        <script>
 
-            function get_query() {
-                var url = document.location.href;
-                var qs = url.substring(url.indexOf('?') + 1).split('&');
-                for (var i = 0, result = {}; i < qs.length; i++) {
-                    qs[i] = qs[i].split('=');
-                    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
-                }
-                return result;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show_park</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
+    <script>
+
+        function get_query() {
+            var url = document.location.href;
+            var qs = url.substring(url.indexOf('?') + 1).split('&');
+            for (var i = 0, result = {}; i < qs.length; i++) {
+                qs[i] = qs[i].split('=');
+                result[qs[i][0]] = decodeURIComponent(qs[i][1]);
             }
+            return result;
+        }
 
 
-            $(document).ready(function () {
-                let query = get_query();
-                showParkPosts(query);
-                park_xy(query);
-                showParkInfo();
+        $(document).ready(function () {
+            let query = get_query();
+            showParkPosts(query);
+            park_xy(query);
+            showParkInfo();
+        });
+
+
+        function park_xy() {
+            let query = get_query();
+            let queryPark = query['park_give'];
+            $.ajax({
+                type: "GET",
+                url: `/api/park_xy?park_give=${queryPark}`,
+                data: {},
+                success: function (response) {
+                    // console.log(response)
+                    let park_xy = response['xy'];
+                    for (let i = 0; i < park_xy.length; i++) {
+                        let x = park_xy[i]['x'];
+                        let y = park_xy[i]['y'];
+                        console.log(x, y);
+                        nMap(x, y);
+                    }
+
+                }
+            })
+        }
+
+
+        function nMap(x, y) {
+            var map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(x, y),
+                zoom: 17,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: naver.maps.MapTypeControlStyle.DROPDOWN
+                }
             });
 
+            var openStreetMapType = new naver.maps.ImageMapType({
+                name: 'OSM',
+                minZoom: 0,
+                maxZoom: 19,
+                tileSize: new naver.maps.Size(256, 256),
+                projection: naver.maps.EPSG3857,
+                repeatX: true,
+                tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                provider: [{
+                    title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
+                    link: "http://www.openstreetmap.org/copyright"
+                }]
+            });
 
-            function park_xy() {
-                let query = get_query();
-                let queryPark = query['park_give'];
-                $.ajax({
-                    type: "GET",
-                    url: `/api/park_xy?park_give=${queryPark}`,
-                    data: {},
-                    success: function (response) {
-                        // console.log(response)
-                        let park_xy = response['xy'];
-                        for (let i = 0; i < park_xy.length; i++) {
-                            let x = park_xy[i]['x'];
-                            let y = park_xy[i]['y'];
-                            console.log(x, y);
-                            nMap(x, y);
-                        }
+            map.mapTypes.set('osm', openStreetMapType);
+            map.setMapTypeId('osm');
 
-                    }
-                })
-            }
+        }
 
 
-            function nMap(x, y) {
-                var map = new naver.maps.Map('map', {
-                    center: new naver.maps.LatLng(x, y),
-                    zoom: 17,
-                    mapTypeControl: true,
-                    mapTypeControlOptions: {
-                        style: naver.maps.MapTypeControlStyle.DROPDOWN
-                    }
-                });
-
-                var openStreetMapType = new naver.maps.ImageMapType({
-                    name: 'OSM',
-                    minZoom: 0,
-                    maxZoom: 19,
-                    tileSize: new naver.maps.Size(256, 256),
-                    projection: naver.maps.EPSG3857,
-                    repeatX: true,
-                    tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    provider: [{
-                        title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
-                        link: "http://www.openstreetmap.org/copyright"
-                    }]
-                });
-
-                map.mapTypes.set('osm', openStreetMapType);
-                map.setMapTypeId('osm');
-
-            }
-
-
-            function showParkPosts() {
-                $('#card-columns').empty();
-                let query = get_query();
-                let queryPark = query['park_give'];
-                // let parkName=val()
-                // let imgUrl=""
-                $.ajax({
-                    type: "GET",
-                    url: `/api/post?park_give=${queryPark}`,
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let posts = response["park_posts"];
-                            for (let i = 0; i < posts.length; i++) {
-                                let post = response["park_posts"][i];
-                                let url = post['url'];
-                                let bird = post['bird'];
-                                let gu = post['gu'];
-                                let park = post['park'];
-                                let review = post['review'];
-                                let date = post['date'];
-                                // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
-                                // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
-                                let tempHtml = `
+        function showParkPosts() {
+            $('#card-columns').empty();
+            let query = get_query();
+            let queryPark = query['park_give'];
+            // let parkName=val()
+            // let imgUrl=""
+            $.ajax({
+                type: "GET",
+                url: `/api/post?park_give=${queryPark}`,
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let posts = response["park_posts"];
+                        for (let i = 0; i < posts.length; i++) {
+                            let post = response["park_posts"][i];
+                            let url = post['url'];
+                            let bird = post['bird'];
+                            let gu = post['gu'];
+                            let park = post['park'];
+                            let review = post['review'];
+                            let date = post['date'];
+                            // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
+                            // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
+                            let tempHtml = `
                                <div class="card">
                        <img class="card-img-top" src="${url}" alt="Card image cap">
                         <div class="card-body">
@@ -137,29 +140,29 @@
                                 <p class="card-text"><small class="text-muted">${bird}</small></p>
                                 <p class="card-text" id="date"><small>${date}</small></p>
                         </div>`
-                                $('#card-columns').append(tempHtml);
-                            }
+                            $('#card-columns').append(tempHtml);
                         }
                     }
-                })
-            }
+                }
+            })
+        }
 
-            function showParkInfo() {
-                let query = get_query();
-                let queryPark = query['park_give'];
-                $.ajax({
-                    type: "GET",
-                    url: `/api/park_info?park_give=${queryPark}`,
-                    data: {},
-                    success: function (response) {
-                        let park_infos = response['park_info'];
-                        for (let i = 0; i < park_infos.length; i++) {
-                            let parkName = park_infos[i]['name'];
-                            let parkAddress = park_infos[i]['address'];
-                            let parkPhone = park_infos[i]['phone'];
-                            console.log(parkName, parkAddress, parkPhone);
-                            let tempHtml = `<h2 style="text-align: center; font-weight: bolder">${parkName}</h2>
-                                                <ul style="margin-top: 25px">
+        function showParkInfo() {
+            let query = get_query();
+            let queryPark = query['park_give'];
+            $.ajax({
+                type: "GET",
+                url: `/api/park_info?park_give=${queryPark}`,
+                data: {},
+                success: function (response) {
+                    let park_infos = response['park_info'];
+                    for (let i = 0; i < park_infos.length; i++) {
+                        let parkName = park_infos[i]['name'];
+                        let parkAddress = park_infos[i]['address'];
+                        let parkPhone = park_infos[i]['phone'];
+                        console.log(parkName, parkAddress, parkPhone);
+                        let tempHtml = `<h2>${parkName}</h2>
+                                                <ul>
                                                     <li>${parkAddress}</li>
                                                     <li>${parkPhone}</li>
                                                 </ul>
@@ -167,170 +170,269 @@
                                             <div class="wrap">
                                                 <button class="button" onclick="location.href='posting'">기록하기</button>
                                             </div>`;
-                            $('#park_info_box').append(tempHtml);
-                        }
-
+                        $('#park_info_box').append(tempHtml);
                     }
-                })
+
+                }
+            })
 
 
-            }
+        }
 
-        </script>
+    </script>
 
 
-        <style>
-            body {
-                padding: 20px;
-            }
+    <style>
+        body {
+            padding: 20px;
+        }
 
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            grid-auto-rows: minmax(100px, auto);
+            border: 1px solid white;
+        }
+
+        #map {
+            border: 6px solid #6de7a9;
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+            grid-column: 1 / 2;
+            grid-row: 2/5;
+
+            /*background-image: url("../static/temp_park.jpg");*/
+            /*background-size: cover;*/
+            /*background-repeat: no-repeat;*/
+        }
+
+        .two {
+            border: 1px solid white;
+            grid-column: 1 / 4;
+            grid-row: 1/2;
+            background-image: url("/static/pica.jpg");
+            background-size: 160px 110px;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .three {
+            border: 3px solid #6de7a9;
+            border-radius: 15px;
+            font-family: 'Nanum Gothic', sans-serif;
+            color: #525eaa;
+            grid-column: 1 / 2;
+            grid-row: 5 / 8;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: bolder;
+
+        }
+
+        ul {
+            margin-top: 25px;
+            font-size: 18px;
+        }
+
+        .four {
+            border: 3px solid #6de7a9;
+            background-color: #e4f3e9;
+            border-radius: 15px;
+            grid-column: 2/4;
+            grid-row: 2/8;
+            padding: 10px;
+        }
+
+        h1 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 80px;
+            color: springgreen;
+            opacity: 0.6;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /*.five {*/
+        /*    border: 1px solid blue;*/
+        /*    grid-column: 2;*/
+        /*    grid-row: 4;*/
+        /*}*/
+
+        /*.six {*/
+        /*    border: 1px solid blue;*/
+        /*    grid-column: 3;*/
+        /*    grid-row: 4;*/
+        /*}*/
+
+        #date {
+            color: cadetblue;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: none !important
+        }
+
+        /*버튼 퍼온거*/
+        .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            width: 130px;
+            height: 25px;
+            /*font-family: 'Nanum Myeongjo', serif;*/
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #525eaa;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+            margin: 30px;
+        }
+
+        .button:hover {
+            background-color: springgreen;
+            opacity: 0.6;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+
+        @media (min-width: 501px) and (max-width: 880px) {
             .wrapper {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 15px;
-                grid-auto-rows: minmax(100px, auto);
-                border: 1px solid white;
-            }
-
-            #map {
-                border: 6px solid #6de7a9;
-                border-radius: 15px;
-                width: 100%;
-                height: 100%;
-                grid-column: 1 / 2;
-                grid-row: 2/5;
-
-                /*background-image: url("../static/temp_park.jpg");*/
-                /*background-size: cover;*/
-                /*background-repeat: no-repeat;*/
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .two {
-                border: 1px solid white;
-                grid-column: 1 / 4;
+                grid-column: 1 / 3;
                 grid-row: 1/2;
-                background-image: url("/static/pica.jpg");
-                background-size: 160px 110px;
-                background-position: center;
-                background-repeat: no-repeat;
 
+            }
+
+            #map {
+                grid-column: 1 / 2;
+                grid-row: 2/4;
             }
 
             .three {
-                border: 3px solid #6de7a9;
-                border-radius: 15px;
-                font-family: 'Nanum Gothic', sans-serif;
-                color: #525eaa;
-                grid-column: 1 / 2;
-                grid-row: 5 / 7;
+                grid-column: 2 / 3;
+                grid-row: 2/4;
                 padding: 20px;
+
             }
 
             .four {
-                border: 3px solid #6de7a9;
-                background-color: #e4f3e9;
-                border-radius: 15px;
-                grid-column: 2/4;
-                grid-row: 2/8;
-                padding: 10px;
+                grid-column: 1/3;
+                grid-row: 4/8;
+
             }
 
-            h1 {
-                font-family: 'Russo One', sans-serif;
-                font-size: 80px;
-                color: springgreen;
-                opacity: 0.6;
+            h2 {
                 text-align: center;
-                text-decoration: none;
+                font-weight: bolder;
+                font-size: 20px;
             }
 
-            /*.five {*/
-            /*    border: 1px solid blue;*/
-            /*    grid-column: 2;*/
-            /*    grid-row: 4;*/
-            /*}*/
-
-            /*.six {*/
-            /*    border: 1px solid blue;*/
-            /*    grid-column: 3;*/
-            /*    grid-row: 4;*/
-            /*}*/
-
-            #date {
-                color: cadetblue;
-            }
-
-            a {
-                text-decoration: none
-            }
-
-            a:hover {
-                text-decoration: none !important
-            }
-
-            /*버튼 퍼온거*/
-            .wrap {
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .button {
-                width: 130px;
-                height: 25px;
-                /*font-family: 'Nanum Myeongjo', serif;*/
-                font-family: 'Nanum Gothic', sans-serif;
+            ul {
+                margin-top: 25px;
                 font-size: 15px;
-                text-transform: uppercase;
-                letter-spacing: 2.5px;
-                font-weight: 500;
-                color: #525eaa;
-                background-color: #fff;
-                border: none;
-                border-radius: 45px;
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease 0s;
-                cursor: pointer;
-                outline: none;
-                margin: 30px;
-            }
-
-            .button:hover {
-                background-color: springgreen;
-                opacity: 0.6;
-                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-                color: #fff;
-                transform: translateY(-7px);
             }
 
 
-        </style>
-    </head>
+        }
 
-    <body>
-        <div class="wrapper">
-            <div id="map"></div>
-            <div class="two">
-                <a href="/"><h1>Birdy Seoul</h1></a>
+        @media (max-width:501px) {
+            .wrapper {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .two {
+                grid-column: 1;
+                grid-row: 1/2;
+
+            }
+
+            #map {
+                grid-column: 1;
+                grid-row: 2/5;
+            }
+
+            .three {
+                grid-column: 1;
+                grid-row: 5/6;
+                padding: 20px;
+
+            }
+
+            .four {
+                grid-column: 1;
+                grid-row: 6/12;
+
+            }
+
+            h2 {
+                text-align: center;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+
+            ul {
+                margin-top: 25px;
+                font-size: 15px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="map"></div>
+        <div class="two">
+            <a href="/">
+                <h1>Birdy Seoul</h1>
+            </a>
+        </div>
+        <div class="three" id="park_info_box">
+            <!--                <h3>낙산공원</h3>-->
+            <!--                <ul>-->
+            <!--                    <li>02-743-7985</li>-->
+            <!--                    <li>서울 종로구 낙산길 41</li>-->
+            <!--                    <li>매일 00:00 - 24:00</li>-->
+            <!--                    <li>무료입장</li>-->
+
+            <!--                </ul>-->
+
+        </div>
+        <div class="four">
+            <div class="card-columns" id="card-columns">
+
             </div>
-            <div class="three" id="park_info_box">
-                <!--                <h3>낙산공원</h3>-->
-                <!--                <ul>-->
-                <!--                    <li>02-743-7985</li>-->
-                <!--                    <li>서울 종로구 낙산길 41</li>-->
-                <!--                    <li>매일 00:00 - 24:00</li>-->
-                <!--                    <li>무료입장</li>-->
+            <!--            <div class="five">Five</div>-->
+            <!--            <div class="six">Six</div>-->
+        </div>
+</body>
 
-                <!--                </ul>-->
-
-            </div>
-            <div class="four">
-                <div class="card-columns" id="card-columns">
-
-                </div>
-                <!--            <div class="five">Five</div>-->
-                <!--            <div class="six">Six</div>-->
-            </div>
-    </body>
 </html>

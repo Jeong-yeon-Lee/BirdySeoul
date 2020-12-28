@@ -1,123 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>posting_box</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
-              rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posting_box</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                makeOptions();
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            makeOptions();
+        });
+
+        function makeOptions() {
+            $.ajax({
+                type: "GET",
+                url: "/api/birds_list",
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let birds = response["birds"]
+                        for (let i = 0; i < birds.length; i++) {
+                            let birdName = birds[i]['name'];
+                            let tempHtml = `  <option>${birdName}</option>`
+                            $('#birdsSelect').append(tempHtml);
+                        }
+                    }
+                }
+            });
+            $.ajax({
+                type: "GET",
+                url: "/api/gus_list",
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let gus = response['gus'];
+                        let guArr = []
+                        for (let i = 0; i < gus.length; i++) {
+                            let guName = gus[i]['gu'];
+                            guArr.push(guName);
+
+                        }
+
+                        let guExist = new Array();
+                        let check = true;
+                        for (let i = 0; i < guArr.length; i++) {
+                            check = true;
+                            for (value in guExist) {
+                                if (guExist[value] == guArr[i]) {
+                                    check = false;
+                                }
+                            }
+                            if (check) {
+                                guExist.push(guArr[i]);
+                            }
+
+                        }
+                        // console.log(guExist);
+                        for (let i = 0; i < guExist.length; i++) {
+                            let guList = guExist[i];
+                            let tempHtml = `<option>${guList}</option>`
+                            $('#select_gu_name').append(tempHtml);
+                        }
+
+                    }
+                }
+            });
+        }
+
+        function selectPark() {
+            $('#select_park_name').empty();
+            let selectGu = $('#select_gu_name').val();
+            $.ajax({
+                type: "GET",
+                url: `/api/park_list?gu_give=${selectGu}`,
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let gus = response['gus'];
+                        console.log('체인지 함수 실행!!')
+                        for (let i = 0; i < gus.length; i++) {
+                            let parks = gus[i]['name'];
+                            let tempHtml = `<option>${parks}</option>`
+                            $('#select_park_name').append(tempHtml);
+
+                        }
+
+                    }
+                }
             });
 
-            function makeOptions() {
-                $.ajax({
-                    type: "GET",
-                    url: "/api/birds_list",
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let birds = response["birds"]
-                            for (let i = 0; i < birds.length; i++) {
-                                let birdName = birds[i]['name'];
-                                let tempHtml = `  <option>${birdName}</option>`
-                                $('#exampleFormControlSelect2').append(tempHtml);
-                            }
-                        }
-                    }
-                });
-                $.ajax({
-                    type: "GET",
-                    url: "/api/gus_list",
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let gus = response['gus'];
-                            let guArr = []
-                            for (let i = 0; i < gus.length; i++) {
-                                let guName = gus[i]['gu'];
-                                guArr.push(guName);
 
-                            }
-
-                            let guExist = new Array();
-                            let check = true;
-                            for (let i = 0; i < guArr.length; i++) {
-                                check = true;
-                                for (value in guExist) {
-                                    if (guExist[value] == guArr[i]) {
-                                        check = false;
-                                    }
-                                }
-                                if (check) {
-                                    guExist.push(guArr[i]);
-                                }
-
-                            }
-                            // console.log(guExist);
-                            for (let i = 0; i < guExist.length; i++) {
-                                let guList = guExist[i];
-                                let tempHtml = `<option>${guList}</option>`
-                                $('#select_gu_name').append(tempHtml);
-                            }
-
-                        }
-                    }
-                });
-            }
-
-            function selectPark() {
-                $('#select_park_name').empty();
-                let selectGu = $('#select_gu_name').val();
-                $.ajax({
-                    type: "GET",
-                    url: `/api/park_list?gu_give=${selectGu}`,
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let gus = response['gus'];
-                            console.log('체인지 함수 실행!!')
-                            for (let i = 0; i < gus.length; i++) {
-                                let parks = gus[i]['name'];
-                                let tempHtml = `<option>${parks}</option>`
-                                $('#select_park_name').append(tempHtml);
-
-                            }
-
-                        }
-                    }
-                });
+        }
 
 
-            }
+        function savePost() {
+            let url = $('#basic-url').val();
+            let guName = $('#select_gu_name').val();
+            let parkName = $('#select_park_name').val();
+            let birds = $('#text-area').val();
+            let review = $('#exampleFormControlTextarea2').val();
+            let date = $('#exampleFormControlInput1').val();
+            // console.log(guName,parkName,birds,review);
+            if (guName == '-- 지역을 선택하세요 --') {
+                alert('지역을 기록해주세요');
+            } else if (parkName == '-- 공원을 선택하세요 --') {
+                alert('공원을 기록해주세요');
+            } else if (url == '') {
+                alert('이미지url을 넣어주세요')
+            } else if (date == '') {
+                alert('날짜를 기록해주세요');
+            } else if (birds == '') {
+                alert('만난 새들을 기록해주세요')
+            } else if (review == '') {
+                alert('오늘의 마음을 기록해주세요')
+            } else {
 
-
-            function savePost() {
-                let url = $('#basic-url').val();
-                let guName = $('#select_gu_name').val();
-                let parkName = $('#select_park_name').val();
-                let birds = $('#exampleFormControlTextarea1').val();
-                let review = $('#exampleFormControlTextarea2').val();
-                let date = $('#exampleFormControlInput1').val();
-                // console.log(guName,parkName,birds,review);
                 $.ajax({
                     type: "POST",
                     url: "/api/posting",
@@ -138,199 +154,233 @@
                         }
                     }
                 });
-
             }
+        }
 
-            function writeBirds() {
-                let selectBird = $('#exampleFormControlSelect2').val();
-                let selectOneBird = selectBird[0];
-                let tempHtml = `${selectOneBird}\n`
-                $('#exampleFormControlTextarea1').append(tempHtml);
-            }
-        </script>
+        function writeBirds() {
+            let selectBird = $('#birdsSelect').val();
+            let tempHtml = `${selectBird}\n`
+            $('#text-area').append(tempHtml);
+        }
+    </script>
 
 
-        <style>
-            body {
-                background-color: #e4f3e9;
-            }
+    <style>
+        body {
+            background-color: #e4f3e9;
+        }
 
+        .posting_box {
+            font-family: 'Nanum Gothic', sans-serif;
+            color: #525eaa;
+            border: 3px solid #6de7a9;
+            background-color: white;
+            border-radius: 15px;
+            width: 920px;
+            height: 770px;
+            margin: 10px auto;
+            padding: 10px;
+        }
+
+        #bird-container {
+            display: inline-flex;
+            width: 100%;
+            height: 200px;
+        }
+
+
+
+        #box1 {
+            border: 1px solid white;
+            width: 900px;
+            height: 200px;
+        }
+
+        .flex {
+            flex: auto;
+        }
+
+
+        #box3 {
+            color: #525eaa;
+            border: 1px solid white;
+
+        }
+
+        #text-area {
+            width: 100%;
+            min-width: 150px;
+
+        }
+
+        #box4 {
+            color: #525eaa;
+            border: 1px solid white;
+            width: 900px;
+            height: 150px;
+
+        }
+
+        #birdsSelect {
+            color: #899792;
+            width: 100%;
+            min-width: 120px;
+            height: 200px;
+
+        }
+
+
+
+        #title {
+            border: 1px solid white;
+            background-image: url("/static/pica.jpg");
+            background-size: 160px 110px;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        h1 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 80px;
+            color: springgreen;
+            opacity: 0.6;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /*버튼 퍼온거*/
+        .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            width: 130px;
+            height: 25px;
+            /*font-family: 'Nanum Myeongjo', serif;*/
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #525eaa;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: springgreen;
+            opacity: 0.6;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        @media (max-width: 955px) {
             .posting_box {
-                font-family: 'Nanum Gothic', sans-serif;
-                color: #525eaa;
-                border: 3px solid #6de7a9;
-                background-color: white;
-                border-radius: 15px;
-                width: 920px;
-                height: 770px;
-                margin: 10px auto;
+                border: 4px solid #6de7a9;
+                width: 100%;
+                height: 100%;
                 padding: 10px;
-            }
-
-            .box-container {
-                display: flex;
+                object-fit: contain;
             }
 
             #box1 {
-                border: 1px solid white;
-                width: 900px;
-                height: 200px;
-            }
-
-
-            #bird_box {
-                color: #525eaa;
-                border: 1px solid white;
-                width: 448px;
-                height: 200px;
-                /*overflow: scroll;*/
-            }
-
-            #box3 {
-                color: #525eaa;
-                border: 1px solid white;
-                width: 448px;
-                height: 200px;
+                max-width: 100%;
             }
 
             #box4 {
-                color: #525eaa;
-                border: 1px solid white;
-                width: 900px;
-                height: 150px;
+                max-width: 100%;
             }
 
-            #exampleFormControlSelect2 {
-                height: 200px;
-                color: #899792;
-            }
+        }
+    </style>
+</head>
 
-            #title {
-                border: 1px solid white;
-                background-image: url("/static/pica.jpg");
-                background-size: 160px 110px;
-                background-position: center;
-                background-repeat: no-repeat;
-
-            }
-
-            h1 {
-                font-family: 'Russo One', sans-serif;
-                font-size: 80px;
-                color: springgreen;
-                opacity: 0.6;
-                text-align: center;
-                text-decoration: none;
-            }
-
-            /*버튼 퍼온거*/
-            .wrap {
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .button {
-                width: 130px;
-                height: 25px;
-                /*font-family: 'Nanum Myeongjo', serif;*/
-                font-family: 'Nanum Gothic', sans-serif;
-                font-size: 15px;
-                text-transform: uppercase;
-                letter-spacing: 2.5px;
-                font-weight: 500;
-                color: #525eaa;
-                background-color: #fff;
-                border: none;
-                border-radius: 45px;
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease 0s;
-                cursor: pointer;
-                outline: none;
-                margin: 10px;
-            }
-
-            .button:hover {
-                background-color: springgreen;
-                opacity: 0.6;
-                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-                color: #fff;
-                transform: translateY(-7px);
-            }
-
-        </style>
-    </head>
-    <body>
-        <div class="posting_box">
-            <div id="title">
-                <a href="/"><h1>Birdy Seoul</h1></a>
-            </div>
-            <div id="box1">
-                <p style="margin-top: 10px; margin-bottom: 2px">지역과 공원을 선택해주세요🐣</p>
-                <select class="custom-select" id="select_gu_name" onchange="selectPark()">
-                    <option selected value=""> -- 지역을 선택하세요 --</option>
-                    <!--                    <option value="1">1</option>-->
-                    <!--                    <option value="2">2</option>-->
-                    <!--                    <option value="3">3</option>-->
-                </select>
-
-
-                <select class="custom-select" id="select_park_name">
-                    <option selected value=""> -- 공원을 선택하세요 --</option>
-                    <!--                    <option value="1">1</option>-->
-                    <!--                    <option value="2">2</option>-->
-                    <!--                    <option value="3">3</option>-->
-                </select>
-                <p style="margin-top: 10px; margin-bottom: 2px">이미지 URL을 입력해주세요🐤</p>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon3">이미지 url</span>
-                    </div>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-            </div>
-            <p style="margin-top: 0px; margin-bottom: 2px">산책한 날짜를 입력해주세요🌳</p>
-            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            <!--            <div id="search">-->
-            <!--                <div class="search_box">-->
-            <!--                    <input type="text" placeholder="검색어를 입력해주세요.">-->
-            <!--                </div>-->
-            <!--                <div class="button">-->
-            <!--                    <button>검색</button>-->
-            <!--                </div>-->
-
-            <!--            </div>-->
-
-            <p style="margin-top: 10px; margin-bottom: 2px">공원에서 만난 새들을 입력해주세요🐥</p>
-            <div class="box-container">
-                <div id="bird_box">
-                    <select multiple class="form-control" id="exampleFormControlSelect2" onchange="writeBirds()">
-                        <!--                        <option>1</option>-->
-                        <!--                        <option>2</option>-->
-
-                    </select>
-                </div>
-                <div id="box3">
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1" style="font-size: 15px">여기에 입력</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div id="box4">
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1" style="margin-top: 10px">오늘의 마음을 입력해주세요🌼</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-                </div>
-
-            </div>
-             <div id="buttons">
-                    <div class="wrap">
-                        <button class="button" onclick="savePost()">기록하기</button>
-                    </div>
-                </div>
+<body>
+    <div class="posting_box">
+        <div id="title">
+            <a href="/">
+                <h1>Birdy Seoul</h1>
+            </a>
         </div>
+        <div id="box1">
+            <p style="margin-top: 10px; margin-bottom: 2px">지역과 공원을 선택해주세요🐣</p>
+            <select class="custom-select" id="select_gu_name" onchange="selectPark()">
+                <option selected value="">-- 지역을 선택하세요 --</option>
+                <!--                    <option value="1">1</option>-->
+                <!--                    <option value="2">2</option>-->
+                <!--                    <option value="3">3</option>-->
+            </select>
 
-    </body>
+
+            <select class="custom-select" id="select_park_name">
+                <option selected value="">-- 공원을 선택하세요 --</option>
+                <!--                    <option value="1">1</option>-->
+                <!--                    <option value="2">2</option>-->
+                <!--                    <option value="3">3</option>-->
+            </select>
+            <p style="margin-top: 10px; margin-bottom: 2px">이미지 URL을 입력해주세요🐤</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">이미지 url</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+        </div>
+        <p style="margin-top: 0px; margin-bottom: 2px; height:24px">산책한 날짜를 입력해주세요🌳</p>
+        <input type="date" class="form-control" id="exampleFormControlInput1">
+        <!--            <div id="search">-->
+        <!--                <div class="search_box">-->
+        <!--                    <input type="text" placeholder="검색어를 입력해주세요.">-->
+        <!--                </div>-->
+        <!--                <div class="button">-->
+        <!--                    <button>검색</button>-->
+        <!--                </div>-->
+
+        <!--            </div>-->
+
+        <p style="margin-top: 10px; margin-bottom: 2px">공원에서 만난 새들을 입력해주세요🐥</p>
+        <div id="bird-container">
+            <div class="flex" id="bird_box">
+                <!--<select multiple class="form-control" id="exampleFormControlSelect2" onchange="writeBirds()">
+                </select>-->
+                <select size="10" id="birdsSelect" onchange="writeBirds()">
+
+                </select>
+
+            </div>
+            <div class="flex" id=" box3">
+                <div>
+                    <p style="font-size: 12px">여기에 직접입력 또는 왼쪽을 클릭!</p>
+                    <textarea id="text-area" rows="6"></textarea>
+                    <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>-->
+                </div>
+            </div>
+        </div>
+        <div id="box4">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1" style="margin-top: 10px">오늘의 마음을 입력해주세요🌼</label>
+                <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+            </div>
+
+        </div>
+        <div id="buttons">
+            <div class="wrap">
+                <button class="button" onclick="savePost()">기록하기</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>

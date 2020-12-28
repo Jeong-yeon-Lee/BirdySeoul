@@ -1,137 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>show_all_birds</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
-              rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
-              rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
-              rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 
-        <script>
-            $(document).ready(function () {
-                makeOptions();
-                showPosts();
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show_all_birds</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+
+    <script>
+        $(document).ready(function () {
+            makeOptions();
+            showPosts();
 
 
+        });
+
+        function makeOptions() {
+            $.ajax({
+                type: "GET",
+                url: "/api/option",
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let gus = response['gus'];
+                        let guArr = []
+                        for (let i = 0; i < gus.length; i++) {
+                            let guName = gus[i]['gu'];
+                            guArr.push(guName);
+
+                        }
+
+                        let guExist = new Array();
+                        let check = true;
+                        for (let i = 0; i < guArr.length; i++) {
+                            check = true;
+                            for (value in guExist) {
+                                if (guExist[value] == guArr[i]) {
+                                    check = false;
+                                }
+                            }
+                            if (check) {
+                                guExist.push(guArr[i]);
+                            }
+
+                        }
+                        // console.log(guExist);
+                        for (let i = 0; i < guExist.length; i++) {
+                            let guList = guExist[i];
+                            let tempHtml = `<option>${guList}</option>`
+                            $('#select_gu_name').append(tempHtml);
+                        }
+
+                        for (let i = 0; i < gus.length; i++) {
+                            let park = gus[i]['name'];
+                            let tempHtml = `<option>${park}</option>`
+                            $('#select_park_name').append(tempHtml);
+
+                        }
+
+
+                    }
+                }
+
+            })
+
+        }
+
+
+        function selectPark() {
+            $('#select_park_name').empty();
+            let selectGu = $('#select_gu_name').val();
+            $.ajax({
+                type: "GET",
+                url: `/api/park_list?gu_give=${selectGu}`,
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let gus = response['gus'];
+                        console.log('체인지 함수 실행!!')
+                        for (let i = 0; i < gus.length; i++) {
+                            let parks = gus[i]['name'];
+                            let tempHtml2 = `<option>${parks}</option>`
+                            $('#select_park_name').append(tempHtml2);
+
+                        }
+
+                    }
+                }
             });
 
-            function makeOptions() {
-                $.ajax({
-                    type: "GET",
-                    url: "/api/option",
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let gus = response['gus'];
-                            let guArr = []
-                            for (let i = 0; i < gus.length; i++) {
-                                let guName = gus[i]['gu'];
-                                guArr.push(guName);
 
-                            }
+        }
 
-                            let guExist = new Array();
-                            let check = true;
-                            for (let i = 0; i < guArr.length; i++) {
-                                check = true;
-                                for (value in guExist) {
-                                    if (guExist[value] == guArr[i]) {
-                                        check = false;
-                                    }
-                                }
-                                if (check) {
-                                    guExist.push(guArr[i]);
-                                }
-
-                            }
-                            // console.log(guExist);
-                            for (let i = 0; i < guExist.length; i++) {
-                                let guList = guExist[i];
-                                let tempHtml = `<option>${guList}</option>`
-                                $('#select_gu_name').append(tempHtml);
-                            }
-
-                            for (let i = 0; i < gus.length; i++) {
-                                let park = gus[i]['name'];
-                                let tempHtml = `<option>${park}</option>`
-                                $('#select_park_name').append(tempHtml);
-
-                            }
-
-
-                        }
-                    }
-
-                })
-
-            }
-
-
-            function selectPark() {
-                $('#select_park_name').empty();
-                let selectGu = $('#select_gu_name').val();
-                $.ajax({
-                    type: "GET",
-                    url: `/api/park_list?gu_give=${selectGu}`,
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let gus = response['gus'];
-                            console.log('체인지 함수 실행!!')
-                            for (let i = 0; i < gus.length; i++) {
-                                let parks = gus[i]['name'];
-                                let tempHtml2 = `<option>${parks}</option>`
-                                $('#select_park_name').append(tempHtml2);
-
-                            }
-
-                        }
-                    }
-                });
-
-
-            }
-
-            function showPosts() {
-                $('#cards-box').empty();
-                $.ajax({
-                    type: "GET",
-                    url: "/api/all_post",
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let posts = response["posts"];
-                            for (let i = 0; i < posts.length; i++) {
-                                let post = posts[i];
-                                let url = post['url'];
-                                let bird = post['bird'];
-                                let gu = post['gu'];
-                                let park = post['park'];
-                                let review = post['review'];
-                                let date = post['date'];
-                                // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
-                                // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
-                                let tempHtml = `
+        function showPosts() {
+            $('#cards-box').empty();
+            $.ajax({
+                type: "GET",
+                url: "/api/all_post",
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let posts = response["posts"];
+                        for (let i = 0; i < posts.length; i++) {
+                            let post = posts[i];
+                            let url = post['url'];
+                            let bird = post['bird'];
+                            let gu = post['gu'];
+                            let park = post['park'];
+                            let review = post['review'];
+                            let date = post['date'];
+                            // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
+                            // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
+                            let tempHtml = `
                                <div class="card">
                         <img class="card-img-top" src="${url}" alt="Card image cap">
                         <div class="card-body">
@@ -141,36 +145,36 @@
                                 <p class="card-text"><small class="text-muted">${bird}</small></p>
                                 <p class="card-text" id="date"><small>${date}</small></p>
                         </div>`
-                                $('#cards-box').append(tempHtml);
-                            }
+                            $('#cards-box').append(tempHtml);
                         }
-
-
                     }
-                })
-            }
 
-            function showSelectedPosts() {
-                $('#cards-box').empty();
-                let selectedParkName = $('#select_park_name').val();
-                $.ajax({
-                    type: "GET",
-                    url: `/api/selected_park_post?park_give=${selectedParkName}`,
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let posts = response["posts"];
-                            for (let i = 0; i < posts.length; i++) {
-                                let post = posts[i];
-                                let url = post['url'];
-                                let bird = post['bird'];
-                                let gu = post['gu'];
-                                let park = post['park'];
-                                let review = post['review'];
-                                let date = post['date'];
-                                // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
-                                // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
-                                let tempHtml = `
+
+                }
+            })
+        }
+
+        function showSelectedPosts() {
+            $('#cards-box').empty();
+            let selectedParkName = $('#select_park_name').val();
+            $.ajax({
+                type: "GET",
+                url: `/api/selected_park_post?park_give=${selectedParkName}`,
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let posts = response["posts"];
+                        for (let i = 0; i < posts.length; i++) {
+                            let post = posts[i];
+                            let url = post['url'];
+                            let bird = post['bird'];
+                            let gu = post['gu'];
+                            let park = post['park'];
+                            let review = post['review'];
+                            let date = post['date'];
+                            // ////오잉 이미지 링크 변수로 하면 되네??????원래는 static아니면 안되었는데...
+                            // let img='https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20120520_283%2Fwjdxo0616_1337511121362X5PLu_JPEG%2F-956579376.jpeg&type=sc960_832'
+                            let tempHtml = `
                                <div class="card">
                         <img class="card-img-top" src="${url}" alt="Card image cap">
                         <div class="card-body">
@@ -180,146 +184,162 @@
                                 <p class="card-text"><small class="text-muted">${bird}</small></p>
                                 <p class="card-text" id="date"><small>${date}</small></p>
                         </div>`
-                                $('#cards-box').append(tempHtml);
-                            }
+                            $('#cards-box').append(tempHtml);
                         }
-
-
                     }
-                })
 
 
-            }
+                }
+            })
 
 
-        </script>
-
-        <style>
-            body {
-                padding: 20px;
-            }
-
-            #title {
-                font-family: 'Russo One', sans-serif;
-                width: 100%;
-                height: 300px;
-                border: 1px solid white;
-                background-image: url("/static/pica.jpg");
-                background-size: 300px 200px;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            h1 {
-                font-size: 100px;
-                color: springgreen;
-                opacity: 0.6;
-                text-align: center;
+        }
 
 
-                margin-top: 82px;
+    </script>
+
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        #title {
+            font-family: 'Russo One', sans-serif;
+            width: 100%;
+            height: 300px;
+            border: 1px solid white;
+            background-image: url("/static/pica.jpg");
+            background-size: 300px 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 100px;
+            color: springgreen;
+            opacity: 0.6;
+            text-align: center;
 
 
-            }
+            margin-top: 82px;
 
 
+        }
+
+
+        #select {
+            border: 3px solid #6de7a9;
+            border-radius: 15px;
+            padding: 10px;
+            font-family: 'Nanum Gothic', sans-serif;
+            width: 50%;
+            height: 50%;
+            margin: 20px auto;
+        }
+
+        #cards {
+            border: 3px solid #6de7a9;
+            background-color: #e4f3e9;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /*버튼 퍼온거*/
+        .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            width: 150px;
+            height: 30px;
+            /*font-family: 'Nanum Myeongjo', serif;*/
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #525eaa;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: springgreen;
+            opacity: 0.6;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        @media (max-width:576px) {
             #select {
-                border: 3px solid #6de7a9;
-                border-radius: 15px;
-                padding: 10px;
-                font-family: 'Nanum Gothic', sans-serif;
-                margin: auto;
-                width: 50%;
-                height: 50%;
-            }
-
-            #cards {
-                border: 3px solid #6de7a9;
-                background-color: #e4f3e9;
-                border-radius: 15px;
-                padding: 15px;
+                width: 65%;
+                font-size: 12px;
                 margin-top: 20px;
             }
 
-            /*버튼 퍼온거*/
-            .wrap {
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
             .button {
-                width: 150px;
-                height: 30px;
-                /*font-family: 'Nanum Myeongjo', serif;*/
-                font-family: 'Nanum Gothic', sans-serif;
-                font-size: 18px;
-                text-transform: uppercase;
-                letter-spacing: 2.5px;
-                font-weight: 500;
-                color: #525eaa;
-                background-color: #fff;
-                border: none;
-                border-radius: 45px;
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease 0s;
-                cursor: pointer;
-                outline: none;
-                margin: 10px;
+                font-size: 12px;
             }
 
-            .button:hover {
-                background-color: springgreen;
-                opacity: 0.6;
-                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-                color: #fff;
-                transform: translateY(-7px);
-            }
+        }
+    </style>
+</head>
 
-        </style>
-    </head>
-    <body>
-        <div id="title">
-            <a href="/"><h1>Birdy Seoul</h1></a>
-        </div>
-        <div id="select">
-            <select class="custom-select" id="select_gu_name" onchange="selectPark()">
-                <option selected value=""> -- 지역을 선택하세요🐥 --</option>
-                <!--                    <option value="1">1</option>-->
-                <!--                    <option value="2">2</option>-->
-                <!--                    <option value="3">3</option>-->
-            </select>
+<body>
+    <div id="title">
+        <a href="/">
+            <h1>Birdy Seoul</h1>
+        </a>
+    </div>
+    <div id="select">
+        <select class="custom-select" id="select_gu_name" onchange="selectPark()">
+            <option selected value=""> -- 지역을 선택하세요🐥 --</option>
+            <!--                    <option value="1">1</option>-->
+            <!--                    <option value="2">2</option>-->
+            <!--                    <option value="3">3</option>-->
+        </select>
 
 
-            <select class="custom-select" id="select_park_name">
-                <option selected value=""> -- 공원을 선택하세요🐥 --</option>
-                <!--                    <option value="1">1</option>-->
-                <!--                    <option value="2">2</option>-->
-                <!--                    <option value="3">3</option>-->
-            </select>
-            <div id="buttons">
-                <div class="wrap">
-                    <button class="button" onclick="showSelectedPosts()">조회하기</button>
-                    <button class="button" onclick="location.href='posting'">기록하기</button>
-                </div>
+        <select class="custom-select" id="select_park_name">
+            <option selected value=""> -- 공원을 선택하세요🐥 --</option>
+            <!--                    <option value="1">1</option>-->
+            <!--                    <option value="2">2</option>-->
+            <!--                    <option value="3">3</option>-->
+        </select>
+        <div id="buttons">
+            <div class="wrap">
+                <button class="button" onclick="showSelectedPosts()">조회하기</button>
+                <button class="button" onclick="location.href='posting'">기록하기</button>
             </div>
         </div>
+    </div>
 
-        <div id="cards">
-            <div id="cards-box" class="card-columns">
-                <!--                <div class="card">-->
-                <!--                    <img class="card-img-top"-->
-                <!--                         src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"-->
-                <!--                         alt="Card image cap">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>-->
-                <!--                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>-->
-                <!--                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>-->
-                <!--                    </div>-->
-                <!--                </div>-->
+    <div id="cards">
+        <div id="cards-box" class="card-columns">
+            <!--                <div class="card">-->
+            <!--                    <img class="card-img-top"-->
+            <!--                         src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"-->
+            <!--                         alt="Card image cap">-->
+            <!--                    <div class="card-body">-->
+            <!--                        <a href="#" class="card-title">여기 기사 제목이 들어가죠</a>-->
+            <!--                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>-->
+            <!--                        <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
 
-            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

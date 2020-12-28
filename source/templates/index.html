@@ -1,219 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>home</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-              integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-              crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-                crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-                integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-                crossorigin="anonymous"></script>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
-              rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BirdySeoul" />
+    <meta property="og:description" content="새들과 함께 서울산책을" />
+    <meta property="og:image" content="{{ url_for('static', filename='pica.jpg') }}" />
+    <title>home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
 
-        <script>
-            $(document).ready(function () {
-                showWeather();
-            });
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-            function showWeather() {
-                $('#weather').empty();
-                $.ajax({
-                    type: "GET",
-                    url: "/api/weather",
-                    data: {},
-                    success: function (response) {
-                        let today_now = response['today_now'];
-                        let now_temp = today_now[0];
-                        let now_temp_kor = today_now[1];
-                        let now_rain = today_now[2];
-                        let high = today_now[3];
-                        let low = today_now[4];
-                        let mise = today_now[5];
-                        let tempHtml =
-                            `<h2 id="info1">${now_temp}℃</h2>
-                                <div id="info2">
-                                    <p style="margin-bottom: 1px; font-size:17px">${now_temp_kor}</p>
-                                    <div id="lowHigh" style="margin-bottom: 1px;font-size:15px;">
-                                        <span style="color:#3333dc;">${low}</span>
-                                        <span>/</span>
-                                        <span style="color:#c94343;">${high}</span>
-                                    </div>
-                                    <p style="margin-bottom: 1px;font-size:15px">미세먼지: ${mise}</p>
-                                    <small>${now_rain}</small>
-                                </div>`
-                        $('#weather').append(tempHtml);
-                    }
+    <script>
+        $(document).ready(function () {
+            showWeather();
+        });
 
-                })
+        function showWeather() {
+            $('#weather').empty();
+            $.ajax({
+                type: "GET",
+                url: "http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=62164d5fddb2823f0ed233442aac2472",
+                data: {},
+                success: function (response) {
+                    let weather = response['weather'];
+                    let desc = weather[0]['main'];
+                    let temp1 = response['main']['temp'] - 273.15
+                    let temp = Math.round(temp1)
+                    let tempHtml = `<h2 id="info1">${temp}℃</h2>
+                    <div id="info2">
+                    <p style="margin-bottom: 1px; font-size:18px">${desc}</p>
+                    </div>`
+                    console.log(desc, temp);
+                    $('#weather').append(tempHtml);
+
+                }
+            })
+        }
+
+
+
+
+
+
+            // function showWeather() {
+            //     $('#weather').empty();
+            //     $.ajax({
+            //         type: "GET",
+            //         url: "/api/weather",
+            //         data: {},
+            //         success: function (response) {
+            //             let today_now = response['today_now'];
+            //             let now_temp = today_now[0];
+            //             let now_temp_kor = today_now[1];
+            //             let now_rain = today_now[2];
+            //             let high = today_now[3];
+            //             let low = today_now[4];
+            //             let mise = today_now[5];
+            //             let tempHtml =
+            //                 `<h2 id="info1">${now_temp}℃</h2>
+            //                     <div id="info2">
+            //                         <p style="margin-bottom: 1px; font-size:17px">${now_temp_kor}</p>
+            //                         <div id="lowHigh" style="margin-bottom: 1px;font-size:15px;">
+            //                             <span style="color:#3333dc;">${low}</span>
+            //                             <span>/</span>
+            //                             <span style="color:#c94343;">${high}</span>
+            //                         </div>
+            //                         <p style="margin-bottom: 1px;font-size:15px">미세먼지: ${mise}</p>
+            //                         <small>${now_rain}</small>
+            //                     </div>`
+            //             $('#weather').append(tempHtml);
+            //         }
+
+            //     })
+
+            // }
+
+
+    </script>
+
+
+    <style>
+        #title {
+            font-family: 'Russo One', sans-serif;
+            width: 100%;
+            height: 500px;
+            border: 1px solid white;
+            background-image: url("/static/pica.jpg");
+            background-size: 500px 350px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 200px;
+            color: springgreen;
+            opacity: 0.6;
+            text-align: center;
+            margin-top: 147px;
+
+
+        }
+
+        #weather {
+            font-family: 'Nanum Gothic', sans-serif;
+            display: block;
+            text-align: center;
+            border-radius: 15px;
+            background-color: springgreen;
+            opacity: 0.6;
+            width: 200px;
+            height: 120px;
+        }
+
+        #buttons {
+            display: flex;
+            width: 628px;
+            padding-left: 23px;
+            margin-left: 30px;
+
+
+            /*border: 1px solid black;*/
+            /*margin-left: 100px;*/
+
+        }
+
+
+        .container {
+            display: flex;
+            padding: 0px;
+            margin: auto;
+
+        }
+
+        /*퍼온 버튼*/
+        .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            width: 200px;
+            height: 45px;
+            /*font-family: 'Nanum Myeongjo', serif;*/
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #525eaa;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+            margin: 20px;
+        }
+
+        .button:hover {
+            background-color: springgreen;
+            opacity: 0.6;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        h2 {
+            font-size: 50px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+
+        #info2 {
+            margin-top: 10px;
+        }
+
+        @media (max-width:545px) {
+            h1 {
+                font-size: 90px;
+                color: springgreen;
+                opacity: 0.6;
+                text-align: center;
+                margin-top: 147px;
 
             }
 
-
-        </script>
-
-
-        <style>
             #title {
                 font-family: 'Russo One', sans-serif;
                 width: 100%;
                 height: 500px;
                 border: 1px solid white;
                 background-image: url("/static/pica.jpg");
-                background-size: 500px 350px;
-                background-position: center;
+                background-size: 500px 300px;
+                background-position: 20% 50%;
                 background-repeat: no-repeat;
-            }
-
-            h1 {
-                font-size: 200px;
-                color: springgreen;
-                opacity: 0.6;
-                text-align: center;
-                margin-top: 147px;
-
-
             }
 
             #weather {
                 font-family: 'Nanum Gothic', sans-serif;
-                display: flex;
-                margin-left: 100px;
-                /*margin-right: 100px;*/
+                display: block;
+                margin: auto;
                 text-align: center;
                 border-radius: 15px;
                 background-color: springgreen;
                 opacity: 0.6;
-                width: 300px;
-                height: 120px;
+                width: 150px;
+                height: 90px;
             }
 
-            #buttons {
-                display: flex;
-                width: 628px;
-                padding-left: 23px;
-                margin-left: 30px;
-
-
-                /*border: 1px solid black;*/
-                /*margin-left: 100px;*/
-
+            h2 {
+                font-size: 40px;
+                margin-top: 13px;
+                margin-bottom: 0px;
             }
-
 
             .container {
-                display: flex;
+                display: block;
                 margin: 0px;
                 padding: 0px;
 
             }
 
-            /*퍼온 버튼*/
             .wrap {
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                display: block;
+                width: 200px;
+                height: 70px;
+            }
+
+            #buttons {
+                display: block;
+                width: 200px;
+                height: 600px;
+                padding-left: 0px;
+                margin: 15px auto;
+
+
+
+
             }
 
             .button {
-                width: 200px;
-                height: 45px;
-                /*font-family: 'Nanum Myeongjo', serif;*/
-                font-family: 'Nanum Gothic', sans-serif;
-                font-size: 20px;
-                text-transform: uppercase;
-                letter-spacing: 2.5px;
-                font-weight: 500;
-                color: #525eaa;
-                background-color: #fff;
-                border: none;
-                border-radius: 45px;
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease 0s;
-                cursor: pointer;
-                outline: none;
-                margin: 30px;
+                margin: 0;
+                font-size: 15px;
             }
 
-            .button:hover {
+
+        }
+
+        @media all and (min-width:545px) and (max-width:768px) {
+            h1 {
+                font-size: 90px;
+                color: springgreen;
+                opacity: 0.6;
+                text-align: center;
+                margin-top: 147px;
+
+            }
+
+            #title {
+                font-family: 'Russo One', sans-serif;
+                width: 100%;
+                height: 400px;
+                border: 1px solid white;
+                background-image: url("/static/pica.jpg");
+                background-size: 250px 170px;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+
+            #weather {
+                font-family: 'Nanum Gothic', sans-serif;
+                display: block;
+                margin: auto;
+                text-align: center;
+                border-radius: 15px;
                 background-color: springgreen;
                 opacity: 0.6;
-                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-                color: #fff;
-                transform: translateY(-7px);
+                width: 150px;
+                height: 90px;
             }
 
             h2 {
-                display: flex;
-                margin-right: 15px;
-                margin-left: 15px;
-                margin-top: 40px;
+                font-size: 40px;
+                margin-top: 13px;
+                margin-bottom: 0px;
+            }
+
+            .container {
+                display: block;
+                margin: auto;
+                padding: 0px;
+
+            }
+
+            .wrap {
+                display: block;
+                width: 200px;
+                height: 70px;
+            }
+
+            #buttons {
+                display: block;
+                width: 200px;
+                height: 600px;
+                padding-left: 0px;
+                margin: 15px auto;
+            }
+
+            .button {
+                margin: 0;
+                font-size: 15px;
+            }
+
+        }
+
+        @media (min-width:769px) and (max-width:1024px) {
+            h1 {
+                font-size: 130px;
+                color: springgreen;
+                opacity: 0.6;
+                text-align: center;
+                margin-top: 147px;
+
+            }
+
+            #weather {
+                font-family: 'Nanum Gothic', sans-serif;
+                display: block;
+                text-align: center;
+                border-radius: 15px;
+                background-color: springgreen;
+                opacity: 0.6;
+                width: 200px;
+                height: 90px;
+            }
+
+            h2 {
+                font-size: 30px;
+                margin-top: 13px;
+                margin-bottom: 0px;
+            }
+
+            .wrap {
+                width: 300px;
+                height: 70px;
+            }
+
+            #buttons {
+                margin-left: 10px;
+            }
+
+
+            .button {
+                margin: 10px;
+                font-size: 18px;
+            }
+
+        }
+
+        @media (min-width:1025px) and (max-width:1172px) {
+            h1 {
+                font-size: 160px;
+                color: springgreen;
+                opacity: 0.6;
+                text-align: center;
+                margin-top: 147px;
 
             }
 
 
-            #info2 {
+        }
+    </style>
+</head>
 
-                margin-top: 10px
+<body>
+    <div id="title">
+        <h1>Birdy Seoul</h1>
+    </div>
 
-            }
+    <div class="container">
+        <div id="weather">
 
-        </style>
-    </head>
-    <body>
-        <div id="title">
-            <h1>Birdy Seoul</h1>
         </div>
-
-        <div class="container">
-            <div id="weather">
-                <!--                <h2 id="info1">9℃</h2>-->
-                <!--                <div id="info2">-->
-                <!--                    <p style="margin-bottom: 1px; font-size:18px">맑음, 어제보다 추워여</p>-->
-                <!--                    <div id="lowHigh" style="margin-bottom: 1px;font-size:15px;">-->
-                <!--                        <span style="color:#3333dc;">최저</span>-->
-                <!--                        <span>/</span>-->
-                <!--                        <span style="color:#c94343;">최고</span>-->
-                <!--                    </div>-->
-                <!--                    <p style="margin-bottom: 1px;font-size:15px">미세먼지: 미세먼지 좋음</p>-->
-                <!--                    <small>시간당 강수량:</small>-->
-                <!--                </div>-->
+        <div id="buttons">
+            <div class="wrap">
+                <button class="button" onclick="location.href='gu'">새들과 산책하기</button>
             </div>
-            <div id="buttons">
-                <div class="wrap">
-                    <button class="button" onclick="location.href='gu'">새들과 산책하기</button>
-                </div>
 
 
-                <div class="wrap">
-                    <button class="button" onclick="location.href='posting'">기록하기</button>
-                </div>
-
-
-                <div class="wrap">
-                    <button class="button" onclick="location.href='all_post'">기록장 모아보기</button>
-                </div>
-
+            <div class="wrap">
+                <button class="button" onclick="location.href='posting'">기록하기</button>
             </div>
+
+
+            <div class="wrap">
+                <button class="button" onclick="location.href='all_post'">기록장 모아보기</button>
+            </div>
+
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

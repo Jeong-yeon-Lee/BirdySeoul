@@ -1,297 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>select_gu</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-              integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-              crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-                crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-                integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-                crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
-              rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
-              rel="stylesheet">
-         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select_gu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Fredoka+One&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Russo+One&family=Sunflower:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 
 
-        <!--        네이버 지도-->
-        <script type="text/javascript"
-                src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
+    <!--        네이버 지도-->
+    <script type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fvp7junofj"></script>
 
 
-        <script>
-            $(document).ready(function () {
-                // $("#parkList").html("");
-                showGuParks();
-                nMap(37.560101, 126.995831);
+    <script>
+        $(document).ready(function () {
+            // $("#parkList").html("");
+            showGuParks();
+            nMap(37.560101, 126.995831);
+            $('img[usemap]').rwdImageMaps();
 
+        });
+
+        function gu_xy(guName) {
+            // let guName = $('#exampleFormControlSelect1').val();
+            $.ajax({
+                type: "GET",
+                url: `/api/gu_xy?gu_give=${guName}`,
+                data: {},
+                success: function (response) {
+                    // console.log(response)
+                    let gu_xy = response['xy'];
+                    for (let i = 0; i < gu_xy.length; i++) {
+                        let x = gu_xy[i]['x'];
+                        let y = gu_xy[i]['y'];
+                        console.log(x, y);
+                        nMap(x, y);
+                    }
+
+                }
+            })
+        }
+
+
+        function nMap(x, y) {
+            var map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(x, y),
+                zoom: 13,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: naver.maps.MapTypeControlStyle.DROPDOWN
+                }
             });
 
-            function gu_xy() {
-                let guName = $('#exampleFormControlSelect1').val();
-                $.ajax({
-                    type: "GET",
-                    url: `/api/gu_xy?gu_give=${guName}`,
-                    data: {},
-                    success: function (response) {
-                        // console.log(response)
-                        let gu_xy = response['xy'];
-                        for (let i = 0; i < gu_xy.length; i++) {
-                            let x = gu_xy[i]['x'];
-                            let y = gu_xy[i]['y'];
-                            console.log(x, y);
-                            nMap(x, y);
-                        }
+            var openStreetMapType = new naver.maps.ImageMapType({
+                name: 'OSM',
+                minZoom: 0,
+                maxZoom: 19,
+                tileSize: new naver.maps.Size(256, 256),
+                projection: naver.maps.EPSG3857,
+                repeatX: true,
+                tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                provider: [{
+                    title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
+                    link: "http://www.openstreetmap.org/copyright"
+                }]
+            });
 
-                    }
-                })
-            }
+            map.mapTypes.set('osm', openStreetMapType);
+            map.setMapTypeId('osm');
 
-
-            function nMap(x, y) {
-                var map = new naver.maps.Map('map', {
-                    center: new naver.maps.LatLng(x, y),
-                    zoom: 13,
-                    mapTypeControl: true,
-                    mapTypeControlOptions: {
-                        style: naver.maps.MapTypeControlStyle.DROPDOWN
-                    }
-                });
-
-                var openStreetMapType = new naver.maps.ImageMapType({
-                    name: 'OSM',
-                    minZoom: 0,
-                    maxZoom: 19,
-                    tileSize: new naver.maps.Size(256, 256),
-                    projection: naver.maps.EPSG3857,
-                    repeatX: true,
-                    tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    provider: [{
-                        title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
-                        link: "http://www.openstreetmap.org/copyright"
-                    }]
-                });
-
-                map.mapTypes.set('osm', openStreetMapType);
-                map.setMapTypeId('osm');
-
-            }
+        }
 
 
-            function showGuParks() {
-                $('#parkList').empty();
-                let guName = $('#exampleFormControlSelect1').val();
-                // console.log(guName);
-                $.ajax({
-                    type: "GET",
-                    url: `/api/gu?gu_give=${guName}`,
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let parks = response['parks']
-                            // console.log(parks);
-                            for (let i = 0; i < parks.length; i++) {
-                                let parkName = parks[i]['name'];
-                                // console.log(parkName)
-                                let tempHtml = `<ul><a href="park?park_give=${parkName}" id="tempList" ><li>${parkName}</li></a></ul>`
-                                $('#parkList').append(tempHtml);
-
-                            }
+        function showGuParks(guName) {
+            $('#parkList').empty();
+            // let guName = $('#exampleFormControlSelect1').val();
+            // console.log(guName);
+            $.ajax({
+                type: "GET",
+                url: `/api/gu?gu_give=${guName}`,
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let parks = response['parks']
+                        // console.log(parks);
+                        for (let i = 0; i < parks.length; i++) {
+                            let parkName = parks[i]['name'];
+                            // console.log(parkName)
+                            let tempHtml = `<ul><a href="park?park_give=${parkName}" id="tempList" ><li>${parkName}</li></a></ul>`
+                            $('#parkList').append(tempHtml);
 
                         }
+
                     }
-                })
+                }
+            })
 
 
-                $.ajax({
-                    type: "GET",
-                    url: '/api/gus_list',
-                    data: {},
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            let gus = response['gus'];
-                            let guArr = []
-                            for (let i = 0; i < gus.length; i++) {
-                                let guName = gus[i]['gu'];
-                                guArr.push(guName);
-                            }
+            $.ajax({
+                type: "GET",
+                url: '/api/gus_list',
+                data: {},
+                success: function (response) {
+                    if (response["result"] == "success") {
+                        let gus = response['gus'];
+                        let guArr = []
+                        for (let i = 0; i < gus.length; i++) {
+                            let guName = gus[i]['gu'];
+                            guArr.push(guName);
+                        }
 
-                            let guExist = new Array();
-                            let check = true;
-                            for (let i = 0; i < guArr.length; i++) {
-                                check = true;
-                                for (value in guExist) {
-                                    if (guExist[value] === guArr[i]) {
-                                        check = false;
-                                    }
-                                }
-                                if (check) {
-                                    guExist.push(guArr[i]);
+                        let guExist = new Array();
+                        let check = true;
+                        for (let i = 0; i < guArr.length; i++) {
+                            check = true;
+                            for (value in guExist) {
+                                if (guExist[value] === guArr[i]) {
+                                    check = false;
                                 }
                             }
-                            for (let i = 0; i < guExist.length; i++) {
-                                let guList = guExist[i];
-                                // console.log(guList)
-                                let tempHtml = `<option>${guList}</option>`
-                                $('#exampleFormControlSelect1').append(tempHtml);
+                            if (check) {
+                                guExist.push(guArr[i]);
                             }
-
+                        }
+                        for (let i = 0; i < guExist.length; i++) {
+                            let guList = guExist[i];
+                            // console.log(guList)
+                            let tempHtml = `<option>${guList}</option>`
+                            $('#exampleFormControlSelect1').append(tempHtml);
                         }
 
                     }
 
-                })
+                }
+
+            })
 
 
-            }
-        </script>
-        <style>
-            body{
-                padding: 20px;
-            }
+        }
 
+        function changeImg(n) {
+            $('#img').attr('src', '/static/seoul_' + n + '.png');
+        }
+        function reChange() {
+            $('#img').attr('src', '/static/seoul.png');
+        }
+
+        // 반응형 지도 코드
+        ; (function ($) {
+            $.fn.rwdImageMaps = function () {
+                var $img = this;
+
+                var rwdImageMap = function () {
+                    $img.each(function () {
+                        if (typeof ($(this).attr('usemap')) == 'undefined')
+                            return;
+
+                        var that = this,
+                            $that = $(that);
+
+                        // Since WebKit doesn't know the height until after the image has loaded, perform everything in an onload copy
+                        $('<img />').on('load', function () {
+                            var attrW = 'width',
+                                attrH = 'height',
+                                w = $that.attr(attrW),
+                                h = $that.attr(attrH);
+
+                            if (!w || !h) {
+                                var temp = new Image();
+                                temp.src = $that.attr('src');
+                                if (!w)
+                                    w = temp.width;
+                                if (!h)
+                                    h = temp.height;
+                            }
+
+                            var wPercent = $that.width() / 100,
+                                hPercent = $that.height() / 100,
+                                map = $that.attr('usemap').replace('#', ''),
+                                c = 'coords';
+
+                            $('map[name="' + map + '"]').find('area').each(function () {
+                                var $this = $(this);
+                                if (!$this.data(c))
+                                    $this.data(c, $this.attr(c));
+
+                                var coords = $this.data(c).split(','),
+                                    coordsPercent = new Array(coords.length);
+
+                                for (var i = 0; i < coordsPercent.length; ++i) {
+                                    if (i % 2 === 0)
+                                        coordsPercent[i] = parseInt(((coords[i] / w) * 100) * wPercent);
+                                    else
+                                        coordsPercent[i] = parseInt(((coords[i] / h) * 100) * hPercent);
+                                }
+                                $this.attr(c, coordsPercent.toString());
+                            });
+                        }).attr('src', $that.attr('src'));
+                    });
+                };
+                $(window).resize(rwdImageMap).trigger('resize');
+
+                return this;
+            };
+        })(jQuery);
+
+
+
+
+
+    </script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .wrapper {
+            border: 1px solid white;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+            margin: auto;
+        }
+
+        .one {
+            border: 1px solid white;
+            grid-column: 1 / 4;
+            grid-row: 1;
+            padding-top: 20px;
+            background-image: url("/static/pica.jpg");
+            background-size: 180px 130px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #map {
+            border: 6px solid #6de7a9;
+            border-radius: 15px;
+
+            width: 100%;
+            height: 100%;
+            grid-column: 3 / 4;
+            grid-row: 2 / 5;
+            /*background-image: url("../static/temp_gu_map.jpg");*/
+            /*background-size: cover;*/
+            /*background-repeat: no-repeat;*/
+        }
+
+        .three {
+            border: 3px solid #6de7a9;
+            background-color: #e4f3e9;
+            border-radius: 15px;
+            grid-column: 1/3;
+            grid-row: 2 / 8;
+            padding: 10px;
+
+
+        }
+
+
+        .parkList {
+            border: 3px solid #6de7a9;
+            border-radius: 15px;
+            grid-column: 3;
+            grid-row: 5/8;
+            text-align: center;
+            padding: 40px;
+
+        }
+
+        h1 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 80px;
+            color: springgreen;
+            opacity: 0.6;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+
+        a {
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: none !important
+        }
+
+        #tempList {
+            color: #525eaa;
+            text-decoration: none;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        #img {
+            max-width: 100%;
+            max-height: 100%;
+
+            /* width: 898px;
+            height: 696px; */
+        }
+
+
+        @media (max-width: 880px) {
             .wrapper {
-                border: 1px solid white;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 10px;
-                grid-auto-rows: minmax(100px, auto);
+                grid-template-columns: repeat(2, 1fr);
+
             }
 
             .one {
-                border: 1px solid white;
-                grid-column: 1 / 4;
+                grid-column: 1/3;
                 grid-row: 1;
-                padding-top: 20px;
-                background-image: url("/static/pica.jpg");
-                background-size: 180px 130px;
-                background-position: center;
-                background-repeat: no-repeat;
+
+            }
+
+
+
+            .three {
+                grid-column: 1/3;
+                grid-row: 2 / 4;
+
             }
 
             #map {
-                border: 6px solid #6de7a9;
-                border-radius: 15px;
-
-                width: 100%;
-                height: 100%;
-                grid-column: 3 / 4;
-                grid-row: 2 / 5;
-                /*background-image: url("../static/temp_gu_map.jpg");*/
-                /*background-size: cover;*/
-                /*background-repeat: no-repeat;*/
+                grid-column: 1/2;
+                grid-row: 4 / 8;
             }
-
-            .three {
-                border: 3px solid #6de7a9;
-                background-color: #e4f3e9;
-                border-radius: 15px;
-                grid-column: 1/3;
-                grid-row: 2 / 8;
-                background-image: url("../static/seoul.png");
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                padding: 10px;
-
-            }
-
-            /*.four {*/
-            /*    border: 1px solid blue;*/
-            /*    grid-column: 3;*/
-            /*    grid-row: 3;*/
-            /*}*/
-
-            /*.five {*/
-            /*    border: 1px solid blue;*/
-            /*    grid-column: 2;*/
-            /*    grid-row: 4;*/
-            /*}*/
 
             .parkList {
-                border: 3px solid #6de7a9;
-                border-radius: 15px;
-                grid-column: 3;
-                grid-row: 5/8;
-                text-align: center;
-                padding: 40px;
+                grid-column: 2;
+                grid-row: 4/8;
+                padding-top: 20px;
+                padding-left: 2px;
+                padding-right: 10px;
+
             }
 
-            h1 {
-                font-family: 'Russo One', sans-serif;
-                font-size: 80px;
-                color: springgreen;
-                opacity: 0.6;
-                text-align: center;
-                text-decoration: none;
+        }
+
+        @media (min-width: 1450px) {
+
+            #img {
+
+                width: 898px;
+                height: 696px;
             }
-
-            /*#button1 {*/
-            /*    top: 373px;*/
-            /*    left: 393px;*/
-            /*    position: absolute;*/
-            /*}*/
-
-            a {
-                text-decoration: none
-            }
-
-            a:hover {
-                text-decoration: none !important
-            }
-
-            #tempList{
-                color:#525eaa;
-                text-decoration: none;
-                font-family: 'Nanum Gothic', sans-serif;
-            }
-        </style>
-    </head>
+        }
+    </style>
+</head>
 
 
-    <body>
-        <div class="wrapper">
-            <div class="one">
-                <a href="/"><h1>Birdy Seoul</h1></a>
-            </div>
-            <div id="map"></div>
-            <div class="three">
-                <select class="form-control" id="exampleFormControlSelect1" onchange="showGuParks(),gu_xy()">
-                    <option>---지역을 선택하세요🐥---</option>
-                    <!--                    <option>관악구</option>-->
-                    <!--                    <option>중구</option>-->
-                    <!--                    <option>성동구</option>-->
-                    <!--                    <option>중랑구</option>-->
-                </select>
-
-            </div>
-            <!--            <div class="four">Four</div>-->
-            <!--            <div class="five">Five</div>-->
-            <div class="parkList" id="parkList">
-                <!--                <ul>-->
-                <!--                                        <li>낙산공원</li>-->
-                <!--                                        <li>와룡공원</li>-->
-                <!--                                        <li>탑골공원</li>-->
-
-                <!--                </ul>-->
-            </div>
+<body>
+    <div class="wrapper">
+        <div class="one">
+            <a href="/">
+                <h1>Birdy Seoul</h1>
+            </a>
         </div>
-    </body>
+        <div id="map"></div>
+        <div class="three">
+            <p style="font-size: 20px; color:#525eaa; text-align: center; font-family: 'Nanum Gothic', sans-serif;">
+                산책할 지역을 클릭하세요🐥</p>
+            <img id="img" style="cursor: initial !important;" src="{{url_for('static', filename = 'seoul.png')}}"
+                usemap="#image-map">
+
+            <map name="image-map">
+                <area style="cursor: pointer" onclick="showGuParks('강서구');gu_xy('강서구')" onmouseenter="changeImg('01')"
+                    onmouseout="reChange()"
+                    coords="120,256,110,258,113,265,116,277,119,284,114,288,114,293,109,299,106,308,99,310,89,316,85,321,79,332,70,331,71,348,67,355,57,356,53,361,61,374,68,377,74,376,81,383,92,383,99,385,104,393,106,398,107,403,118,398,130,390,138,390,148,393,158,394,161,399,174,378,178,385,182,390,185,399,186,406,188,413,195,422,238,416,238,402,241,391,237,384,242,369,261,379,270,376,266,363,190,315,177,308,163,299,140,281"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('양천구');gu_xy('양천구')" onmouseenter="changeImg('02')"
+                    onmouseout="reChange()"
+                    coords="172,375,167,389,158,399,164,413,169,417,170,426,166,435,164,447,166,455,164,460,177,462,185,475,193,471,202,464,211,461,221,458,227,459,234,466,246,463,241,471,250,471,262,459,270,448,271,437,269,429,274,421,283,416,287,410,287,401,280,389,273,378,258,378,242,369,236,383,241,395,240,403,239,414,195,422,181,402,184,394,174,387"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('구로구');gu_xy('구로구')" onmouseenter="changeImg('03')"
+                    onmouseout="reChange()"
+                    coords="160,466,158,479,153,486,145,485,142,492,146,499,157,505,164,505,164,512,156,515,154,526,150,531,147,538,150,543,156,539,160,535,164,538,174,538,184,532,188,537,198,535,202,538,206,542,209,534,209,527,211,521,220,523,226,517,237,505,246,502,261,507,267,507,269,512,275,516,282,523,287,526,294,527,299,529,307,528,312,523,314,517,300,498,295,489,295,463,273,448,254,468,247,473,238,471,241,462,232,467,228,460,219,461,211,464,185,479,179,471,175,465"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('영등포구');gu_xy('영등포구')" onmouseenter="changeImg('04')"
+                    onmouseout="reChange()"
+                    coords="262,363,273,383,282,395,287,411,276,419,268,425,268,436,269,444,277,451,293,458,297,467,293,485,298,504,309,515,321,506,329,490,349,483,356,449,374,442,387,439,365,414,356,411,346,411,337,407,323,410,311,395,288,377,274,369,269,363"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('금천구');gu_xy('금천구')" onmouseenter="changeImg('05')"
+                    onmouseout="reChange()"
+                    coords="310,531,295,531,271,513,255,513,257,524,261,534,270,551,279,560,271,563,282,568,283,576,283,585,295,598,309,614,307,628,330,626,336,621,347,620,358,605,366,598,353,578,338,577,335,560,323,544,330,540,332,531,326,528,318,523"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('동작구');gu_xy('동작구')" onmouseenter="changeImg('06')"
+                    onmouseout="reChange()"
+                    coords="314,516,335,509,346,504,358,501,363,493,372,500,382,501,394,496,402,499,411,500,416,501,425,497,426,510,428,519,437,530,446,535,456,534,462,517,463,499,463,487,467,479,452,470,445,467,396,444,366,454,358,449,346,488,334,490"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('관악구');gu_xy('관악구')" onmouseenter="changeImg('07')"
+                    onmouseout="reChange()"
+                    coords="315,528,322,515,339,512,346,505,365,501,368,491,374,500,395,499,404,498,415,502,421,500,425,495,429,500,429,514,437,524,447,533,463,533,467,545,478,559,474,579,466,585,455,597,454,603,439,602,434,613,426,617,408,619,400,619,392,623,384,623,379,612,366,600,363,592,351,573,337,577,338,567,336,558,325,544,334,539,331,532,326,523,318,523"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('서초구');gu_xy('서초구')" onmouseenter="changeImg('08')"
+                    onmouseout="reChange()"
+                    coords="459,473,469,483,465,490,465,501,462,517,463,530,466,551,474,558,478,564,477,574,484,572,493,568,492,558,505,560,513,579,525,585,531,582,549,575,557,564,565,565,561,579,566,593,571,596,568,603,565,616,571,621,580,626,637,625,638,618,645,609,650,615,659,607,665,605,667,594,672,585,680,578,673,569,671,561,663,553,661,546,658,539,645,538,618,552,603,551,585,538,575,519,559,514,549,492,527,432,518,432,509,444,502,455,490,458,479,470"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('강남구');gu_xy('강남구')" onmouseenter="changeImg('09')"
+                    onmouseout="reChange()"
+                    coords="524,428,543,410,554,409,572,414,585,418,593,419,602,428,608,432,619,440,623,451,626,467,628,474,637,480,654,482,673,488,685,495,692,501,698,510,708,523,721,535,729,551,732,555,723,563,718,573,702,568,689,565,679,567,674,571,668,559,662,548,655,545,654,535,646,536,639,537,626,545,614,545,599,549,590,546,576,526,574,514,558,515,552,495,543,474,532,450"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('송파구');gu_xy('송파구')" onmouseenter="changeImg('10')"
+                    onmouseout="reChange()"
+                    coords="621,444,624,461,624,473,635,479,667,484,689,500,705,518,719,538,733,556,745,552,755,549,744,538,757,537,764,536,774,526,781,515,787,508,796,500,797,488,797,482,793,475,784,476,783,468,777,472,762,468,762,460,762,454,762,447,765,442,750,432,732,427,718,419,720,407,724,401,725,393,715,387,699,410,694,423,682,431,674,434,668,442,651,445,638,439,625,439"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('강동구');gu_xy('강동구')" onmouseenter="changeImg('11')"
+                    onmouseout="reChange()"
+                    coords="714,384,720,390,727,396,727,403,721,411,716,418,728,423,743,427,758,436,764,442,770,448,772,435,776,424,786,417,788,408,792,401,791,395,798,387,802,382,815,383,823,379,829,377,835,377,840,379,842,370,844,363,838,358,838,347,834,334,830,321,825,308,814,302,806,306,799,315,785,318,777,326,774,333,762,329,748,333,735,338,726,352,722,367,715,377"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('용산구');gu_xy('용산구')" onmouseenter="changeImg('12')"
+                    onmouseout="reChange()"
+                    coords="392,403,402,403,407,423,415,430,430,435,450,443,465,448,482,435,494,431,498,423,504,417,512,416,517,411,521,402,525,395,510,389,506,377,498,367,490,373,482,375,478,366,466,361,455,359,450,363,443,360,438,365,428,355,429,363,429,372,422,379,416,383,416,389,406,395"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('마포구');gu_xy('마포구')" onmouseenter="changeImg('13')"
+                    onmouseout="reChange()"
+                    coords="236,316,260,331,278,347,294,353,309,366,319,377,334,384,349,385,360,383,369,389,381,388,385,394,391,403,404,403,412,394,418,383,425,377,426,366,425,355,417,351,411,355,395,357,385,357,374,359,365,352,359,347,365,341,352,339,342,335,333,327,318,322,310,313,294,302,282,293,272,282,265,291,266,299,257,307,248,307"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('성동구');gu_xy('성동구')" onmouseenter="changeImg('14')"
+                    onmouseout="reChange()"
+                    coords="506,380,510,390,513,398,520,394,526,395,530,387,539,386,554,385,559,390,572,392,584,399,594,401,601,404,606,404,614,390,620,376,624,367,630,355,633,348,622,345,611,342,599,335,591,330,584,324,576,319,566,319,554,327,544,323,539,330,543,339,538,346,534,352,526,353,526,362,522,370,514,374"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('광진구');gu_xy('광진구')" onmouseenter="changeImg('15')"
+                    onmouseout="reChange()"
+                    coords="641,326,637,338,629,349,630,358,623,370,612,390,609,402,605,407,631,418,644,421,656,421,666,413,674,402,685,398,690,390,694,381,701,376,705,366,710,351,712,345,704,343,695,352,688,347,689,332,690,323,686,315,677,325,662,328,646,323"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('중구');gu_xy('중구')" onmouseenter="changeImg('16')"
+                    onmouseout="reChange()"
+                    coords="426,351,427,356,439,362,450,360,458,363,464,363,477,368,479,373,486,376,496,371,502,370,506,378,510,383,517,375,523,368,526,360,528,353,534,351,540,342,538,331,539,322,529,325,521,326,501,326,493,327,481,329,472,331,465,330,446,327,434,337,434,344"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('서대문구');gu_xy('서대문구')" onmouseenter="changeImg('17')"
+                    onmouseout="reChange()"
+                    coords="312,314,335,332,344,336,358,339,359,344,357,350,371,357,383,356,398,355,412,354,421,352,428,347,433,342,436,332,423,325,413,315,408,308,413,304,416,292,413,284,416,267,410,260,405,255,409,250,401,242,391,247,382,253,385,261,381,269,373,268,367,270,360,279,361,289,351,284,352,292,347,296,338,295,331,289,329,298,315,307"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('종로구');gu_xy('종로구')" onmouseenter="changeImg('18')"
+                    onmouseout="reChange()"
+                    coords="404,204,399,213,403,223,406,231,406,239,405,246,410,252,408,258,408,266,416,264,422,271,415,279,415,286,418,291,415,301,410,307,411,313,418,319,426,327,434,329,439,331,447,327,458,327,473,332,490,327,497,327,502,327,513,327,523,325,530,325,537,325,539,315,539,307,530,311,523,303,514,298,513,304,506,302,506,294,498,287,494,279,487,276,481,279,472,278,466,271,458,269,447,263,455,254,466,251,466,242,465,226,461,215,454,203,446,194,446,186,436,190,434,196,419,195,417,200"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('은평구');gu_xy('은평구')" onmouseenter="changeImg('19')"
+                    onmouseout="reChange()"
+                    coords="280,271,273,279,279,286,291,294,303,307,316,311,330,295,333,288,338,295,346,299,353,289,359,284,359,276,370,270,379,263,384,253,391,245,399,241,403,236,403,226,402,218,402,208,410,202,415,199,423,194,433,191,438,189,437,178,431,170,425,165,421,159,414,151,410,144,397,137,391,133,382,135,374,144,358,149,341,157,337,161,331,157,320,151,321,165,325,175,325,181,321,189,314,192,325,208,318,209,316,216,317,222,311,224,306,224,309,231,310,239,314,245,313,255,307,262,312,268,307,274,304,280,303,285,295,285,288,283,282,279"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('성북구');gu_xy('성북구')" onmouseenter="changeImg('20')"
+                    onmouseout="reChange()"
+                    coords="445,187,445,195,458,201,458,207,463,216,466,225,467,231,465,242,467,249,451,259,454,266,461,269,466,269,473,280,485,280,502,277,501,287,506,294,510,299,513,303,521,299,526,304,531,311,539,304,550,298,556,290,562,281,562,273,566,276,574,264,580,267,587,258,598,254,603,255,610,245,618,245,627,239,625,231,613,231,602,224,594,215,588,207,580,218,573,227,566,229,563,235,555,238,549,241,547,232,541,235,534,239,530,231,522,227,507,215,506,207,490,206,486,198,474,188,467,186,463,179,450,183"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('동대문구');gu_xy('동대문구')" onmouseenter="changeImg('21')"
+                    onmouseout="reChange()"
+                    coords="537,308,538,315,536,324,545,327,557,325,567,323,578,323,586,327,594,335,606,342,624,347,630,346,634,337,640,324,640,313,641,305,635,295,630,286,625,278,626,268,630,255,630,247,625,240,620,246,607,256,594,257,586,260,582,271,573,265,571,271,571,278,561,276,564,283,560,288,556,294,552,300,543,305"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('중랑구');gu_xy('중랑구')" onmouseenter="changeImg('22')"
+                    onmouseout="reChange()"
+                    coords="625,227,629,235,627,245,628,253,624,264,627,281,633,289,637,298,640,307,641,317,643,325,657,323,674,326,686,319,686,311,694,301,699,297,704,282,709,275,714,272,712,259,718,246,718,237,715,230,715,219,704,212,691,214,680,211,677,215,669,219,666,223,662,216,648,215,640,216,633,220"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('노원구');gu_xy('노원구')" onmouseenter="changeImg('23')"
+                    onmouseout="reChange()"
+                    coords="610,228,625,228,631,223,639,219,647,216,656,213,662,213,666,219,679,212,691,212,693,203,703,191,706,174,703,162,693,157,687,154,679,155,671,150,670,135,667,128,669,121,673,110,675,103,672,97,667,86,666,79,671,74,674,64,663,58,649,44,646,46,638,42,633,46,627,50,615,46,607,54,591,61,589,84,584,97,586,108,590,126,594,132,593,147,596,158,597,166,597,171,590,163,583,169,580,177,574,182,574,191,582,199,587,207,592,211,596,216,602,223"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('강북구');gu_xy('강북구')" onmouseenter="changeImg('24')"
+                    onmouseout="reChange()"
+                    coords="465,174,474,186,483,191,492,199,504,206,511,208,511,216,515,222,524,226,529,226,533,230,544,231,554,232,553,239,564,231,571,226,579,219,581,213,584,208,588,205,582,194,574,190,568,185,564,180,557,172,556,166,548,161,537,153,523,148,521,141,521,134,524,122,524,116,524,109,529,106,516,94,516,83,508,77,507,68,495,73,487,75,483,89,486,96,488,105,487,111,480,114,472,118,468,126,464,130,456,138,469,144,460,145,462,155,464,163"
+                    shape="poly">
+                <area style="cursor: pointer" onclick="showGuParks('도봉구');gu_xy('도봉구')" onmouseenter="changeImg('25')"
+                    onmouseout="reChange()"
+                    coords="510,65,510,75,510,84,518,87,516,93,524,103,523,111,522,120,518,128,521,135,521,142,525,149,530,151,538,155,543,160,554,167,560,174,559,181,562,185,571,190,576,179,579,170,589,163,596,167,598,156,594,147,593,138,590,132,586,126,586,115,582,108,582,99,586,87,587,78,586,71,585,60,586,49,574,48,574,42,566,50,561,56,554,55,548,43,545,35,533,37,523,39,514,38,509,47,508,56"
+                    shape="poly">
+
+            </map>
+
+
+        </div>
+        <!--            <div class="four">Four</div>-->
+        <!--            <div class="five">Five</div>-->
+        <div class="parkList" id="parkList">
+            <!--                <ul>-->
+            <!--                                        <li>낙산공원</li>-->
+            <!--                                        <li>와룡공원</li>-->
+            <!--                                        <li>탑골공원</li>-->
+
+            <!--                </ul>-->
+        </div>
+    </div>
+</body>
+
 </html>
