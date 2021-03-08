@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import shop.birdyseoul.birdobservation.filters.JwtRequestFilter
 
 @EnableWebSecurity
-class SecurityConfig: WebSecurityConfigurerAdapter() {
+class SecurityConfig : WebSecurityConfigurerAdapter() {
 
     @Autowired
     lateinit var userDetailsService: BirderDetailService
@@ -25,7 +25,7 @@ class SecurityConfig: WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity?) {
         http!!.csrf().disable().authorizeRequests()
-            .antMatchers("/authenticate").permitAll()
+            .antMatchers("/authenticate", "/register", "/records", "/record").permitAll()
             .anyRequest().authenticated()
             .and().sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -37,13 +37,13 @@ class SecurityConfig: WebSecurityConfigurerAdapter() {
     }
 
     @Bean
-    override fun authenticationManagerBean() : AuthenticationManager {
+    override fun authenticationManagerBean(): AuthenticationManager {
         return super.authenticationManagerBean()
     }
 
     @Bean
     fun passwordEncoder(): PasswordEncoder {
-        return NoOpPasswordEncoder.getInstance()
+        return BCryptPasswordEncoder()
     }
 
 }
