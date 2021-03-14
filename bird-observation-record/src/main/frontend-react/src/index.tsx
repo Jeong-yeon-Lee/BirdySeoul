@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import BirdySeoulMain from './birdy-seoul-main';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BirdySeoulMain />
   </React.StrictMode>,
   document.getElementById('root')
 );
