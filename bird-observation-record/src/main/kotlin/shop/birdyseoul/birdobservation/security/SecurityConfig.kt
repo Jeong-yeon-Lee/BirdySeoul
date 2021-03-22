@@ -25,7 +25,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity?) {
         http!!.csrf().disable().authorizeRequests()
-            .antMatchers("/authenticate", "/register", "/records", "/record").permitAll()
+            .antMatchers("/authenticate", "/register", "/records", "/record", "/").permitAll()
             .anyRequest().authenticated()
             .and().sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

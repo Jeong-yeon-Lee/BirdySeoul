@@ -28,6 +28,51 @@ dependencies {
 	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.2")
 }
 
+val webappDir = "$projectDir/src/main/frontend-react"
+
+sourceSets {
+	main {
+		resources {
+			srcDirs.add(File("$webappDir/build"))
+		}
+	}
+}
+
+tasks.withType<ProcessResources> {
+
+}
+
+tasks.register<Copy>("copyFront") {
+	dependsOn("buildReact")
+	from("$webappDir/build/")
+	into("$projectDir/src/main/resources/")
+}
+
+tasks.register<Exec>("installReact") {
+	workingDir = File(webappDir)
+	inputs.dir(webappDir)
+	group = BasePlugin.BUILD_GROUP
+	if(System.getProperty("os.name").toLowerCase().contains("widows")) {
+		commandLine("npm.cmd", "audit", "fix")
+		commandLine("npm.cmd", "install")
+	} else {
+		commandLine("npm", "audit", "fix")
+		commandLine("npm", "install")
+	}
+}
+
+tasks.register<Exec>("buildReact") {
+	dependsOn("installReact")
+	workingDir = File(webappDir)
+	inputs.dir(webappDir)
+	group = BasePlugin.BUILD_GROUP
+	if(System.getProperty("os.name").toLowerCase().contains("widows")) {
+		commandLine("npm.cmd", "run-script", "build")
+	} else {
+		commandLine("npm", "run-script", "build")
+	}
+}
+
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")

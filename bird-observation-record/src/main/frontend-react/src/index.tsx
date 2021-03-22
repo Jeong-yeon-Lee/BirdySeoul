@@ -7,7 +7,7 @@ import BirdySeoulMain from './birdy-seoul-main';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BirdySeoulMain />
+    <div>HELLO, BIRDYSEOUL!</div>
   </React.StrictMode>,
   document.getElementById('root')
 );
