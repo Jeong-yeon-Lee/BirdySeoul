@@ -39,20 +39,20 @@ sourceSets {
 }
 
 tasks.withType<ProcessResources> {
-
+	dependsOn("copyFront")
 }
 
 tasks.register<Copy>("copyFront") {
 	dependsOn("buildReact")
 	from("$webappDir/build/")
-	into("$projectDir/src/main/resources/")
+	into("$projectDir/src/main/resources/static/")
 }
 
 tasks.register<Exec>("installReact") {
 	workingDir = File(webappDir)
 	inputs.dir(webappDir)
 	group = BasePlugin.BUILD_GROUP
-	if(System.getProperty("os.name").toLowerCase().contains("widows")) {
+	if(System.getProperty("os.name").toLowerCase().contains("windows")) {
 		commandLine("npm.cmd", "audit", "fix")
 		commandLine("npm.cmd", "install")
 	} else {
@@ -66,7 +66,7 @@ tasks.register<Exec>("buildReact") {
 	workingDir = File(webappDir)
 	inputs.dir(webappDir)
 	group = BasePlugin.BUILD_GROUP
-	if(System.getProperty("os.name").toLowerCase().contains("widows")) {
+	if(System.getProperty("os.name").toLowerCase().contains("windows")) {
 		commandLine("npm.cmd", "run-script", "build")
 	} else {
 		commandLine("npm", "run-script", "build")

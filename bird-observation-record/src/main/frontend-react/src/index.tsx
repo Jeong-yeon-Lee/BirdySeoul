@@ -1,14 +1,16 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { BrowserRouter, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import BirdySeoulMain from './birdy-seoul-main';
+import { MainPage } from './mainpage/main-page';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <div>HELLO, BIRDYSEOUL!</div>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <div>
+      <Route path="/" component={MainPage} exact={true} />
+      <Route path="/records" component={() => <div>관차라라라라라라</div>}/>
+    </div>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

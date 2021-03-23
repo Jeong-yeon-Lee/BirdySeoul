@@ -12,19 +12,19 @@ class ObservationRecordController {
     @Autowired
     lateinit var repository: ObservationRecordRepository
 
-    @PostMapping(path = ["record"],consumes = ["application/json"])
+    @PostMapping(path = ["/api/record"],consumes = ["application/json"])
     @ResponseStatus(HttpStatus.CREATED)
     fun addRecord(@RequestBody record: BirdObservationRecord) {
         this.repository.save(record)
     }
 
-    @PostMapping(path = ["observations"], consumes = ["application/json"])
+    @PostMapping(path = ["/api/observations"], consumes = ["application/json"])
     @ResponseStatus(HttpStatus.CREATED)
     fun addRecords(@RequestBody records: List<BirdObservationRecord>) {
         this.repository.saveAll(records)
     }
 
-    @GetMapping("/records")
+    @GetMapping("/api/records")
     fun getAllRecords(): MutableList<BirdObservationRecord> {
         return repository.findAll()
     }

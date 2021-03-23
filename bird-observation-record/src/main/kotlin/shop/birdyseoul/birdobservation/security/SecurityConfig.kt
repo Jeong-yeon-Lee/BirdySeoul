@@ -25,10 +25,22 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity?) {
         http!!.csrf().disable().authorizeRequests()
-            .antMatchers("/authenticate", "/register", "/records", "/record", "/").permitAll()
+            .antMatchers(
+                "/authenticate",
+                "/register",
+                "/record",
+                "/static/**",
+                "/*.json",
+                "/*.ico",
+                "/*.html",
+                "/*.png",
+                "/*.txt",
+                "/",
+                "/{x:[\\w\\-]+}",
+                "/{x:^(?!api$).*$}/**/{y:[\\w\\-]+}"
+            ).permitAll()
             .anyRequest().authenticated()
-            .and().sessionManagement()
-            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter::class.java)
     }
 
