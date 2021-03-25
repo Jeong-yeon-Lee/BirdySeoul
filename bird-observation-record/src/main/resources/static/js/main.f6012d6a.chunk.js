@@ -1,0 +1,2 @@
+(this["webpackJsonpfrontend-react"]=this["webpackJsonpfrontend-react"]||[]).push([[0],{10:function(n,t,e){"use strict";e.r(t);var c=e(0),i=e.n(c),o=e(3),r=e.n(o),d=(e(8),function(n){n&&n instanceof Function&&e.e(3).then(e.bind(null,11)).then((function(t){var e=t.getCLS,c=t.getFID,i=t.getFCP,o=t.getLCP,r=t.getTTFB;e(n),c(n),i(n),o(n),r(n)}))}),s=e(2);r.a.render(Object(s.jsx)(i.a.StrictMode,{children:Object(s.jsx)("div",{children:"HELLO, BIRDYSEOUL!"})}),document.getElementById("root")),d()},8:function(n,t,e){}},[[10,1,2]]]);
+//# sourceMappingURL=main.f6012d6a.chunk.js.map
