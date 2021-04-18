@@ -39,7 +39,7 @@ sourceSets {
 }
 
 tasks.withType<ProcessResources> {
-	dependsOn("copyFront")
+	// dependsOn("copyFront")
 }
 
 tasks.register<Copy>("copyFront") {

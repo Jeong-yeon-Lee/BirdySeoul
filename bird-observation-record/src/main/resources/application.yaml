@@ -2,5 +2,6 @@ spring:
   data:
     mongodb:
       ## 사용할 Mongo DB에 대한 접근 정보에 대한 설정. 향후 환경변수 등으로 대체할 것.
-      ## 수영 맥북 - uri: mongodb://sooyoung:sooyoung@localhost:27017/birding-record?authSource=admin&authMechanism=SCRAM-SHA-1
+      ## 수영 로컬 도커 - uri: mongodb://sooyoung:sooyoung@localhost:27017/birding-record?authSource=admin&authMechanism=SCRAM-SHA-1
       ## 수영 회사 - uri: mongodb://root:example@192.168.155.58:27017/birding-record?authSource=admin&authMechanism=SCRAM-SHA-1
+      uri: mongodb+srv://sooyoung_shin_1:DyCZUkuCryAXwnPA@cluster0.nukm8.mongodb.net/birdySeoul?retryWrites=true&w=majority

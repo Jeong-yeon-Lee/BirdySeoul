@@ -1,6 +1,6 @@
 package shop.birdyseoul.birdobservation.models
 
 data class AuthenticationRequest(
-    val username: String,
+    val email: String,
     val password: String
 )

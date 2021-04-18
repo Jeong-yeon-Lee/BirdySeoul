@@ -9,7 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
 import org.springframework.security.config.http.SessionCreationPolicy
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
-import org.springframework.security.crypto.password.NoOpPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
 import shop.birdyseoul.birdobservation.filters.JwtRequestFilter
@@ -26,8 +25,8 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
         http!!.csrf().disable().authorizeRequests()
             .antMatchers(
-                "/authenticate",
-                "/register",
+                "/api/authenticate",
+                "/api/register",
                 "/record",
                 "/static/**",
                 "/*.json",
@@ -35,9 +34,9 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
                 "/*.html",
                 "/*.png",
                 "/*.txt",
+                "/api/test",
                 "/",
-                "/{x:[\\w\\-]+}",
-                "/{x:^(?!api$).*$}/**/{y:[\\w\\-]+}"
+                "/{x:[\\w\\-]+}"
             ).permitAll()
             .anyRequest().authenticated()
             .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)

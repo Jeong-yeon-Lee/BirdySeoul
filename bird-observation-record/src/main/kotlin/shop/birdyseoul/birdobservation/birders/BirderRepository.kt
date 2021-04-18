@@ -6,5 +6,5 @@ import shop.birdyseoul.birdobservation.dbaccess.BirdObservationRecord
 
 @Document(collection = "birders")
 interface BirderRepository : MongoRepository<Birder, String> {
-    fun findByUsername(username: String): Birder
+    fun findByEmail(email: String): Birder?
 }

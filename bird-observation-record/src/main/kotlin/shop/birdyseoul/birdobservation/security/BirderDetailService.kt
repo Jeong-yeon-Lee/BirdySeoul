@@ -10,15 +10,14 @@ import shop.birdyseoul.birdobservation.birders.BirderRepository
 
 @Service
 class BirderDetailService(
-    @Autowired
-    val birderRepo: BirderRepository
+    @Autowired val birderRepo: BirderRepository
 ) : UserDetailsService {
 
-    override fun loadUserByUsername(username: String?): UserDetails {
-        val birder = birderRepo.findByUsername(username!!)
-        if(birder != null) {
+    override fun loadUserByUsername(email: String?): UserDetails {
+        val birder = birderRepo.findByEmail(email!!)
+        if (birder != null) {
             return birder
         }
-        throw UsernameNotFoundException("User $username not found")
+        throw UsernameNotFoundException("User $email not found")
     }
 }

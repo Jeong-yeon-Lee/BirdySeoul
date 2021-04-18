@@ -6,12 +6,12 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
 class Birder constructor(
-    @Id
-    val id: String,
     val email: String,
     private val password: String,
-    private val username: String
 ) : UserDetails {
+
+    @Id
+    private lateinit var id: String
 
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
         return mutableSetOf(SimpleGrantedAuthority("ROLE_USER"))
@@ -22,7 +22,7 @@ class Birder constructor(
     }
 
     override fun getUsername(): String {
-        return this.username
+        return this.email
     }
 
     override fun isAccountNonExpired(): Boolean {

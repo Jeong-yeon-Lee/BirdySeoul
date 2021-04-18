@@ -1,33 +1,36 @@
-import { Link, Route } from 'react-router-dom';
 import '../css/main-page.css';
+import Cookies from 'js-cookie';
+import { UserInfo } from './user-info';
 
 export const MainPage = () => {
+
+    const title = "Birdy Seoul!!!!";
+
     return (
-        <body>
-            <Route path="/records" component= {() => <div>관차라라라라랄!</div>} exact={true}/>
-            <div id="title">
-                <h1>Birdy Seoul</h1>
-            </div>
-            <ul>
-                <li>
-                    <Link to="/records">관찰목록</Link>
-                </li>
-            </ul>
-            <div className="container">
-                <div id="weather">
+        <>
+            <body>
+                <div>
+                    <UserInfo />
                 </div>
-                <div id="buttons">
-                    <div className="wrap">
-                        <button className="button">새들과 산책하기</button>
+                <div id="title">
+                    <h1>{title}</h1>
+                </div>
+                <div className="container">
+                    <div id="weather">
                     </div>
-                    <div className="wrap">
-                        <button className="button">기록하기</button>
-                    </div>
-                    <div className="wrap">
-                        <button className="button">기록장 모아보기</button>
+                    <div id="buttons">
+                        <div className="wrap">
+                            <button className="button">새들과 산책하기</button>
+                        </div>
+                        <div className="wrap">
+                            <button className="button">기록하기</button>
+                        </div>
+                        <div className="wrap">
+                            <button className="button">기록장 모아보기</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </body>
+            </body>
+        </>
     );
 }
