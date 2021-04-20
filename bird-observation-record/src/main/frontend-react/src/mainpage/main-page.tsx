@@ -1,6 +1,7 @@
 import '../css/main-page.css';
 import Cookies from 'js-cookie';
 import { UserInfo } from './user-info';
+import { Link } from 'react-router-dom';
 
 export const MainPage = () => {
 
@@ -23,7 +24,9 @@ export const MainPage = () => {
                             <button className="button">새들과 산책하기</button>
                         </div>
                         <div className="wrap">
-                            <button className="button">기록하기</button>
+                            <Link to={"/records"}>
+                                <button className="button">기록하기</button>
+                            </Link>
                         </div>
                         <div className="wrap">
                             <button className="button">기록장 모아보기</button>

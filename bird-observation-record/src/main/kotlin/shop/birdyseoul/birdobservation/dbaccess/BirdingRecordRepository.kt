@@ -2,8 +2,9 @@ package shop.birdyseoul.birdobservation.dbaccess
 
 import org.springframework.data.mongodb.core.mapping.Document
 import org.springframework.data.mongodb.repository.MongoRepository
+import shop.birdyseoul.birdobservation.models.BirdingRecord
 
 @Document(collection = "observations")
-interface ObservationRecordRepository: MongoRepository<BirdObservationRecord, String> {
-
+interface BirdingRecordRepository: MongoRepository<BirdingRecord, String> {
+    fun findByRecorder(recorder: String): MutableList<BirdingRecord>
 }

@@ -34,7 +34,6 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
                 "/*.html",
                 "/*.png",
                 "/*.txt",
-                "/api/test",
                 "/",
                 "/{x:[\\w\\-]+}"
             ).permitAll()

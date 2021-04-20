@@ -6,6 +6,7 @@ import { MainPage } from './mainpage/main-page';
 import { LoginPage } from './mainpage/login-page';
 import { RegisterPage } from './mainpage/register-page';
 import axios from 'axios';
+import { BirdingRecord } from './birding/birding-record';
 
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
@@ -14,7 +15,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div>
       <Route path="/" component={MainPage} exact={true} />
-      <Route path="/records" component={() => <div>관차라라라라라라</div>}/>
+      <Route path="/records" component={BirdingRecord}/>
       <Route path="/login" component={LoginPage} />
       <Route path="/register" component={RegisterPage} />
     </div>

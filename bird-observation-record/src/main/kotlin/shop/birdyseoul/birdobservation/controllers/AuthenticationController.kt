@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.BadCredentialsException
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
+import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.web.bind.annotation.*
 import shop.birdyseoul.birdobservation.models.AuthenticationRequest
@@ -29,7 +30,7 @@ class AuthenticationController {
     lateinit var jwtUtil: JWTUtil
 
     @RequestMapping(value=["/api/test"], method= [RequestMethod.GET])
-    fun test(): ResponseEntity<String> {
+    fun test(response: HttpServletResponse): ResponseEntity<String> {
         return ResponseEntity.ok("Test Success!!")
     }
 
@@ -44,12 +45,12 @@ class AuthenticationController {
             throw Exception("Incorrect username or password", e)
         }
 
-        val cookie: Cookie = Cookie("platform", "web");
-        cookie.maxAge = 7*24*60*60
-        cookie.isHttpOnly = true
-        cookie.path = "/"
-
-        response.addCookie(cookie)
+//        val cookie: Cookie = Cookie("platform", "web");
+//        cookie.maxAge = 7*24*60*60
+//        cookie.isHttpOnly = true
+//        cookie.path = "/"
+//
+//        response.addCookie(cookie)
 
         val userDetails: UserDetails = userDetailsService.loadUserByUsername(request.email)
         val jwt: String = jwtUtil.generateToken(userDetails)
