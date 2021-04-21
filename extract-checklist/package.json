@@ -1,0 +1,13 @@
+{
+  "name": "extract-checklist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "parse5": "^6.0.1",
+    "pdf-parse": "^1.1.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

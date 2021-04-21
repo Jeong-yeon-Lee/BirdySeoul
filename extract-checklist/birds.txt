@@ -1,0 +1,2288 @@
+yarn run v1.22.10
+$ node index.js
+============
+영명   : Bar-headed Goose
+학명   : Anser indicus
+한국명 : 줄기러기
+============
+영명   : Emperor Goose
+학명   : Anser canagicus
+한국명 : 흰머리기러기
+============
+영명   : Snow Goose
+학명   : Anser caerulescens
+한국명 : 흰기러기
+============
+영명   : Graylag Goose
+학명   : Anser anser
+한국명 : 회색기러기
+============
+영명   : Swan Goose
+학명   : Anser cygnoides
+한국명 : 개리
+============
+영명   : Greater White-fronted Goose
+학명   : Anser albifrons
+한국명 : 쇠기러기
+============
+영명   : Lesser White-fronted Goose
+학명   : Anser erythropus
+한국명 : 흰이마기러기
+============
+영명   : Taiga Bean-Goose
+학명   : Anser fabalis
+한국명 : 큰기러기
+============
+영명   : Tundra Bean-Goose
+학명   : Anser serrirostris
+한국명 : 큰기러기
+============
+영명   : Brant
+학명   : Branta bernicla
+한국명 : 흑기러기
+============
+영명   : Barnacle Goose
+학명   : Branta leucopsis
+============
+영명   : Cackling Goose
+학명   : Branta hutchinsii
+한국명 : 캐나다기러기
+============
+영명   : Red-breasted Goose
+학명   : Branta ruficollis
+한국명 : 붉은가슴기러기
+============
+영명   : Mute Swan
+학명   : Cygnus olor
+한국명 : 혹고니
+============
+영명   : Tundra Swan
+학명   : Cygnus columbianus
+한국명 : 고니
+============
+영명   : Whooper Swan
+학명   : Cygnus cygnus
+한국명 : 큰고니
+============
+영명   : Ruddy Shelduck
+학명   : Tadorna ferruginea
+한국명 : 황오리
+============
+영명   : Common Shelduck
+학명   : Tadorna tadorna
+한국명 : 혹부리오리
+============
+영명   : Crested Shelduck
+학명   : Tadorna cristata
+한국명 : 원앙사촌
+============
+영명   : Cotton Pygmy-Goose
+학명   : Nettapus
+                    coromandelianus
+============
+영명   : Mandarin Duck
+학명   : Aix galericulata
+한국명 : 원앙
+============
+영명   : Baikal Teal
+학명   : Sibirionetta formosa
+한국명 : 가창오리
+============
+영명   : Garganey
+학명   : Spatula querquedula
+한국명 : 발구지
+============
+영명   : Northern Shoveler
+학명   : Spatula clypeata
+한국명 : 넓적부리
+============
+영명   : Gadwall
+학명   : Mareca strepera
+한국명 : 알락오리
+============
+영명   : Falcated Duck
+학명   : Mareca falcata
+한국명 : 청머리오리
+============
+영명   : Eurasian Wigeon
+학명   : Mareca penelope
+한국명 : 홍머리오리
+============
+영명   : American Wigeon
+학명   : Mareca americana
+한국명 : 아메리카홍머리오리
+============
+영명   : Eastern Spot-billed Duck
+학명   : Anas zonorhyncha
+한국명 : 흰뺨검둥오리
+============
+영명   : Mallard
+학명   : Anas platyrhynchos
+한국명 : 청둥오리
+============
+영명   : Northern Pintail
+학명   : Anas acuta
+한국명 : 고방오리
+============
+영명   : Green-winged Teal
+학명   : Anas crecca
+한국명 : 쇠오리
+============
+영명   : Red-crested Pochard
+학명   : Netta rufina
+한국명 : 붉은부리흰죽지
+============
+영명   : Canvasback
+학명   : Aythya valisineria
+한국명 : 큰흰죽지
+============
+영명   : Redhead
+학명   : Aythya americana
+한국명 : 미국흰죽지
+============
+영명   : Common Pochard
+학명   : Aythya ferina
+한국명 : 흰죽지
+============
+영명   : Ring-necked Duck
+학명   : Aythya collaris
+한국명 : 줄부리오리
+============
+영명   : Ferruginous Duck
+학명   : Aythya nyroca
+한국명 : 적갈색흰죽지 / 검은흰죽지
+============
+영명   : Baer's Pochard
+학명   : Aythya baeri
+한국명 : 붉은가슴흰죽지
+============
+영명   : Tufted Duck
+학명   : Aythya fuligula
+한국명 : 댕기흰죽지
+============
+영명   : Greater Scaup
+학명   : Aythya marila
+한국명 : 검은머리흰죽지
+============
+영명   : Lesser Scaup
+학명   : Aythya affinis
+한국명 : 쇠검은머리흰죽지
+============
+영명   : King Eider
+학명   : Somateria spectabilis
+한국명 : 호사북방오리
+============
+영명   : Harlequin Duck
+학명   : Histrionicus histrionicus
+한국명 : 흰줄박이오리
+============
+영명   : Velvet Scoter
+학명   : Melanitta fusca
+한국명 : 검둥오리사촌
+============
+영명   : Stejneger's Scoter
+학명   : Melanitta stejnegeri
+한국명 : 검둥오리사촌
+============
+영명   : Black Scoter
+학명   : Melanitta americana
+한국명 : 검둥오리
+============
+영명   : Long-tailed Duck
+학명   : Clangula hyemalis
+한국명 : 바다꿩
+============
+영명   : Bufflehead
+학명   : Bucephala albeola
+한국명 : 꼬마오리
+============
+영명   : Common Goldeneye
+학명   : Bucephala clangula
+한국명 : 흰뺨오리
+============
+영명   : Barrow's Goldeneye
+학명   : Bucephala islandica
+한국명 : 북방흰뺨오리
+============
+영명   : Smew
+학명   : Mergellus albellus
+한국명 : 흰비오리
+============
+영명   : Common Merganser
+학명   : Mergus merganser
+한국명 : 비오리
+============
+영명   : Red-breasted Merganser
+학명   : Mergus serrator
+한국명 : 바다비오리
+============
+영명   : Scaly-sided Merganser
+학명   : Mergus squamatus
+한국명 : 호사비오리
+============
+영명   : Japanese Quail
+학명   : Coturnix japonica
+한국명 : 메추라기
+============
+영명   : Ring-necked Pheasant
+학명   : Phasianus colchicus
+한국명 : 꿩
+============
+영명   : Hazel Grouse
+학명   : Tetrastes bonasia
+한국명 : 들꿩
+============
+영명   : Little Grebe
+학명   : Tachybaptus ruficollis
+한국명 : 논병아리
+============
+영명   : Horned Grebe
+학명   : Podiceps auritus
+한국명 : 귀뿔논병아리
+============
+영명   : Red-necked Grebe
+학명   : Podiceps grisegena
+한국명 : 큰논병아리
+============
+영명   : Great Crested Grebe
+학명   : Podiceps cristatus
+한국명 : 뿔논병아리
+============
+영명   : Eared Grebe
+학명   : Podiceps nigricollis
+한국명 : 검은목논병아리
+============
+영명   : Rock Pigeon
+학명   : Columba livia
+한국명 : 집비둘기
+============
+영명   : Hill Pigeon
+학명   : Columba rupestris
+한국명 : 양비둘기
+============
+영명   : Stock Dove
+학명   : Columba oenas
+한국명 : 분홍가슴비둘기
+============
+영명   : Japanese Wood-Pigeon
+학명   : Columba janthina
+한국명 : 흑비둘기
+============
+영명   : Oriental Turtle-Dove
+학명   : Streptopelia orientalis
+한국명 : 멧비둘기
+============
+영명   : Eurasian Collared-Dove
+학명   : Streptopelia decaocto
+한국명 : 염주비둘기
+============
+영명   : Red Collared-Dove
+학명   : Streptopelia tranquebarica
+한국명 : 홍비둘기
+============
+영명   : Spotted Dove
+학명   : Streptopelia chinensis
+한국명 : 목점박이비둘기
+============
+영명   : White-bellied Green-Pigeon
+학명   : Treron sieboldii
+한국명 : 녹색비둘기
+============
+영명   : Pallas's Sandgrouse
+학명   : Syrrhaptes paradoxus
+한국명 : 사막꿩
+============
+영명   : Great Bustard
+학명   : Otis tarda
+한국명 : 느시
+============
+영명   : Greater Coucal
+학명   : Centropus sinensis
+한국명 : 큰쿠칼
+============
+영명   : Lesser Coucal
+학명   : Centropus bengalensis
+한국명 : 쿠칼
+============
+영명   : Chestnut-winged Cuckoo
+학명   : Clamator coromandus
+한국명 : 밤색날개뻐꾸기
+============
+영명   : Asian Koel
+학명   : Eudynamys scolopaceus
+한국명 : 초록부리뻐꾸기(검은뻐꾸기)
+============
+영명   : Square-tailed Drongo-Cuckoo
+학명   : Surniculus lugubris
+한국명 : 검은두견이
+============
+영명   : Large Hawk-Cuckoo
+학명   : Hierococcyx sparverioides
+한국명 : 큰매사촌
+============
+영명   : Northern Hawk-Cuckoo
+학명   : Hierococcyx hyperythrus
+한국명 : 매사촌
+============
+영명   : Lesser Cuckoo
+학명   : Cuculus poliocephalus
+한국명 : 두견이
+============
+영명   : Indian Cuckoo
+학명   : Cuculus micropterus
+한국명 : 검은등뻐꾸기
+============
+영명   : Himalayan Cuckoo
+학명   : Cuculus saturatus
+한국명 : 벙어리뻐꾸기
+============
+영명   : Common Cuckoo
+학명   : Cuculus canorus
+한국명 : 뻐꾸기
+============
+영명   : Oriental Cuckoo
+학명   : Cuculus optatus
+한국명 : 벙어리뻐꾸기
+============
+영명   : Gray Nightjar
+학명   : Caprimulgus jotaka
+한국명 : 쏙독새
+============
+영명   : White-throated Needletail
+학명   : Hirundapus caudacutus
+한국명 : 바늘꼬리칼새
+============
+영명   : Himalayan Swiftlet
+학명   : Aerodramus brevirostris
+한국명 : 황해쇠칼새
+============
+영명   : Alpine Swift
+학명   : Apus melba
+한국명 : 흰배칼새
+============
+영명   : Common Swift
+학명   : Apus apus
+한국명 : 서양칼새 / 검은등칼새
+============
+영명   : Pacific Swift
+학명   : Apus pacificus
+한국명 : 칼새
+============
+영명   : House Swift
+학명   : Apus nipalensis
+한국명 : 쇠칼새
+============
+영명   : Water Rail
+학명   : Rallus aquaticus
+한국명 : 흰눈썹뜸부기
+============
+영명   : Brown-cheeked Rail
+학명   : Rallus indicus
+한국명 : 흰눈썹뜸부기
+============
+영명   : Eurasian Moorhen
+학명   : Gallinula chloropus
+한국명 : 쇠물닭
+============
+영명   : Eurasian Coot
+학명   : Fulica atra
+한국명 : 물닭
+============
+영명   : Watercock
+학명   : Gallicrex cinerea
+한국명 : 뜸부기
+============
+영명   : White-breasted Waterhen
+학명   : Amaurornis phoenicurus
+한국명 : 흰배뜸부기
+============
+영명   : Ruddy-breasted Crake
+학명   : Zapornia fusca
+한국명 : 쇠뜸부기사촌
+============
+영명   : Band-bellied Crake
+학명   : Zapornia paykullii
+한국명 : 한국뜸부기
+============
+영명   : Baillon's Crake
+학명   : Zapornia pusilla
+한국명 : 쇠뜸부기
+============
+영명   : Swinhoe's Rail
+학명   : Coturnicops exquisitus
+한국명 : 알락뜸부기
+============
+영명   : Demoiselle Crane
+학명   : Anthropoides virgo
+한국명 : 쇠재두루미
+============
+영명   : Siberian Crane
+학명   : Leucogeranus leucogeranus
+한국명 : 시베리아흰두루미
+============
+영명   : Sandhill Crane
+학명   : Antigone canadensis
+한국명 : 캐나다두루미
+============
+영명   : White-naped Crane
+학명   : Antigone vipio
+한국명 : 재두루미
+============
+영명   : Common Crane
+학명   : Grus grus
+한국명 : 검은목두루미
+============
+영명   : Hooded Crane
+학명   : Grus monacha
+한국명 : 흑두루미
+============
+영명   : Red-crowned Crane
+학명   : Grus japonensis
+한국명 : 두루미
+============
+영명   : Black-winged Stilt
+학명   : Himantopus himantopus
+한국명 : 장다리물떼새
+============
+영명   : Pied Avocet
+학명   : Recurvirostra avosetta
+한국명 : 뒷부리장다리물떼새
+============
+영명   : Eurasian Oystercatcher
+학명   : Haematopus ostralegus
+한국명 : 검은머리물떼새
+============
+영명   : Black-bellied Plover
+학명   : Pluvialis squatarola
+한국명 : 개꿩
+============
+영명   : American Golden-Plover
+학명   : Pluvialis dominica
+한국명 : 미국검은가슴물떼새
+============
+영명   : Pacific Golden-Plover
+학명   : Pluvialis fulva
+한국명 : 검은가슴물떼새
+============
+영명   : Northern Lapwing
+학명   : Vanellus vanellus
+한국명 : 댕기물떼새
+============
+영명   : Gray-headed Lapwing
+학명   : Vanellus cinereus
+한국명 : 민댕기물떼새
+============
+영명   : Lesser Sand-Plover
+학명   : Charadrius mongolus
+한국명 : 왕눈물떼새
+============
+영명   : Greater Sand-Plover
+학명   : Charadrius leschenaultii
+한국명 : 큰왕눈물떼새
+============
+영명   : Kentish Plover
+학명   : Charadrius alexandrinus
+한국명 : 흰물떼새
+============
+영명   : Common Ringed Plover
+학명   : Charadrius hiaticula
+한국명 : 흰죽지꼬마물떼새
+============
+영명   : Long-billed Plover
+학명   : Charadrius placidus
+한국명 : 흰목물떼새
+============
+영명   : Little Ringed Plover
+학명   : Charadrius dubius
+한국명 : 꼬마물떼새
+============
+영명   : Oriental Plover
+학명   : Charadrius veredus
+한국명 : 큰물떼새
+============
+영명   : Eurasian Dotterel
+학명   : Charadrius morinellus
+한국명 : 흰눈썹물떼새
+============
+영명   : Greater Painted-Snipe
+학명   : Rostratula benghalensis
+한국명 : 호사도요
+============
+영명   : Pheasant-tailed Jacana
+학명   : Hydrophasianus chirurgus
+한국명 : 물꿩
+============
+영명   : Whimbrel
+학명   : Numenius phaeopus
+한국명 : 중부리도요
+============
+영명   : Little Curlew
+학명   : Numenius minutus
+한국명 : 쇠부리도요
+============
+영명   : Far Eastern Curlew
+학명   : Numenius madagascariensis
+한국명 : 알락꼬리마도요
+============
+영명   : Eurasian Curlew
+학명   : Numenius arquata
+한국명 : 마도요
+============
+영명   : Bar-tailed Godwit
+학명   : Limosa lapponica
+한국명 : 큰뒷부리도요
+============
+영명   : Black-tailed Godwit
+학명   : Limosa limosa
+한국명 : 흑꼬리도요
+============
+영명   : Hudsonian Godwit
+학명   : Limosa haemastica
+한국명 : 캐나다흑꼬리도요
+============
+영명   : Ruddy Turnstone
+학명   : Arenaria interpres
+한국명 : 꼬까도요
+============
+영명   : Great Knot
+학명   : Calidris tenuirostris
+한국명 : 붉은어깨도요
+============
+영명   : Red Knot
+학명   : Calidris canutus
+한국명 : 붉은가슴도요
+============
+영명   : Ruff
+학명   : Calidris pugnax
+한국명 : 목도리도요
+============
+영명   : Broad-billed Sandpiper
+학명   : Calidris falcinellus
+한국명 : 송곳부리도요
+============
+영명   : Sharp-tailed Sandpiper
+학명   : Calidris acuminata
+한국명 : 메추라기도요
+============
+영명   : Curlew Sandpiper
+학명   : Calidris ferruginea
+한국명 : 붉은갯도요
+============
+영명   : Temminck's Stint
+학명   : Calidris temminckii
+한국명 : 흰꼬리좀도요
+============
+영명   : Long-toed Stint
+학명   : Calidris subminuta
+한국명 : 종달도요
+============
+영명   : Spoon-billed Sandpiper
+학명   : Calidris pygmaea
+한국명 : 넓적부리도요
+============
+영명   : Red-necked Stint
+학명   : Calidris ruficollis
+한국명 : 좀도요
+============
+영명   : Sanderling
+학명   : Calidris alba
+한국명 : 세가락도요
+============
+영명   : Dunlin
+학명   : Calidris alpina
+한국명 : 민물도요
+============
+영명   : Little Stint
+학명   : Calidris minuta
+한국명 : 작은도요
+============
+영명   : Buff-breasted Sandpiper
+학명   : Calidris subruficollis
+한국명 : 누른도요
+============
+영명   : Pectoral Sandpiper
+학명   : Calidris melanotos
+한국명 : 아메리카메추라기도요
+============
+영명   : Western Sandpiper
+학명   : Calidris mauri
+한국명 : 긴부리참도요
+============
+영명   : Asian Dowitcher
+학명   : Limnodromus semipalmatus
+한국명 : 큰부리도요
+============
+영명   : Long-billed Dowitcher
+학명   : Limnodromus scolopaceus
+한국명 : 긴부리도요
+============
+영명   : Jack Snipe
+학명   : Lymnocryptes minimus
+한국명 : 꼬마도요
+============
+영명   : Eurasian Woodcock
+학명   : Scolopax rusticola
+한국명 : 멧도요
+============
+영명   : Solitary Snipe
+학명   : Gallinago solitaria
+한국명 : 청도요
+============
+영명   : Latham's Snipe
+학명   : Gallinago hardwickii
+한국명 : 큰꺅도요
+============
+영명   : Common Snipe
+학명   : Gallinago gallinago
+한국명 : 꺅도요
+============
+영명   : Pin-tailed Snipe
+학명   : Gallinago stenura
+한국명 : 바늘꼬리도요
+============
+영명   : Swinhoe's Snipe
+학명   : Gallinago megala
+한국명 : 꺅도요사촌
+============
+영명   : Terek Sandpiper
+학명   : Xenus cinereus
+한국명 : 뒷부리도요
+============
+영명   : Wilson's Phalarope
+학명   : Phalaropus tricolor
+한국명 : 큰지느러미발도요
+============
+영명   : Red-necked Phalarope
+학명   : Phalaropus lobatus
+한국명 : 지느러미발도요
+============
+영명   : Red Phalarope
+학명   : Phalaropus fulicarius
+한국명 : 붉은배지느러미발도요
+============
+영명   : Common Sandpiper
+학명   : Actitis hypoleucos
+한국명 : 깝작도요
+============
+영명   : Green Sandpiper
+학명   : Tringa ochropus
+한국명 : 삑삑도요
+============
+영명   : Gray-tailed Tattler
+학명   : Tringa brevipes
+한국명 : 노랑발도요
+============
+영명   : Spotted Redshank
+학명   : Tringa erythropus
+한국명 : 학도요
+============
+영명   : Greater Yellowlegs
+학명   : Tringa melanoleuca
+한국명 : 큰노랑발도요
+============
+영명   : Common Greenshank
+학명   : Tringa nebularia
+한국명 : 청다리도요
+============
+영명   : Nordmann's Greenshank
+학명   : Tringa guttifer
+한국명 : (쇠)청다리도요사촌
+============
+영명   : Marsh Sandpiper
+학명   : Tringa stagnatilis
+한국명 : 쇠청다리도요
+============
+영명   : Wood Sandpiper
+학명   : Tringa glareola
+한국명 : 알락도요
+============
+영명   : Common Redshank
+학명   : Tringa totanus
+한국명 : 붉은발도요
+============
+영명   : Yellow-legged Buttonquail
+학명   : Turnix tanki
+한국명 : 세가락메추라기
+============
+영명   : Oriental Pratincole
+학명   : Glareola maldivarum
+한국명 : 제비물떼새
+============
+영명   : South Polar Skua
+학명   : Stercorarius maccormicki
+한국명 : 큰도둑갈매기
+============
+영명   : Pomarine Jaeger
+학명   : Stercorarius pomarinus
+한국명 : 넓적꼬리도둑갈매기
+============
+영명   : Parasitic Jaeger
+학명   : Stercorarius parasiticus
+한국명 : 북극도둑갈매기
+============
+영명   : Long-tailed Jaeger
+학명   : Stercorarius longicaudus
+한국명 : 좀도둑갈매기
+============
+영명   : Dovekie
+학명   : Alle alle
+한국명 : 작은바다쇠오리
+============
+영명   : Common Murre
+학명   : Uria aalge
+한국명 : 바다오리
+============
+영명   : Thick-billed Murre
+학명   : Uria lomvia
+한국명 : 흰줄부리바다오리 / 큰부리바다오리
+============
+영명   : Pigeon Guillemot
+학명   : Cepphus columba
+한국명 : 흰줄날개바다오리
+============
+영명   : Spectacled Guillemot
+학명   : Cepphus carbo
+한국명 : 흰눈썹바다오리
+============
+영명   : Long-billed Murrelet
+학명   : Brachyramphus perdix
+한국명 : 알락쇠오리
+============
+영명   : Ancient Murrelet
+학명   : Synthliboramphus antiquus
+한국명 : 바다쇠오리
+============
+영명   : Japanese Murrelet
+학명   : Synthliboramphus wumizusume
+한국명 : 뿔쇠오리
+============
+영명   : Least Auklet
+학명   : Aethia pusilla
+한국명 : 작은바다오리
+============
+영명   : Rhinoceros Auklet
+학명   : Cerorhinca monocerata
+한국명 : 흰수염바다오리
+============
+영명   : Black-legged Kittiwake
+학명   : Rissa tridactyla
+한국명 : 세가락갈매기
+============
+영명   : Ivory Gull
+학명   : Pagophila eburnea
+한국명 : 북극흰갈매기
+============
+영명   : Sabine's Gull
+학명   : Xema sabini
+한국명 : 목테갈매기
+============
+영명   : Saunders's Gull
+학명   : Saundersilarus saundersi
+한국명 : 검은머리갈매기
+============
+영명   : Slender-billed Gull
+학명   : Chroicocephalus genei
+한국명 : 기린목갈매기 / 긴목갈매기
+============
+영명   : Black-headed Gull
+학명   : Chroicocephalus ridibundus
+한국명 : 붉은부리갈매기
+============
+영명   : Relict Gull
+학명   : Ichthyaetus relictus
+한국명 : 적호갈매기(고대갈매기)
+============
+영명   : Pallas's Gull
+학명   : Ichthyaetus ichthyaetus
+한국명 : 큰검은머리갈매기
+============
+영명   : Black-tailed Gull
+학명   : Larus crassirostris
+한국명 : 괭이갈매기
+============
+영명   : Mew Gull
+학명   : Larus canus
+한국명 : 갈매기
+============
+영명   : Ring-billed Gull
+학명   : Larus delawarensis
+한국명 : 북미갈매기
+============
+영명   : Western Gull
+학명   : Larus occidentalis
+============
+영명   : Herring Gull
+학명   : Larus argentatus
+한국명 : 재갈매기
+============
+영명   : Caspian Gull
+학명   : Larus cachinnans
+한국명 : 카스피해갈매기
+============
+영명   : Iceland Gull
+학명   : Larus glaucoides
+한국명 : 작은흰갈매기
+============
+영명   : Lesser Black-backed Gull
+학명   : Larus fuscus
+한국명 : 줄무늬노랑발갈매기
+============
+영명   : Slaty-backed Gull
+학명   : Larus schistisagus
+한국명 : 큰재갈매기
+============
+영명   : Glaucous-winged Gull
+학명   : Larus glaucescens
+한국명 : 수리갈매기
+============
+영명   : Glaucous Gull
+학명   : Larus hyperboreus
+한국명 : 흰갈매기
+============
+영명   : Sooty Tern
+학명   : Onychoprion fuscatus
+한국명 : 검은등제비갈매기
+============
+영명   : Bridled Tern
+학명   : Onychoprion anaethetus
+한국명 : 에위니아제비갈매기
+============
+영명   : Aleutian Tern
+학명   : Onychoprion aleuticus
+한국명 : 알류샨제비갈매기
+============
+영명   : Little Tern
+학명   : Sternula albifrons
+한국명 : 쇠제비갈매기
+============
+영명   : Gull-billed Tern
+학명   : Gelochelidon nilotica
+한국명 : 큰부리제비갈매기
+============
+영명   : Caspian Tern
+학명   : Hydroprogne caspia
+한국명 : 붉은부리큰제비갈매기
+============
+영명   : Black Tern
+학명   : Chlidonias niger
+한국명 : 검은제비갈매기
+============
+영명   : White-winged Tern
+학명   : Chlidonias leucopterus
+한국명 : 흰죽지갈매기
+============
+영명   : Whiskered Tern
+학명   : Chlidonias hybrida
+한국명 : 구레나룻제비갈매기
+============
+영명   : Roseate Tern
+학명   : Sterna dougallii
+한국명 : 긴꼬리제비갈매기
+============
+영명   : Common Tern
+학명   : Sterna hirundo
+한국명 : 제비갈매기
+============
+영명   : Great Crested Tern
+학명   : Thalasseus bergii
+한국명 : 큰제비갈매기
+============
+영명   : Red-throated Loon
+학명   : Gavia stellata
+한국명 : 아비
+============
+영명   : Arctic Loon
+학명   : Gavia arctica
+한국명 : 큰회색머리아비
+============
+영명   : Pacific Loon
+학명   : Gavia pacifica
+한국명 : 회색머리아비
+============
+영명   : Yellow-billed Loon
+학명   : Gavia adamsii
+한국명 : 흰부리아비
+============
+영명   : Short-tailed Albatross
+학명   : Phoebastria albatrus
+한국명 : 알바트로스
+============
+영명   : Swinhoe's Storm-Petrel
+학명   : Oceanodroma monorhis
+한국명 : 바다제비
+============
+영명   : Band-rumped Storm-Petrel
+학명   : Oceanodroma castro
+============
+영명   : Bonin Petrel
+학명   : Pterodroma hypoleuca
+한국명 : 흰배슴새
+============
+영명   : Bulwer's Petrel
+학명   : Bulweria bulwerii
+한국명 : 검은슴새
+============
+영명   : Streaked Shearwater
+학명   : Calonectris leucomelas
+한국명 : 슴새
+============
+영명   : Flesh-footed Shearwater
+학명   : Ardenna carneipes
+한국명 : 붉은발슴새
+============
+영명   : Sooty Shearwater
+학명   : Ardenna grisea
+한국명 : 사대양슴새
+============
+영명   : Short-tailed Shearwater
+학명   : Ardenna tenuirostris
+한국명 : 쇠부리슴새
+============
+영명   : Black Stork
+학명   : Ciconia nigra
+한국명 : 먹황새
+============
+영명   : Oriental Stork
+학명   : Ciconia boyciana
+한국명 : 황새
+============
+영명   : Lesser Frigatebird
+학명   : Fregata ariel
+한국명 : 군함조
+============
+영명   : Great Frigatebird
+학명   : Fregata minor
+한국명 : 큰군함조
+============
+영명   : Masked Booby
+학명   : Sula dactylatra
+한국명 : 푸른얼굴얼가니새
+============
+영명   : Brown Booby
+학명   : Sula leucogaster
+한국명 : 갈색얼가니새
+============
+영명   : Red-footed Booby
+학명   : Sula sula
+한국명 : 붉은발얼가니새
+============
+영명   : Pelagic Cormorant
+학명   : Phalacrocorax pelagicus
+한국명 : 쇠가마우지
+============
+영명   : Great Cormorant
+학명   : Phalacrocorax carbo
+한국명 : 민물가마우지
+============
+영명   : Japanese Cormorant
+학명   : Phalacrocorax capillatus
+한국명 : 가마우지
+============
+영명   : Great White Pelican
+학명   : Pelecanus onocrotalus
+한국명 : 큰사다새
+============
+영명   : Dalmatian Pelican
+학명   : Pelecanus crispus
+한국명 : 사다새
+============
+영명   : Great Bittern
+학명   : Botaurus stellaris
+한국명 : 알락해오라기
+============
+영명   : Yellow Bittern
+학명   : Ixobrychus sinensis
+한국명 : 덤불해오라기
+============
+영명   : Schrenck's Bittern
+학명   : Ixobrychus eurhythmus
+한국명 : 큰덤불해오라기
+============
+영명   : Cinnamon Bittern
+학명   : Ixobrychus cinnamomeus
+한국명 : 열대붉은해오라기
+============
+영명   : Black Bittern
+학명   : Ixobrychus flavicollis
+한국명 : 검은해오라기
+============
+영명   : Gray Heron
+학명   : Ardea cinerea
+한국명 : 왜가리
+============
+영명   : Purple Heron
+학명   : Ardea purpurea
+한국명 : 붉은왜가리
+============
+영명   : Great Egret
+학명   : Ardea alba
+한국명 : 대백로
+============
+영명   : Intermediate Egret
+학명   : Ardea intermedia
+한국명 : 중백로
+============
+영명   : Chinese Egret
+학명   : Egretta eulophotes
+한국명 : 노랑부리백로
+============
+영명   : Little Egret
+학명   : Egretta garzetta
+한국명 : 쇠백로
+============
+영명   : Pacific Reef-Heron
+학명   : Egretta sacra
+한국명 : 흑로
+============
+영명   : Cattle Egret
+학명   : Bubulcus ibis
+한국명 : 황로
+============
+영명   : Chinese Pond-Heron
+학명   : Ardeola bacchus
+한국명 : 흰날개해오라기
+============
+영명   : Striated Heron
+학명   : Butorides striata
+한국명 : 검은댕기해오라기
+============
+영명   : Black-crowned Night-Heron
+학명   : Nycticorax nycticorax
+한국명 : 해오라기
+============
+영명   : Japanese Night-Heron
+학명   : Gorsachius goisagi
+한국명 : 붉은해오라기
+============
+영명   : Malayan Night-Heron
+학명   : Gorsachius melanolophus
+한국명 : 검은댕기붉은해오라기
+============
+영명   : Black-headed Ibis
+학명   : Threskiornis melanocephalus
+한국명 : 검은머리흰따오기
+============
+영명   : Crested Ibis
+학명   : Nipponia nippon
+한국명 : 따오기
+============
+영명   : Eurasian Spoonbill
+학명   : Platalea leucorodia
+한국명 : 노랑부리저어새
+============
+영명   : Black-faced Spoonbill
+학명   : Platalea minor
+한국명 : 저어새
+============
+영명   : Osprey
+학명   : Pandion haliaetus
+한국명 : 물수리
+============
+영명   : Black-winged Kite
+학명   : Elanus caeruleus
+한국명 : 검은죽지솔개
+============
+영명   : Bearded Vulture
+학명   : Gypaetus barbatus
+한국명 : 수염수리
+============
+영명   : Oriental Honey-buzzard
+학명   : Pernis ptilorhynchus
+한국명 : 벌매
+============
+영명   : Black Baza
+학명   : Aviceda leuphotes
+한국명 : 검은바자 / 검은뿔작은매
+============
+영명   : Cinereous Vulture
+학명   : Aegypius monachus
+한국명 : 독수리
+============
+영명   : Himalayan Griffon
+학명   : Gyps himalayensis
+한국명 : 고산대머리수리
+============
+영명   : Crested Serpent-Eagle
+학명   : Spilornis cheela
+한국명 : 관수리
+============
+영명   : Mountain Hawk-Eagle
+학명   : Nisaetus nipalensis
+한국명 : 뿔매
+============
+영명   : Greater Spotted Eagle
+학명   : Clanga clanga
+한국명 : 항라머리검독수리
+============
+영명   : Booted Eagle
+학명   : Hieraaetus pennatus
+한국명 : 흰점어깨수리
+============
+영명   : Steppe Eagle
+학명   : Aquila nipalensis
+한국명 : 초원수리
+============
+영명   : Imperial Eagle
+학명   : Aquila heliaca
+한국명 : 흰죽지수리
+============
+영명   : Golden Eagle
+학명   : Aquila chrysaetos
+한국명 : 검독수리
+============
+영명   : Bonelli's Eagle
+학명   : Aquila fasciata
+한국명 : 흰배줄무늬수리
+============
+영명   : Gray-faced Buzzard
+학명   : Butastur indicus
+한국명 : 왕새매
+============
+영명   : Eastern Marsh-Harrier
+학명   : Circus spilonotus
+한국명 : 개구리매
+============
+영명   : Hen Harrier
+학명   : Circus cyaneus
+한국명 : 잿빛개구리매
+============
+영명   : Pied Harrier
+학명   : Circus melanoleucos
+한국명 : 알락개구리매
+============
+영명   : Chinese Sparrowhawk
+학명   : Accipiter soloensis
+한국명 : 붉은배새매
+============
+영명   : Japanese Sparrowhawk
+학명   : Accipiter gularis
+한국명 : 조롱이
+============
+영명   : Eurasian Sparrowhawk
+학명   : Accipiter nisus
+한국명 : 새매
+============
+영명   : Northern Goshawk
+학명   : Accipiter gentilis
+한국명 : 참매
+============
+영명   : Black Kite
+학명   : Milvus migrans
+한국명 : 솔개
+============
+영명   : White-tailed Eagle
+학명   : Haliaeetus albicilla
+한국명 : 흰꼬리수리
+============
+영명   : Steller's Sea-Eagle
+학명   : Haliaeetus pelagicus
+한국명 : 참수리
+============
+영명   : Rough-legged Hawk
+학명   : Buteo lagopus
+한국명 : 털발말똥가리
+============
+영명   : Eastern Buzzard
+학명   : Buteo japonicus
+한국명 : 말똥가리
+============
+영명   : Upland Buzzard
+학명   : Buteo hemilasius
+한국명 : 큰말똥가리
+============
+영명   : Australasian Grass-Owl
+학명   : Tyto longimembris
+한국명 : 가면올빼미
+============
+영명   : Japanese Scops-Owl
+학명   : Otus semitorques
+한국명 : 큰소쩍새
+============
+영명   : Oriental Scops-Owl
+학명   : Otus sunia
+한국명 : 소쩍새
+============
+영명   : Eurasian Eagle-Owl
+학명   : Bubo bubo
+한국명 : 수리부엉이
+============
+영명   : Snowy Owl
+학명   : Bubo scandiacus
+한국명 : 흰올빼미
+============
+영명   : Little Owl
+학명   : Athene noctua
+한국명 : 금눈쇠올빼미
+============
+영명   : Himalayan Owl
+학명   : Strix nivicolum
+한국명 : 올빼미
+============
+영명   : Ural Owl
+학명   : Strix uralensis
+한국명 : 긴점박이올빼미
+============
+영명   : Long-eared Owl
+학명   : Asio otus
+한국명 : 칡부엉이
+============
+영명   : Short-eared Owl
+학명   : Asio flammeus
+한국명 : 쇠부엉이
+============
+영명   : Northern Boobook
+학명   : Ninox japonica
+한국명 : 솔부엉이
+============
+영명   : Eurasian Hoopoe
+학명   : Upupa epops
+한국명 : 후투티
+============
+영명   : Common Kingfisher
+학명   : Alcedo atthis
+한국명 : 물총새
+============
+영명   : Ruddy Kingfisher
+학명   : Halcyon coromanda
+한국명 : 호반새
+============
+영명   : Black-capped Kingfisher
+학명   : Halcyon pileata
+한국명 : 청호반새
+============
+영명   : Crested Kingfisher
+학명   : Megaceryle lugubris
+한국명 : 뿔호반새
+============
+영명   : Dollarbird
+학명   : Eurystomus orientalis
+한국명 : 파랑새
+============
+영명   : Eurasian Wryneck
+학명   : Jynx torquilla
+한국명 : 개미잡이
+============
+영명   : Gray-capped Woodpecker
+학명   : Yungipicus canicapillus
+한국명 : 아물쇠딱다구리
+============
+영명   : Pygmy Woodpecker
+학명   : Yungipicus kizuki
+한국명 : 쇠딱다구리
+============
+영명   : Rufous-bellied Woodpecker
+학명   : Dendrocopos hyperythrus
+한국명 : 붉은배오색딱다구리
+============
+영명   : White-backed Woodpecker
+학명   : Dendrocopos leucotos
+한국명 : 큰오색딱다구리
+============
+영명   : Great Spotted Woodpecker
+학명   : Dendrocopos major
+한국명 : 오색딱다구리
+============
+영명   : Lesser Spotted Woodpecker
+학명   : Dryobates minor
+한국명 : 쇠오색딱다구리
+============
+영명   : Gray-headed Woodpecker
+학명   : Picus canus
+한국명 : 청딱다구리
+============
+영명   : White-bellied Woodpecker
+학명   : Dryocopus javensis
+한국명 : 크낙새
+============
+영명   : Black Woodpecker
+학명   : Dryocopus martius
+한국명 : 까막딱다구리
+============
+영명   : Lesser Kestrel
+학명   : Falco naumanni
+한국명 : 흰발톱황조롱이
+============
+영명   : Eurasian Kestrel
+학명   : Falco tinnunculus
+한국명 : 황조롱이
+============
+영명   : Amur Falcon
+학명   : Falco amurensis
+한국명 : 비둘기조롱이
+============
+영명   : Merlin
+학명   : Falco columbarius
+한국명 : 쇠황조롱이
+============
+영명   : Eurasian Hobby
+학명   : Falco subbuteo
+한국명 : 새홀리기
+============
+영명   : Saker Falcon
+학명   : Falco cherrug
+한국명 : 헨다손매
+============
+영명   : Gyrfalcon
+학명   : Falco rusticolus
+한국명 : 흰매
+============
+영명   : Peregrine Falcon
+학명   : Falco peregrinus
+한국명 : 매
+============
+영명   : Blue-winged Pitta
+학명   : Pitta moluccensis
+한국명 : 푸른날개팔색조
+============
+영명   : Fairy Pitta
+학명   : Pitta nympha
+한국명 : 팔색조
+============
+영명   : Ryukyu Minivet
+학명   : Pericrocotus tegimae
+한국명 : 검은가슴할미새사촌
+============
+영명   : Ashy Minivet
+학명   : Pericrocotus divaricatus
+한국명 : 할미새사촌
+============
+영명   : Black-winged Cuckooshrike
+학명   : Lalage melaschistos
+한국명 : 검은할미새사촌
+============
+영명   : Black-naped Oriole
+학명   : Oriolus chinensis
+한국명 : 꾀꼬리
+============
+영명   : Ashy Woodswallow
+학명   : Artamus fuscus
+한국명 : 회색숲제비
+============
+영명   : White-breasted Woodswallow
+학명   : Artamus leucorynchus
+한국명 : 흰가슴숲제비
+============
+영명   : Black Drongo
+학명   : Dicrurus macrocercus
+한국명 : 검은바람까마귀
+============
+영명   : Ashy Drongo
+학명   : Dicrurus leucophaeus
+한국명 : 회색바람까마귀
+============
+영명   : Hair-crested Drongo
+학명   : Dicrurus hottentottus
+한국명 : 바람까마귀
+============
+영명   : Japanese Paradise-Flycatcher
+학명   : Terpsiphone atrocaudata
+한국명 : 삼광조
+============
+영명   : Amur Paradise-Flycatcher
+학명   : Terpsiphone incei
+한국명 : 북방긴꼬리딱새
+============
+영명   : Tiger Shrike
+학명   : Lanius tigrinus
+한국명 : 칡때까치
+============
+영명   : Bull-headed Shrike
+학명   : Lanius bucephalus
+한국명 : 때까치
+============
+영명   : Red-backed Shrike
+학명   : Lanius collurio
+한국명 : 붉은등때까치
+============
+영명   : Brown Shrike
+학명   : Lanius cristatus
+한국명 : 노랑때까치
+============
+영명   : Long-tailed Shrike
+학명   : Lanius schach
+한국명 : 긴꼬리때까치
+============
+영명   : Northern Shrike
+학명   : Lanius borealis
+한국명 : 재때까치
+============
+영명   : Great Gray Shrike
+학명   : Lanius excubitor
+한국명 : 큰재개구마리
+============
+영명   : Chinese Gray Shrike
+학명   : Lanius sphenocercus
+한국명 : 물때까치
+============
+영명   : Eurasian Jay
+학명   : Garrulus glandarius
+한국명 : 어치
+============
+영명   : Azure-winged Magpie
+학명   : Cyanopica cyanus
+한국명 : 물까치
+============
+영명   : Oriental Magpie
+학명   : Pica serica
+한국명 : 까치
+============
+영명   : Eurasian Magpie
+학명   : Pica pica
+한국명 : 까치
+============
+영명   : Eurasian Nutcracker
+학명   : Nucifraga caryocatactes
+한국명 : 잣까마귀
+============
+영명   : Red-billed Chough
+학명   : Pyrrhocorax pyrrhocorax
+한국명 : 붉은부리까마귀
+============
+영명   : Daurian Jackdaw
+학명   : Corvus dauuricus
+한국명 : 갈까마귀
+============
+영명   : House Crow
+학명   : Corvus splendens
+한국명 : 집까마귀
+============
+영명   : Rook
+학명   : Corvus frugilegus
+한국명 : 떼까마귀
+============
+영명   : Carrion Crow
+학명   : Corvus corone
+한국명 : 까마귀
+============
+영명   : Large-billed Crow
+학명   : Corvus macrorhynchos
+한국명 : 큰부리까마귀
+============
+영명   : Gray-headed Canary-Flycatcher
+학명   : Culicicapa ceylonensis
+============
+영명   : Coal Tit
+학명   : Periparus ater
+한국명 : 진박새
+============
+영명   : Yellow-bellied Tit
+학명   : Periparus venustulus
+한국명 : 노랑배진박새
+============
+영명   : Varied Tit
+학명   : Sittiparus varius
+한국명 : 곤줄박이
+============
+영명   : Marsh Tit
+학명   : Poecile palustris
+한국명 : 쇠박새
+============
+영명   : Willow Tit
+학명   : Poecile montanus
+한국명 : 북방 쇠박새
+============
+영명   : Azure Tit
+학명   : Cyanistes cyanus
+한국명 : 흰머리유리박새
+============
+영명   : Great Tit
+학명   : Parus major
+한국명 : 박새
+============
+영명   : Japanese Tit
+학명   : Parus minor
+한국명 : 박새
+============
+영명   : Chinese Penduline-Tit
+학명   : Remiz consobrinus
+한국명 : 스윈호오목눈이
+============
+영명   : Horned Lark
+학명   : Eremophila alpestris
+한국명 : 해변종다리
+============
+영명   : Greater Short-toed Lark
+학명   : Calandrella brachydactyla
+한국명 : 쇠종다리
+============
+영명   : Sykes's Short-toed Lark
+학명   : Calandrella dukhunensis
+============
+영명   : Bimaculated Lark
+학명   : Melanocorypha bimaculata
+한국명 : 큰부리종다리
+============
+영명   : Mongolian Lark
+학명   : Melanocorypha mongolica
+============
+영명   : Asian Short-toed Lark
+학명   : Alaudala cheleensis
+한국명 : 북방쇠종다리
+============
+영명   : Eurasian Skylark
+학명   : Alauda arvensis
+한국명 : 종다리
+============
+영명   : Crested Lark
+학명   : Galerida cristata
+한국명 : 뿔종다리
+============
+영명   : Bearded Reedling
+학명   : Panurus biarmicus
+한국명 : 수염오목눈이
+============
+영명   : Zitting Cisticola
+학명   : Cisticola juncidis
+한국명 : 개개비사촌
+============
+영명   : Thick-billed Warbler
+학명   : Arundinax aedon
+한국명 : 큰부리개개비
+============
+영명   : Booted Warbler
+학명   : Iduna caligata
+한국명 : 쇠덤불개개비
+============
+영명   : Black-browed Reed Warbler
+학명   : Acrocephalus bistrigiceps
+한국명 : 쇠개개비
+============
+영명   : Paddyfield Warbler
+학명   : Acrocephalus agricola
+한국명 : 북방쇠개개비 / 서양쇠개개비
+============
+영명   : Manchurian Reed Warbler
+학명   : Acrocephalus tangorum
+한국명 : 우수리개개비
+============
+영명   : Oriental Reed Warbler
+학명   : Acrocephalus orientalis
+한국명 : 개개비
+============
+영명   : Gray's Grasshopper-Warbler
+학명   : Locustella fasciolata
+한국명 : 붉은허리개개비
+============
+영명   : Marsh Grassbird
+학명   : Locustella pryeri
+한국명 : 큰개개비
+============
+영명   : Pallas's Grasshopper-Warbler
+학명   : Locustella certhiola
+한국명 : 북방개개비
+============
+영명   : Middendorff's Grasshopper-Warbler
+학명   : Locustella ochotensis
+한국명 : 알락꼬리쥐발귀
+============
+영명   : Pleske's Grasshopper-Warbler
+학명   : Locustella pleskei
+한국명 : 섬개개비
+============
+영명   : Lanceolated Warbler
+학명   : Locustella lanceolata
+한국명 : 쥐발귀개개비
+============
+영명   : Baikal Bush Warbler
+학명   : Locustella davidi
+한국명 : 점무늬가슴쥐발귀
+============
+영명   : Bank Swallow
+학명   : Riparia riparia
+한국명 : 갈색제비
+============
+영명   : Pale Sand Martin
+학명   : Riparia diluta
+한국명 : 옅은갈색제비
+============
+영명   : Eurasian Crag-Martin
+학명   : Ptyonoprogne rupestris
+한국명 : 바위산제비
+============
+영명   : Barn Swallow
+학명   : Hirundo rustica
+한국명 : 제비
+============
+영명   : Pacific Swallow
+학명   : Hirundo tahitica
+============
+영명   : Red-rumped Swallow
+학명   : Cecropis daurica
+한국명 : 귀제비
+============
+영명   : Common House-Martin
+학명   : Delichon urbicum
+한국명 : 흰턱제비
+============
+영명   : Asian House-Martin
+학명   : Delichon dasypus
+한국명 : 흰털발제비
+============
+영명   : Light-vented Bulbul
+학명   : Pycnonotus sinensis
+한국명 : 줄무늬머리직박구리 / 검은이마직박구리
+============
+영명   : Black Bulbul
+학명   : Hypsipetes leucocephalus
+============
+영명   : Brown-eared Bulbul
+학명   : Hypsipetes amaurotis
+한국명 : 직박구리
+============
+영명   : Wood Warbler
+학명   : Phylloscopus sibilatrix
+한국명 : 노랑턱솔새
+============
+영명   : Yellow-browed Warbler
+학명   : Phylloscopus inornatus
+한국명 : 노랑눈썹솔새
+============
+영명   : Hume's Warbler
+학명   : Phylloscopus humei
+한국명 : 연노랑눈썹솔새
+============
+영명   : Chinese Leaf Warbler
+학명   : Phylloscopus yunnanensis
+한국명 : 연노랑허리솔새
+============
+영명   : Pallas's Leaf Warbler
+학명   : Phylloscopus proregulus
+한국명 : 노랑허리솔새
+============
+영명   : Radde's Warbler
+학명   : Phylloscopus schwarzi
+한국명 : 긴다리솔새사촌
+============
+영명   : Yellow-streaked Warbler
+학명   : Phylloscopus armandii
+한국명 : 쇠긴다리솔새사촌
+============
+영명   : Tickell's Leaf Warbler
+학명   : Phylloscopus affinis
+한국명 : 노랑배솔새사촌
+============
+영명   : Alpine Leaf Warbler
+학명   : Phylloscopus occisinensis
+한국명 : 노랑배솔새사촌
+============
+영명   : Dusky Warbler
+학명   : Phylloscopus fuscatus
+한국명 : 솔새사촌
+============
+영명   : Buff-throated Warbler
+학명   : Phylloscopus subaffinis
+============
+영명   : Willow Warbler
+학명   : Phylloscopus trochilus
+한국명 : 연노랑눈솔새
+============
+영명   : Common Chiffchaff
+학명   : Phylloscopus collybita
+한국명 : 검은다리솔새
+============
+영명   : Eastern Crowned Warbler
+학명   : Phylloscopus coronatus
+한국명 : 산솔새
+============
+영명   : Two-barred Warbler
+학명   : Phylloscopus plumbeitarsus
+한국명 : 버들솔새
+============
+영명   : Pale-legged Leaf Warbler
+학명   : Phylloscopus tenellipes
+한국명 : 되솔새
+============
+영명   : Sakhalin Leaf Warbler
+학명   : Phylloscopus borealoides
+한국명 : 사할린되솔새
+============
+영명   : Japanese Leaf Warbler
+학명   : Phylloscopus xanthodryas
+한국명 : 쇠솔새
+============
+영명   : Arctic Warbler
+학명   : Phylloscopus borealis
+한국명 : 쇠솔새
+============
+영명   : Kamchatka Leaf Warbler
+학명   : Phylloscopus examinandus
+한국명 : 솔새
+============
+영명   : Claudia's Leaf Warbler
+학명   : Phylloscopus claudiae
+한국명 : 북방동고비솔새
+============
+영명   : Asian Stubtail
+학명   : Urosphena squameiceps
+한국명 : 숲새
+============
+영명   : Japanese Bush Warbler
+학명   : Horornis diphone
+한국명 : 섬휘파람새
+============
+영명   : Manchurian Bush Warbler
+학명   : Horornis canturians
+한국명 : 큰휘파람새
+============
+영명   : Long-tailed Tit
+학명   : Aegithalos caudatus
+한국명 : 오목눈이
+============
+영명   : Barred Warbler
+학명   : Sylvia nisoria
+한국명 : 비늘무늬덤불개개비
+============
+영명   : Lesser Whitethroat
+학명   : Sylvia curruca
+한국명 : 쇠흰턱딱새
+============
+영명   : Beijing Babbler
+학명   : Rhopophilus pekinensis
+한국명 : 꼬리치레
+============
+영명   : Vinous-throated Parrotbill
+학명   : Sinosuthora webbiana
+한국명 : 붉은머리오목눈이
+============
+영명   : Chestnut-flanked White-eye
+학명   : Zosterops erythropleurus
+한국명 : 한국동박새
+============
+영명   : Warbling White-eye
+학명   : Zosterops japonicus
+============
+영명   : Swinhoe's White-eye
+학명   : Zosterops simplex
+============
+영명   : Goldcrest
+학명   : Regulus regulus
+한국명 : 상모솔새
+============
+영명   : Eurasian Nuthatch
+학명   : Sitta europaea
+한국명 : 아물동고비(동고비)
+============
+영명   : Snowy-browed Nuthatch
+학명   : Sitta villosa
+한국명 : 쇠동고비
+============
+영명   : Eurasian Treecreeper
+학명   : Certhia familiaris
+한국명 : 나무발발이
+============
+영명   : Eurasian Wren
+학명   : Troglodytes troglodytes
+한국명 : 굴뚝새
+============
+영명   : Brown Dipper
+학명   : Cinclus pallasii
+한국명 : 물까마귀
+============
+영명   : European Starling
+학명   : Sturnus vulgaris
+한국명 : 흰점찌르레기
+============
+영명   : Rosy Starling
+학명   : Pastor roseus
+한국명 : 분홍찌르레기
+============
+영명   : Daurian Starling
+학명   : Agropsar sturninus
+한국명 : 북방쇠찌르레기
+============
+영명   : Chestnut-cheeked Starling
+학명   : Agropsar philippensis
+한국명 : 쇠찌르레기
+============
+영명   : White-shouldered Starling
+학명   : Sturnia sinensis
+한국명 : 잿빛쇠찌르레기
+============
+영명   : Red-billed Starling
+학명   : Spodiopsar sericeus
+한국명 : 붉은부리찌르레기
+============
+영명   : White-cheeked Starling
+학명   : Spodiopsar cineraceus
+한국명 : 찌르레기
+============
+영명   : White's Thrush
+학명   : Zoothera aurea
+한국명 : 호랑지빠귀
+============
+영명   : Siberian Thrush
+학명   : Geokichla sibirica
+한국명 : 흰눈썹지빠귀
+============
+영명   : Orange-headed Thrush
+학명   : Geokichla citrina
+한국명 : 귤빛지빠귀
+============
+영명   : Chinese Thrush
+학명   : Otocichla mupinensis
+한국명 : 중국지빠귀
+============
+영명   : Redwing
+학명   : Turdus iliacus
+한국명 : 침엽수림 지대지빠귀 / 타이가지빠귀
+============
+영명   : Chinese Blackbird
+학명   : Turdus mandarinus
+한국명 : 대륙검은지빠귀
+============
+영명   : Japanese Thrush
+학명   : Turdus cardis
+한국명 : 검은지빠귀
+============
+영명   : Gray-backed Thrush
+학명   : Turdus hortulorum
+한국명 : 되지빠귀
+============
+영명   : Eyebrowed Thrush
+학명   : Turdus obscurus
+한국명 : 흰눈썹붉은배지빠귀
+============
+영명   : Brown-headed Thrush
+학명   : Turdus chrysolaus
+한국명 : 붉은배지빠귀
+============
+영명   : Pale Thrush
+학명   : Turdus pallidus
+한국명 : 흰배지빠귀
+============
+영명   : Fieldfare
+학명   : Turdus pilaris
+한국명 : 회색머리지빠귀
+============
+영명   : Black-throated Thrush
+학명   : Turdus atrogularis
+한국명 : 검은목지빠귀
+============
+영명   : Red-throated Thrush
+학명   : Turdus ruficollis
+한국명 : 붉은목지빠귀
+============
+영명   : Dusky Thrush
+학명   : Turdus eunomus
+한국명 : 노랑지빠귀
+============
+영명   : Naumann's Thrush
+학명   : Turdus naumanni
+한국명 : 노랑지빠귀
+============
+영명   : Gray-streaked Flycatcher
+학명   : Muscicapa griseisticta
+한국명 : 제비딱새
+============
+영명   : Dark-sided Flycatcher
+학명   : Muscicapa sibirica
+한국명 : 솔딱새
+============
+영명   : Ferruginous Flycatcher
+학명   : Muscicapa ferruginea
+한국명 : 귤색딱새 / 회색머리갈색딱새
+============
+영명   : Asian Brown Flycatcher
+학명   : Muscicapa dauurica
+한국명 : 쇠솔딱새
+============
+영명   : Brown-breasted Flycatcher
+학명   : Muscicapa muttui
+============
+영명   : Chinese Blue Flycatcher
+학명   : Cyornis glaucicomans
+한국명 : 주황가슴파랑딱새
+============
+영명   : Fujian Niltava
+학명   : Niltava davidi
+한국명 : 붉은가슴딱새
+============
+영명   : Blue-and-white Flycatcher
+학명   : Cyanoptila cyanomelana
+한국명 : 큰유리새
+============
+영명   : Zappey's Flycatcher
+학명   : Cyanoptila cumatilis
+한국명 : 하늘유리새
+============
+영명   : Verditer Flycatcher
+학명   : Eumyias thalassinus
+한국명 : 파랑딱새
+============
+영명   : European Robin
+학명   : Erithacus rubecula
+한국명 : 꼬까울새
+============
+영명   : Rufous-tailed Robin
+학명   : Larvivora sibilans
+한국명 : 울새
+============
+영명   : Japanese Robin
+학명   : Larvivora akahige
+한국명 : 붉은가슴울새
+============
+영명   : Siberian Blue Robin
+학명   : Larvivora cyane
+한국명 : 쇠유리새
+============
+영명   : Bluethroat
+학명   : Luscinia svecica
+한국명 : 흰눈썹울새
+============
+영명   : Siberian Rubythroat
+학명   : Calliope calliope
+한국명 : 진홍가슴
+============
+영명   : Red-flanked Bluetail
+학명   : Tarsiger cyanurus
+한국명 : 유리딱새
+============
+영명   : Yellow-rumped Flycatcher
+학명   : Ficedula zanthopygia
+한국명 : 흰눈썹황금새
+============
+영명   : Green-backed Flycatcher
+학명   : Ficedula elisae
+한국명 : 중국황금새
+============
+영명   : Narcissus Flycatcher
+학명   : Ficedula narcissina
+한국명 : 황금새
+============
+영명   : Mugimaki Flycatcher
+학명   : Ficedula mugimaki
+한국명 : 노랑딱새
+============
+영명   : Slaty-blue Flycatcher
+학명   : Ficedula tricolor
+한국명 : 진푸른딱새
+============
+영명   : Taiga Flycatcher
+학명   : Ficedula albicilla
+한국명 : 흰꼬리딱새
+============
+영명   : Red-breasted Flycatcher
+학명   : Ficedula parva
+한국명 : 서양흰꼬리딱새
+============
+영명   : Plumbeous Redstart
+학명   : Phoenicurus fuliginosus
+한국명 : 부채꼬리바위딱새
+============
+영명   : White-capped Redstart
+학명   : Phoenicurus leucocephalus
+한국명 : 흰머리바위딱새
+============
+영명   : White-winged Redstart
+학명   : Phoenicurus erythrogastrus
+한국명 : 흰날개딱새
+============
+영명   : Black Redstart
+학명   : Phoenicurus ochruros
+한국명 : 검은머리딱새
+============
+영명   : Daurian Redstart
+학명   : Phoenicurus auroreus
+한국명 : 딱새
+============
+영명   : White-throated Rock-Thrush
+학명   : Monticola gularis
+한국명 : 꼬까직박구리
+============
+영명   : Blue Rock-Thrush
+학명   : Monticola solitarius
+한국명 : 바다직박구리
+============
+영명   : Siberian Stonechat
+학명   : Saxicola maurus
+한국명 : 검은딱새
+============
+영명   : Gray Bushchat
+학명   : Saxicola ferreus
+한국명 : 검은뺨딱새
+============
+영명   : Northern Wheatear
+학명   : Oenanthe oenanthe
+한국명 : 북방사막딱새
+============
+영명   : Isabelline Wheatear
+학명   : Oenanthe isabellina
+한국명 : 긴다리사막딱새
+============
+영명   : Desert Wheatear
+학명   : Oenanthe deserti
+한국명 : 검은꼬리사막딱새
+============
+영명   : Pied Wheatear
+학명   : Oenanthe pleschanka
+한국명 : 검은등사막딱새
+============
+영명   : Bohemian Waxwing
+학명   : Bombycilla garrulus
+한국명 : 황여새
+============
+영명   : Japanese Waxwing
+학명   : Bombycilla japonica
+한국명 : 홍여새
+============
+영명   : Scaly-breasted Munia
+학명   : Lonchura punctulata
+한국명 : 얼룩무늬납부리새
+============
+영명   : Alpine Accentor
+학명   : Prunella collaris
+한국명 : 바위종다리
+============
+영명   : Siberian Accentor
+학명   : Prunella montanella
+한국명 : 멧종다리
+============
+영명   : Japanese Accentor
+학명   : Prunella rubida
+한국명 : 쇠바위종다리
+============
+영명   : House Sparrow
+학명   : Passer domesticus
+한국명 : 집참새
+============
+영명   : Russet Sparrow
+학명   : Passer cinnamomeus
+한국명 : 섬참새
+============
+영명   : Eurasian Tree Sparrow
+학명   : Passer montanus
+한국명 : 참새
+============
+영명   : Forest Wagtail
+학명   : Dendronanthus indicus
+한국명 : 물레새
+============
+영명   : Gray Wagtail
+학명   : Motacilla cinerea
+한국명 : 노랑할미새
+============
+영명   : Western Yellow Wagtail
+학명   : Motacilla flava
+한국명 : 긴발톱할미새
+============
+영명   : Eastern Yellow Wagtail
+학명   : Motacilla tschutschensis
+한국명 : 긴발톱할미새
+============
+영명   : Citrine Wagtail
+학명   : Motacilla citreola
+한국명 : 노랑머리할미새
+============
+영명   : Japanese Wagtail
+학명   : Motacilla grandis
+한국명 : 검은등할미새
+============
+영명   : White Wagtail
+학명   : Motacilla alba
+한국명 : 알락할미새
+============
+영명   : Richard's Pipit
+학명   : Anthus richardi
+한국명 : 큰밭종다리
+============
+영명   : Blyth's Pipit
+학명   : Anthus godlewskii
+한국명 : 쇠밭종다리
+============
+영명   : Meadow Pipit
+학명   : Anthus pratensis
+한국명 : 풀밭종다리
+============
+영명   : Rosy Pipit
+학명   : Anthus roseatus
+한국명 : 한국밭종다리
+============
+영명   : Tree Pipit
+학명   : Anthus trivialis
+한국명 : 나무밭종다리 / 모래색밭종다리
+============
+영명   : Olive-backed Pipit
+학명   : Anthus hodgsoni
+한국명 : 힝둥새
+============
+영명   : Pechora Pipit
+학명   : Anthus gustavi
+한국명 : 흰등밭종다리
+============
+영명   : Red-throated Pipit
+학명   : Anthus cervinus
+한국명 : 붉은가슴밭종다리
+============
+영명   : Water Pipit
+학명   : Anthus spinoletta
+한국명 : 옅은밭종다리
+============
+영명   : American Pipit
+학명   : Anthus rubescens
+한국명 : 밭종다리
+============
+영명   : Brambling
+학명   : Fringilla montifringilla
+한국명 : 되새
+============
+영명   : Hawfinch
+학명   : Coccothraustes coccothraustes
+한국명 : 콩새
+============
+영명   : Yellow-billed Grosbeak
+학명   : Eophona migratoria
+한국명 : 밀화부리
+============
+영명   : Japanese Grosbeak
+학명   : Eophona personata
+한국명 : 큰부리밀화부리
+============
+영명   : Common Rosefinch
+학명   : Carpodacus erythrinus
+한국명 : 적원자
+============
+영명   : Long-tailed Rosefinch
+학명   : Carpodacus sibiricus
+한국명 : 긴꼬리홍양진이
+============
+영명   : Pallas's Rosefinch
+학명   : Carpodacus roseus
+한국명 : 양진이
+============
+영명   : Eurasian Bullfinch
+학명   : Pyrrhula pyrrhula
+한국명 : 멋쟁이
+============
+영명   : Asian Rosy-Finch
+학명   : Leucosticte arctoa
+한국명 : 갈색양진이
+============
+영명   : Oriental Greenfinch
+학명   : Chloris sinica
+한국명 : 방울새
+============
+영명   : Common Redpoll
+학명   : Acanthis flammea
+한국명 : 홍방울새
+============
+영명   : Hoary Redpoll
+학명   : Acanthis hornemanni
+한국명 : 쇠홍방울새
+============
+영명   : Red Crossbill
+학명   : Loxia curvirostra
+한국명 : 솔잣새
+============
+영명   : White-winged Crossbill
+학명   : Loxia leucoptera
+한국명 : 흰죽지솔잣새
+============
+영명   : Eurasian Siskin
+학명   : Spinus spinus
+한국명 : 검은머리방울새
+============
+영명   : Lapland Longspur
+학명   : Calcarius lapponicus
+한국명 : 긴발톱멧새
+============
+영명   : Snow Bunting
+학명   : Plectrophenax nivalis
+한국명 : 흰멧새
+============
+영명   : Black-headed Bunting
+학명   : Emberiza melanocephala
+한국명 : 검은머리멧새
+============
+영명   : Red-headed Bunting
+학명   : Emberiza bruniceps
+한국명 : 붉은머리멧새
+============
+영명   : Chestnut-eared Bunting
+학명   : Emberiza fucata
+한국명 : 붉은뺨멧새
+============
+영명   : Godlewski's Bunting
+학명   : Emberiza godlewskii
+한국명 : 동부산악멧새
+============
+영명   : Meadow Bunting
+학명   : Emberiza cioides
+한국명 : 멧새
+============
+영명   : Yellowhammer
+학명   : Emberiza citrinella
+한국명 : 금빛머리멧새
+============
+영명   : Pine Bunting
+학명   : Emberiza leucocephalos
+한국명 : 흰머리멧새
+============
+영명   : Ortolan Bunting
+학명   : Emberiza hortulana
+한국명 : 오토란 / 회색머리멧새
+============
+영명   : Yellow-throated Bunting
+학명   : Emberiza elegans
+한국명 : 노랑턱멧새
+============
+영명   : Ochre-rumped Bunting
+학명   : Emberiza yessoensis
+한국명 : 쇠검은머리쑥새
+============
+영명   : Pallas's Bunting
+학명   : Emberiza pallasi
+한국명 : 북방검은머리쑥새
+============
+영명   : Reed Bunting
+학명   : Emberiza schoeniclus
+한국명 : 검은머리쑥새
+============
+영명   : Yellow-breasted Bunting
+학명   : Emberiza aureola
+한국명 : 검은머리촉새
+============
+영명   : Little Bunting
+학명   : Emberiza pusilla
+한국명 : 쇠붉은뺨멧새
+============
+영명   : Rustic Bunting
+학명   : Emberiza rustica
+한국명 : 쑥새
+============
+영명   : Yellow Bunting
+학명   : Emberiza sulphurata
+한국명 : 무당새
+============
+영명   : Black-faced Bunting
+학명   : Emberiza spodocephala
+한국명 : 촉새
+============
+영명   : Chestnut Bunting
+학명   : Emberiza rutila
+한국명 : 꼬까참새
+============
+영명   : Yellow-browed Bunting
+학명   : Emberiza chrysophrys
+한국명 : 노랑눈썹멧새
+============
+영명   : Tristram's Bunting
+학명   : Emberiza tristrami
+한국명 : 흰배멧새
+============
+영명   : Gray Bunting
+학명   : Emberiza variabilis
+한국명 : 검은멧새
+============
+영명   : White-crowned Sparrow
+학명   : Zonotrichia leucophrys
+한국명 : 흰정수리북미참새
+============
+영명   : Golden-crowned Sparrow
+학명   : Zonotrichia atricapilla
+한국명 : 상모참새
+============
+영명   : Savannah Sparrow
+학명   : Passerculus sandwichensis
+한국명 : 노랑눈썹북미참새
+number of species : 655
+Done in 0.17s.

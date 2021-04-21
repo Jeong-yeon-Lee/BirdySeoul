@@ -1,0 +1,1753 @@
+yarn run v1.22.10
+$ node index.js
+
+
+1
+
+새와 생명의 터 조류목록
+The Birds Korea Checklist
+글
+나일 무어스
+편집
+하정문  서해민
+
+새와 생명의 터
+주소:부산시 남구 동명로 26, (용당동, 현대아이파크 101-1902), 48559, 대한민국
+전화번호:051-627-3163
+팩스:051-627-3164
+이메일:inquiries@birdskorea.org
+참고문헌 표기
+나일 무어스, 하정문, 서해민. (2018). 대한민국 조류목록. 새와 생명의 터
+새와 생명의 터는 황해 연안을 중심으로 한국의 새들과 그들의 서식지를 보전하기 위해 노력하는 소
+규모 단체입니다.
+새들과 서식지의 상황을 증진시키기 위해 지속적으로 조류목록을 만들어 공개하고 있습니다. 2007
+년과 2009년에 한반도에서 기록된 새들을 온라인 목록으로 발표한 것을 시작으로 2013년과 2014
+년에 다시금 목록을 개정했습니다. 2014년에 공개된 조류목록은 조류현황(나일 무어스, 2014)에도 
+정식으로 실려있습니다. 본 목록은 한국에 정기적으로 도래하는 모든 새들을 확인할 수 있는 유일한 
+보고서입니다. 지난 10년간 매년 5개체 이상이 관찰된 종을 대상으로 하고 있으며 총 4개의 보전군
+(
+ 
+적색, 
+ 
+황색,   
+ 
+녹색,  회색)으로 나뉘어 있어 종별 보전 우선순위를 확인할 수 있습니다.
+2018년  개정판에는  과거에  기록되었거나  현재도  지속적으로  도래하는  370종이  4개의  보전군으
+로  나뉘어  있습니다.  특히  여기에  실려있는  희귀한  4종(바다꿩 Clangula  hyemalis,  알락뜸부기 
+Coturnicops  exquisitus,  한국뜸부기 Porzana  paykullii,  남극도둑갈매기 Stercorarius  mac-
+cormicki)은 정기적으로 도래함에도 불구하고 발견하기 힘들거나 서식지의 접근성이 떨어져서 기록
+되지 않은 것으로 판단하여 포함시켰습니다.
+2018년 새와 생명의 터 조류목록에서는 아래의 보전군들을 다루고 있습니다.
+적색 58종
+최우선 보전 순위
+황색 82종
+우선 보전 순위
+녹색 228종
+적색목록(BirdLife International, 2017)에 관심필요로 등재되어 있거나 국내 개
+체군의 크기가 안정 혹은 증가함
+회색 8종
+과거에 정기적으로 도래한 종이나 지난 10년간 더 이상 지속적으로 기록되지 않음
+평가 방법이나 기준에 대한 정보는 조류현황(나일 무어스, 2014)에서 찾을 수 있습니다.
+
+새와 생명의 터4
+대한민국 조류목록
+서론
+새와 생명의 터는 새들의 보호와 서식지 보전을 위해 활동하는 소규모 단체입니다. 저희는 
+2009년부터 대한민국에서 관찰된 새들을 목록화하여 무료로 배포하고 있습니다. 이번 판
+에 수록된 새들은 식별 가능한 표본과 사진, 음성 자료가 남아있어 자연 상태에서 기록이 확
+인된 새들이 모두 551종이며, 이외에도 도입된 종이 1종, 그리고 신빙성 있는 자료가 없거
+나 화질이 낮은 사진만 남아있는 종이 22종 있습니다.
+본 조류목록은 2017년에 완성이 되어 2018년 1월 중에 게시될 예정이며 서해민 님께서 구
+성과 레이아웃을, 메튜 폴 님께서 검수를해주셨으며, Miklós Rapala 님께서 2018년 3월에 
+추가로 수정해주셨습니다. 분류와 학명, 영어 이름은 이전에 배포한 새와 생명의 터 조류
+목록과 동일하게 국제조류학협회의 권고안을 따르며 BirdLife International에서 2017년 
+12월에 발표한 국제 보전 현황도 반영하고 있습니다. 하지만 몇 가지 예외가 있으며 분류학
+적 차이는 별표, 다른 영어명이 사용된 종은 십자가로 표시했습니다. 한국명은 야외원색도
+감 한국의 새와 야생조류 필드가이드, 한반도의 조류를 따르고 있으며, 출처마다 이름이 상
+이한 경우에는 최초 발견자가 제시한 이름을 사용했습니다.
+새와 생명의 터 조류목록은 지속적으로 계정됩니다. 하지만 자세한 정보를 찾을 수 없는 경
+우도 많으며 국내 관찰종과 현황 및 분류, 명명을 담당하는 위원회가 부재한 상황에서 작성
+되었다는 점을 알려드립니다. 그러므로 새와 생명의 터 조류목록은 2000년에 국립공원 관
+리공단과 한국조류협회에서 작성한 목록과 다른 점이 많으며, 대부분이 국제조류학협회의 
+권고안과 상충해서 발생하는 것들입니다. 또한 해당 범주로 분류하는 기준 및 보전 현황이 
+상이하거나 일부 종을 목록에서 제외 혹은 검토를 통해서 새로운 종이 포함된 경우도 있습
+니다. 이러한 부분들은 확실한 정보를 검색하여 해당 종에 경험이 풍부한 전문가들의 도움
+을 받아 심사숙고한 끝에 반영했습니다.
+
+새와 생명의 터5
+조류목록 사용방법
+조류목록 사용방법
+범주
+본 조류목록에서는 기록의 신뢰성을 보여주는 지표로 5개의 범주와 보류군을 사용하고 있
+습니다.
+범주 1
+1980년 이후로 대한민국에서 기록된 종 또는 아종으로 동정이 가능한 사진이
+나 음성, 표본이 남아있다.
+범주 2
+1980년 이전에 대한민국에서 기록된 종 또는 아종으로 동정이 가능한 자료나 
+표본이 남아있지만1980년 이후로 동일한 수준의 기록이 없다. 1980년대 이
+후 기록의 유무를 기준으로 자료의 품질이 낮은 2.1군과 기록이 전혀 없는 2.2
+군으로 세분한다.
+범주 3
+복수의 사람이 목격하거나 한 명이 수차례 관찰한 종으로 관찰 당시의 상세한 
+묘사가 남아있지만 동정 가능한 사진이나 음성 녹음이 없다.
+범주 4
+한 명 혹은 복수의 사람들이 단 한 번만 관찰한 종으로 당시의 상세한 묘사가 
+남아있지만 동정 가능한 사진이나 음성 녹음이 없다.
+범주 5
+국내에 도입된 종으로 자생 가능한 개체군이 20년 이상 지속되고 있다.
+보류군
+국내에서 기록된 종이지만 품질이 낮은 사진이나 음성 녹음만 남아있어 추가
+적인 검토가 필요하다.
+국제 보전현황
+국제적인 보전현황은 BirdLife International(2017)의 기준을 따르고 있으며 다음과 같이 
+두 글자로 표현했습니다.
+CR
+심각한 멸종위기
+EN
+멸종위기
+VU
+취약
+NT
+위협
+LC
+관심 필요
+NR
+해당사항 없음
+
+새와 생명의 터6
+대한민국 조류목록
+국내 보전현황
+국내의 보전현황은 Moores et al.(2014)의 분류 체계를 바탕으로 작성했습니다. 본 조류
+목록에서 보전현황을 다루고 있는 새들은 모두 국내에 정기적으로 도래한다고 판단한 종
+들이며(개체수 등급 1 ~ 5), 보전현황의 심각성에 따라  붉은색,  노란색,  초 록 색 ,               
+ 회색으로 표시했습니다.  보전현황을 나눌 때는 전 세계적인 추세뿐만 아니라 국내의 멸
+종위기종도 포함했으며, 현재도 흔하게 관찰되지만 과거에 비해 감소하는 종들도 고려했습
+니다. 붉은색은 국제적으로 멸종 위기에 처한 종이거나 국내의 개체수 감소 추세가 심각하
+다는 것을 의미하며 노란색, 초록색으로 갈수록 보전현황이 높아집니다. 회색은 과거에 정
+기적으로 도래했으나 현재는 더 이상 관찰되지 않는 종입니다. 정기적으로 발견되지 않아 
+보전현황이 없는 종은 색상이 없습니다
+계절성, 개체수, 번식현황
+국내의 도래현황과 개체수는 두 개의 알파벳과 하나의 숫자 조합으로 계절성과 풍부도를 
+나타내며 도래하는 개체수가 가장 많은 계절을 처음에 표기했습니다. 월동하는 물새의 개
+체수와 변화 양상은 환경부에서 실시한 겨울 철새 전수조사(1999-2017)의 2014-2017년 
+자료 및 한국물새네트워크의 도요물떼새 조사(2010-2014)와 새와 생명의 터에서 실시한 
+2016, 2017년 조사 결과를 바탕으로 하고 있습니다. 육지의 새들과 바닷새들의 개체수는 
+과거의 국립생물자원관(2010) 조사 결과와 최근에 발표된 자료(Moores et al. 2017)를 이
+용하여 대략적으로 추산했습니다.
+계절성
+R텃새S여름철새
+P이동철새W겨울철새
+번식현황
+0번식 기록이 없음
+11980년 이후로 번식이 확인됨
+2
+1980년 이후로 번식이 의심됨
+3
+1980년 이전에 번식이 확인되었으나 
+이후 기록이 없음
+4
+1980년 이전에 번식이 의심되었으나 
+이후 기록이 없음
+개체수
+1매년 ≥100,000 이상이 관찰됨
+2매년 10,000-99,999 개체가 관찰됨
+3매년 1,000-9,999 개체가 관찰됨
+4매년 100-999 개체가 관찰됨
+5매년 10-99개체가 관찰됨
+V1희귀하게 도래하며 1980년 이후로 총 
+관찰기록이 10회 이상이지만 매년 10
+개체 미만이 관찰됨
+V2매우 희귀하게 도래하며 1980년 이후
+로 1-9회 관찰됨
+EXT도래하지 않음
+
+새와 생명의 터7
+범주 1 - 기러기목
+범주 1
+기러기목 오리과 - 오리, 기러기, 고니
+국내
+현황
+국제
+현황도래현황번식
+1흑기러기Branta berniclaLCWV10
+nigricansWV10
+2붉은가슴기러기Branta ruficollisVUV20
+3큰캐나다기러기Branta canadensisLCV20
+parvipesV20
+4흰얼굴기러기Branta leucopsisLCV20
+5캐나다기러기Branta hutchinsiiLCWV10
+leucopareiaWV10
+minimaWV20
+taverneriWV20
+6줄기러기Anser indicusLCV20
+7흰머리기러기Anser canagicusNTV20
+8흰기러기Anser caerulescensLCWV10
+caerulescensWV10
+9회색기러기Anser anserLCV20
+rubrirostrisV20
+10개리Anser cygnoidesVUP4, W50
+11큰부리큰기러기Anser fabalisLCP3, W3, SV20
+johanseniV2?0
+middendorffiiP3, W3, SV20
+12큰기러기Anser serrirostrisNRP2, W2, SV20
+serrirostrisP2, W2, SV20
+13쇠기러기Anser albifronsLCP1, W1, SV10
+albifronsW40
+frontalis *P1, W1, SV10
+14흰이마기러기Anser erythropusVUP5, W50
+15혹고니Cygnus olor LCWV10
+16고니Cygnus columbianusLCW50
+bewickiiW50
+조류목록
+
+새와 생명의 터8
+대한민국 조류목록
+기러기목 오리과 - 오리, 기러기, 고니
+국내
+현황
+국제
+현황도래현황번식
+17큰고니Cygnus cygnusLCW3, SV20
+18혹부리오리Tadorna tadornaLCW2, SV20
+19황오리Tadorna ferrugineaLCW3, SV20
+20원앙Aix galericulataLCR3, P3, W31
+21가창오리Sibirionetta formosaLCW1, SV20
+22발구지Spatula querquedulaLCP40
+23넓적부리Spatula clypeataLCW3, SV20
+24알락오리Mareca streperaLCW3, SV20
+streperaW3, SV20
+25청머리오리Mareca falcataNTW3, SV12
+26홍머리오리Mareca penelopeLCW3, SV10
+27아메리카홍머리오리Mareca americanaLCWV10
+28흰뺨검둥오리Anas zonorhynchaLCW2, R31
+29청둥오리Anas platyrhynchosLCW1, P2, R41
+platyrhynchosW1, P2, R41
+30고방오리Anas acutaLCW3, SV20
+31쇠오리Anas creccaLCW2, SV10
+creccaW2, SV10
+nimiaDD0
+332미국쇠오리Anas carolinensisNRV20
+33붉은부리흰죽지Netta rufinaLCWV10
+34흰죽지Aythya ferinaVUW2, SV10
+35붉은가슴흰죽지Aythya baeriCRV10
+36적갈색흰죽지Aythya nyrocaNTV10
+37줄부리오리Aythya collaris LCV20
+38댕기흰죽지Aythya fuligula LCW3, P4, SV20
+39검은머리흰죽지Aythya marilaLCW3, SV20
+nearcticaW3, SV20
+40쇠검은머리흰죽지Aythya affinisLCV20
+41호사북방오리Somateria spectabilisLCV20
+42흰줄박이오리Histrionicus histrionicus LCW50
+
+새와 생명의 터9
+범주 1 - 기러기목, 닭목, 아비목, 슴새목
+기러기목 오리과 - 오리, 기러기, 고니
+국내
+현황
+국제
+현황도래현황번식
+43
+검둥오리사촌 †
+Melanitta deglandiLCW4, SV20
+stejnegeriW4, SV20
+44
+검둥오리사촌 †
+Melanitta americanaNTW40
+45바다꿩Clangula hyemalisVUWV10
+46꼬마오리Bucephala albeolaLCV20
+47흰뺨오리Bucephala clangulaLCW30
+clangulaW30
+48흰비오리Mergellus albellusLCW30
+49비오리Mergus merganserLCW2, R51
+orientalisW2, R51
+50바다비오리Mergus serratorLCW3, SV20
+51호사비오리Mergus squamatusENW4, P50
+닭목 꿩과 - 꿩, 메추라기
+52들꿩Tetrastes bonasiaLCR11
+amurensisR11
+53메추라기Coturnix japonicaNTW4, SV21
+54꿩Phasianus colchiusLCR11
+karpowiR11
+아비목 아비과 - 아비
+55
+아비 †
+Gavia stellataLCP3, W40
+56큰회색머리아비Gavia arcticaLCW3, SV20
+viridigularisW3, SV20
+57회색머리아비Gavia pacificaLCP3, W3, SV20
+58흰부리아비Gavia adamsiiNTW5, SV20
+슴새목 바다제비과 - 바다제비
+59바다제비Oceanodroma monorhisNTS11
+
+새와 생명의 터10
+대한민국 조류목록
+슴새목 슴새과 - 슴새
+국내
+현황
+국제
+현황도래현황번식
+60흰배슴새Pterodroma hypoleucaLCV20
+61슴새Calonectris leucomelasNTS21
+62쇠부리슴새Ardenna tenuirostrisLCP4, WV20
+63붉은발슴새Ardenna carneipesNTP50
+64검은슴새Bulweria bulweriiLCV20
+논병아리목 논병아리과 - 논병아리
+65논병아리Tachybaptus ruficollisLCR31
+poggeiR31
+66큰논병아리Podiceps grisegenaLCW40
+holbolliiW40
+67뿔논병아리Podiceps cristatusLCW2, R41
+cristatusW2, R41
+68귀뿔논병아리Podiceps auritusVUW5, SV20
+auritusW5, SV20
+69검은목논병아리Podiceps nigricollisLCW40
+nigricollisW40
+홍학목 홍학과 - 홍학
+70큰홍학Phoenicopterus roseusLCV20
+황새목 황새과 - 황새
+71먹황새Ciconia nigraLCV13
+72황새Ciconia boycianaENW5, SV23
+사다새목 저어새과 - 저어새, 따오기
+73검은머리흰따오기Threskiornis melanocephalusNTV20
+74노랑부리저어새Platalea leucorodiaLCW4, SV10
+leucorodiaW4, SV10
+75저어새Platalea minorENS3, R51
+
+새와 생명의 터11
+범주 1 - 슴새목, 논병아리목, 홍학목, 황새목, 사다새목
+사다새목 왜가리과 - 왜가리, 백로, 해오라기
+국내
+현황
+국제
+현황도래현황번식
+76알락해오라기Botaurus stellarisLCW5, P50
+stellarisW5, P50
+77덤불해오라기Ixobrychus sinensisLCS41
+78큰덤불해오라기Ixobrychus eurhythmusLCS51
+79열대덤불해오라기Ixobrychus cinnamomeusLCPV12
+80검은해오라기Dupetor flaviollisLCPV10
+81붉은해오라기Gorsachius goisagiENPV1, SV21
+82푸른눈테해오라기Gorsachius melanolophusLCV20
+83해오라기Nycticorax nycticoraxLCS3, R51
+nycticoraxS3, R51
+84댕기해오라기Butorides striataLCS3, WV21
+amurensisS3, WV21
+85흰날개해오라기Ardeola bacchusLCP4, S5, WV21
+86황로Bubulcus coromandusNRS31
+87왜가리Ardea cinereaLCS2, R31
+cinereaDD?0
+jouyiS2, R31
+88붉은왜가리Ardea purpureaLCP5, SV20
+manilensisP5, SV20
+89중대백로Ardea albaLCS2, P3, W31
+대백로albaW3, SV10
+modestaS2, P3, WV11
+90중백로Ardea intermediaLCS31
+intermediaS31
+91쇠백로Egretta garzettaLCS2, W41
+garzettaS2, W41
+92
+흑로 †
+Egretta sacraLCR41
+sacraR41
+93노랑부리백로Egretta eulophotesVUS4, WV21
+
+새와 생명의 터12
+대한민국 조류목록
+가다랭이잡이목 군함조과 - 군함조
+국내
+현황
+국제
+현황도래현황번식
+94큰군함조Fregata minorLCV20
+minorV20
+95군함조Fregata arielLCV10
+arielV10
+가다랭이잡이목 얼가니과 - 얼가니새
+96푸른얼굴얼가니새Sula dactylatraLCV20
+dactylatra / personataV20
+97붉은발얼가니새Sula sulaLCV20
+rubripesV20
+98갈색얼가니새Sula leucogasterLCV10
+plotusV10
+가다랭이잡이목 가마우지과 - 가마우지
+99쇠가마우지Phalacrocorax pelagicusLCW3, R41
+pelagicusW3, R41
+100민물가마우지Phalacrocorax carboLCW2, R41
+sinensisW2, R41
+hanedaeDD2
+101
+가마우지 †
+Phalacrocorax capillatusLCR3, W41
+수리목 물수리과 - 물수리
+102물수리Pandion haliaetusLCP4, W5, R51
+haliaetusP4, W5, R51
+수리목 수리과 - 수리, 매, 개구리매
+103검은죽지솔개Elanus caeruleusLCV20
+vociferusV20
+104수염수리Gypaetus barbatusNTV20
+barbatusV20
+105벌매Pernis ptilorhynchusLCP3, S51
+orientalisP3, S51
+106고산대머리수리Gyps himalayensisNTV20
+
+새와 생명의 터13
+범주 1 - 가다랭이잡이목, 수리목
+수리목 수리과 - 수리, 매, 개구리매
+국내
+현황
+국제
+현황도래현황번식
+107독수리Aegypius monachusNTW3, SV20
+108관수리Spilornis cheelaLCV20
+rickettiV20
+109작은발땅꾼수리Circaetus gallicusLCV20
+110항라머리검독수리Clanga clangaVUP5, WV10
+111흰점어깨수리Hieraaetus pennatusLCV20
+112초원수리Aquila nipalensis ENV10
+nipalensisV10
+113흰죽지수리Aquila heliacaVUV10
+114검독수리Aquila chrysaetosLCW5, SV23
+kamtschatica /  japonicaW5, SV23
+115흰배줄무늬수리Aquila fasciata LCV20
+fasciataV20
+116붉은배새매Accipiter soloensisLCP3, S41
+117조롱이Accipiter gularisLCP3, R41
+sibiricusDD?0
+gularisP3, R41
+118새매Accipiter nisusLCP3, W3, SV22
+nisosimilisP3, W3, SV22
+119참매Accipiter gentilisLCP3, W3, R51
+흰참매albidusV20
+schvedowiP3, W3, R51
+fujiyamaeW40
+120개구리매Circus spilonotusLCP5, WV10
+121잿빛개구리매Circus cyaneusLCW4, P50
+122알락개구리매Circus melanoleucosLCP5, SV21
+123솔개Milvus migransLCP4, W4, R51
+lineatusP4, W4, R51
+124흰꼬리수리Haliaeetus albicillaLCW4, RV11
+albicillaW4, RV11
+125참수리Haliaeetus pelagicusVUW50
+pelagicusW50
+한국참수리var. niger *DD0
+
+새와 생명의 터14
+대한민국 조류목록
+수리목 수리과 - 수리, 매, 개구리매
+국내
+현황
+국제
+현황도래현황번식
+126왕새매Butastur indicusLCP2, S51
+127털발말똥가리Buteo lagopusLCW50
+menzbieriW5
+0
+캄챠카털발말똥가리kamtschatkensisWV20
+128큰말똥가리Buteo hemilasiusLCP5, W50
+129말똥가리Buteo japonicusLCP3, W3, SV20
+japonicusP3, W3, SV20
+느시목 느시과 - 느시
+130느시Otis tardaVUWV20
+dybowskiiWV20
+두루미목 뜸부기과 - 뜸부기, 물닭
+131알락뜸부기Coturnicops exquisitusVUV20
+132
+회색가슴뜸부기 †
+Rallus aquaticusLCWV20
+korejewiWV20
+133
+흰눈썹뜸부기 †
+Rallus indicusLCW50
+134흰배뜸부기Amaurornis phoenicurusLCP5, SV21
+phoenicurusP5, SV21
+135쇠뜸부기Porzana pusillaLCP50
+pusillaP50
+136쇠뜸부기사촌Porzana fuscaLCS51
+erythrothoraxS51
+137한국뜸부기Porzana paykulliiNTV12
+138뜸부기Gallicrex cinereaLCS51
+139쇠물닭Gallinula chloropusLCS3, R41
+chloropusS3, R41
+140물닭Fulica atraLCW2, R41
+atraW2, R41
+
+새와 생명의 터15
+범주 1 - 수리목, 느시목, 두루미목, 도요목
+두루미목 두루미과 - 두루미
+국내
+현황
+국제
+현황도래현황번식
+141시베리아흰두루미Leucogeranus leucogeranus  CRWV10
+142캐나다두루미Antigone canadensisLCWV10
+canadensisWV10
+143재두루미Antigone vipioVUW3, P30
+144쇠재두루미Grus virgoLCWV20
+145두루미Grus japonensisENW40
+146검은목두루미Grus grusLCWV10
+147흑두루비Grus monachaVUP3, W40
+도요목 세가락메추라기과 - 세가락메추라기
+148세가락메추라기Turnix tankiLCV12
+blanfordiiV12
+도요목 검은머리물떼새과 - 검은머리물떼새
+149
+검은머리물떼새 †
+Haematopus ostralegusNTW3, R41
+osculansW3, R41
+도요목 장다리물떼새과 - 장다리물떼새
+150장다리물떼새Himantopus himantopusLCP4, S5, WV21
+151딋부리장다리물떼새Recurvirostra avosettaLCV10
+도요목 물떼새과 - 물떼새
+152댕기물떼새Vanellus vanellusNTW40
+153민댕기물떼새Vanellus cinereusLCV10
+154검은가슴물떼새Pluvialis fulvaLCP40
+155개꿩Pluvialis squatarolaLCP3, W3, S40
+squatarola / tomkovichi P3, W3, S40
+156흰죽지꼬마물떼새Charadrius hiaticulaLCV10
+tundraeV10
+157흰목물떼새Charadrius placidusLCR31
+
+새와 생명의 터16
+대한민국 조류목록
+도요목 물떼새과 - 물떼새
+국내
+현황
+국제
+현황도래현황번식
+158꼬마물떼새Charadrius dubiusLCP3, S3, WV21
+curonicusP3, S3, WV21
+159흰물떼새Charadrius alexandrinusLCP2, S4, W41
+큰흰물떼새dealbatus DDV20
+nihonensisP2, S4, W41
+160왕눈물떼새Charadrius mongolusLCP3, WV10
+검은이마왕눈물떼새atrifrons /  schaeferiV20
+몽골왕눈물떼새mongolusP3, WV10
+stegmanniP50
+161큰왕눈물떼새Charadrius leschenaultiiLCP5, SV20
+leschenaultiiP5, SV20
+162큰물떼새Charadrius veredusLCP50
+163흰눈썹물떼새Charadrius morinellusLCV20
+도요목 호사도요과 - 호사도요
+164호사도요Rostratula  benghalensisLCS5, WV11
+도요목 물꿩과 - 물꿩
+165물꿩Hydrophasianus chirurgusLCS51
+도요목 도요과 - 도요
+166중부리도요Numenius phaeopusLCP3, WV20
+variegatusP3, WV20
+167쇠부리도요Numenius minutusLCP50
+168알락꼬리마도요Numenius madagascariensisENP3, S3, WV10
+169마도요Numenius arquataNTP3, W3, S40
+orientalisP3, W3, S40
+170큰뒷부리도요Limosa lapponicaNTP2, S5, WV20
+흰허리큰뒷부리도요menzbieriP3, S5, WV20
+baueriP20
+171흑꼬리도요Limosa limosaNTP3, SV1, WV20
+limosaP5, WV20
+melanuroidesP30
+
+새와 생명의 터17
+범주 1 - 도요목
+도요목 도요과 - 도요
+국내
+현황
+국제
+현황도래현황번식
+172꼬까도요Arenaria interpresLCP4, WV20
+interpresP4, WV20
+173붉은어깨도요Calidris tenuirostrisENP2, S50
+174붉은가슴도요Calidris canutusNTP50
+piersmaiDD0
+rogersiP50
+175목도리도요Calidris pugnaxLCP5, WV20
+176송곳부리도요Calidris falcinellusLCP30
+sibiricaP30
+177메추라기도요Calidris acuminataLCP40
+178붉은갯도요Calidris ferrugineaNTP50
+179흰꼬리좀도요Calidris temminckiiLCP5, WV20
+180종달도요Calidris subminutaLCP40
+181넓적부리도요Calidris pygmeaCRP50
+182좀도요Calidris ruficollisNTP3, WV20
+183세가락도요Calidris albaLCP4, W40
+alba / rubidaP4, W40
+184민물도요Calidris alpina LCP1, W2, SV10
+sakhalinaDD0
+kistchinskiP5?0
+actitesV20
+북방민물도요arcticolaDD0
+hudsoniaV20
+185작은도요Calidris minutaLCV10
+186누른도요Calidris subruficollisNTV20
+187아메리카메추라기도요Calidris melanotosLCV10
+188큰부리도요Limnodromus semipalmatusNTPV10
+189긴부리도요Limnodromus scolopaceusLCV10
+190멧도요Scolopax rusticolaLCP4, W4, SV20
+191꼬마도요Lymnocryptes minimusLCV20
+192청도요Gallinago solitariaLCW50
+japonicaW50
+
+새와 생명의 터18
+대한민국 조류목록
+도요목 도요과 - 도요
+국내
+현황
+국제
+현황도래현황번식
+193큰꺅도요Gallinago  hardwickiiLCP50
+194바늘꼬리도요Gallinago stenuraLCP3, WV20
+195꺅도요사촌Gallinago megalaLCP40
+196꺅도요Gallinago gallinagoLCP4, W50
+gallinagoP4, W50
+197뒷부리도요Xenus cinereusLCP2, S40
+198지느러미발도요Phalaropus lobatusLCP30
+199붉은배지느러미발도요Phalaropus fulicariusLCP5, WV20
+200깝작도요Actitis hypoleucosLCP3, S4, W41
+201삑삑도요Tringa ochropusLCP3, W40
+202노랑발도요Tringa brevipesNTP3, SV20
+203붉은발도요Tringa totanusLCP4, S5, WV21
+ussuriensisP4, S5, WV21
+terrignotaeDD0
+craggiDD0
+204쇠청다리도요Tringa stagnatilisLCP4, SV20
+205알락도요Tringa glareolaLCP3, SV20
+206학도요Tringa erythropusLCP4, WV10
+207청다리도요Tringa nebulariaLCP3, W5, SV10
+208청다리도요사촌Tringa guttifer ENP5, SV20
+도요목 제비물떼새과 - 제비물떼새
+209제비물떼새Glareola maldivarumLCP5, SV22
+도요목 갈매기과 - 갈매기, 제비갈매기
+210세가락갈매기Rissa tridactylaVUP2, W30
+pollicarisP3, W30
+211긴목갈매기Chroicocephalus geneiLCV20
+212붉은부리갈매기Chroicocephalus ridibindusLCP2, W2, S50
+213검은머리갈매기Chroicocephalus saundersiVUW3, P3, S41
+214고대갈매기Ichthyaetus relictusVUWV10
+
+새와 생명의 터19
+범주 1 - 도요목
+도요목 갈매기과 - 갈매기, 제비갈매기
+국내
+현황
+국제
+현황도래현황번식
+215큰검은머리갈매기Ichthyaetus ichthyaetusLCV10
+216괭이갈매기Larus crassirostrisLCS2, W21
+217
+갈매기 †
+Larus canusLCW20
+heineiW40
+kamtschatschensisW20
+218수리갈매기Larus glaucescensLCW50
+219미국큰재갈매기Larus occidentalisLCWV20
+occidentalisWV20
+220흰갈매기Larus hyperboreusLCW4, SV20
+pallidissimusW4, SV20
+쇠흰갈매기barrovianusDD0
+221작은흰갈매기Larus glaucoidesLCWV10
+glaucoidesWV20
+kumlieniWV10
+작은재갈매기thayeriWV10
+222옅은재갈매기Larus smithsonianusLCWV10
+223재갈매기Larus vegaeNR?W2, P2, S50
+vegaeW2, P2, S50
+birulai *W50
+224한국재갈매기 *Larus mongolicus *NRP2,W3, S41
+225카스피해갈매기Larus cachinnansLCWV10
+226큰재갈매기Larus schistisagusLCW3, SV10
+227검은등갈매기Larus fuscusLCV20
+fuscusV20
+228줄무늬노랑발갈매기 *Larus heuglini *NRP3, W4, SV20
+heuglini *V20
+taimyrensis *P3, W4, SV20
+barabensis WV10
+229큰부리제비갈매기Gelochelidon niloticaLCV10
+affinisV10
+230붉은부리큰제비갈매기Hydroprogne caspiaLCV10
+231큰제비갈매기Thalasseus bergiiLCV20
+cristatusV20
+232뿔제비갈매기Thalasseus bernsteiniCRSV21
+
+새와 생명의 터20
+대한민국 조류목록
+도요목 갈매기과 - 갈매기, 제비갈매기
+국내
+현황
+국제
+현황도래현황번식
+233쇠제비갈매기Sternula albifronsLCS3, WV21
+sinensisS3, WV21
+234알류샨제비갈매기Onychoprion aleuticusVUP50
+235에위니아제비갈매기Onychoprion anaethetusLCV20
+anaethetusV20
+236검은등제비갈매기Onychoprion fuscatusLCV10
+nubilosus / oahuensisV10
+237긴꼬리제비갈매기Sterna dougalliiLCV20
+bangsiV20
+238제비갈매기Sterna hirundoLCP2, SV2, WV20
+붉은발제비갈매기minussensisV10
+longipennisP2, SV2, WV20
+239구레나룻제비갈매기Chlidonias hybrida LCP5, WV10
+hybridaP5, WV10
+240흰죽지제비갈매기Chlidonias leucopterusLCP40
+241검은제비갈매기Chlidonias niger LCV20
+nigerV20
+도요목 도둑갈매기과 - 도둑갈매기
+242남극도둑갈매기Stercorarius maccormickiLCS50
+243넓적꼬리도둑갈매기Stercorarius pomarinusLCP4, WV20
+244북극도둑갈매기Stercorarius parasiticusLCP50
+245긴꼬리도둑갈매기Stercorarius longicaudusLCV10
+pallescensV10
+도요목 바다오리과 - 바다오리
+246큰부리바다오리Uria lomviaLCW50
+arraW50
+247바다오리Uria aalgeLCW50
+inornataW50
+248흰눈썹바다오리Cephhus carboLCW50
+249알락쇠오리Brachyramphus perdixNTW5, SV20
+
+새와 생명의 터21
+범주 1 - 도요목, 비둘기목, 두견목
+도요목 바다오리과 - 바다오리
+국내
+현황
+국제
+현황도래현황번식
+250바다쇠오리Synthliboramphus antiquusLCW2, S41
+antiquusW2, S41
+251
+뿔쇠오리 †
+Synthliboramphus wumizusumeVUS4, R51
+252작은바다오리Aethia pusillaLCWV10
+253콧수염바다오리Aethia cristatellaLCWV20
+254흰수염바다오리Cerorhinca monocerataLCW30
+255댕기바다오리Fratercula cirrhataLCV20
+비둘기목 비둘기과 - 비둘기
+256낭비둘기Columba rupestrisLCR5, PV21
+rupestrisR5, PV21
+257분홍가슴비둘기Columba oenasLCWV20
+yarkandensisWV20
+258
+흑비둘기 †
+Columba janthinaNTR41
+janthinaR41
+259멧비둘기Streptopelia orientalisLCR1, P31
+orientalisR1, P31
+260염주비둘기Streptopelia decaoctoLCV10
+decaoctoV10
+261홍비둘기Streptopelia tranquebaricaLCV10
+humilisV10
+262목점박이비둘기Spilopelia chinensisLCV20
+chinensisV20
+263녹색비둘기Treron sieboldiiLCV10
+sieboldiiV10
+두견목 두견과 - 두견이, 뻐꾸기, 매사촌
+264작은뻐꾸기사촌Centropus bengalensisLCV20
+bengalensis / lignatorV20
+265밤색날개뻐꾸기Clamator coromandusLCV21
+266검은뻐꾸기Eudynamys scolopaceusLCV10
+chinensisV10
+
+새와 생명의 터22
+대한민국 조류목록
+두견목 두견과 - 두견이, 뻐꾸기, 매사촌
+국내
+현황
+국제
+현황도래현황번식
+267검은두견이Surniculus lugubrisLCV20
+barussarumV20
+268큰매사촌Hierococcyx sparverioidesLCV10
+269
+매사촌 †
+Hierococcyx hyperythrusLCS4, P41
+270두견이Cuculus poliocephalusLCS31
+271검은등뻐꾸기Cuculus micropterusLCS31
+micropterusS31
+272벙어리뻐꾸기Cuculus optatusLCS3, P31
+273뻐꾸기Cuculus canorusLCP2, S31
+canorusP2, S31
+bakeriDD0
+올빼미목 가면올빼미과 - 가면올빼미
+274가면올빼미Tyto longimembris LCV20
+chinensisV20
+올빼미목 올빼미과 - 올빼미, 부엉이, 소쩍새
+275
+큰소쩍새 †
+Otus semitorquesLCR31
+ussuriensisR31
+제주큰소쩍새semitorquesDD2
+276소쩍새Otus suniaLCS31
+japonicus DD0
+stictonotusS31
+277흰올빼미Bubo scandiacusVUV20
+278수리부엉이Bubo buboLCR31
+kiautschensisR31
+279올빼미Strix nivicolumLCR51
+maR51
+280긴점박이올빼미Strix uralensisLCR51
+nikolskiiR51
+281금눈쇠올빼미Athene noctuaLCW5, SV21
+plumipesW5, SV21
+
+새와 생명의 터23
+범주 1 - 두견목, 올빼미목, 쏙독새목, 칼새목, 파랑새목
+올빼미목 올빼미과 - 올빼미, 부엉이, 소쩍새
+국내
+현황
+국제
+현황도래현황번식
+282솔부엉이Ninox japonicaLCP3, S31
+japonicaP3, S31
+283칡부엉이Asio otusLCW50
+otusW50
+284쇠부엉이Asio flammeusLCW50
+flammeusW50
+쏙독새목 쏙독새과 - 쏙독새
+285쏙독새Caprimulgus jotakaLCP3, S31
+jotakaP3, S31
+칼새목 칼새과 - 칼새
+286황해쇠칼새Collocalia brevirostrisLCP5, SV20
+innominatusP5, SV20
+287바늘꼬리칼새Hirundapus caudacutusLCP3, S52
+caudacutusP3, S52
+288흰배칼새Tachymarptis melbaLCV20
+nubifrugus (?)V20
+289칼새Apus pacificusLCP2, S31
+pacificusP2, S31
+290쇠칼새Apus nipalensisLCV10
+nipalensisV10
+파랑새목 파랑새과 - 파랑새
+291파랑새Eurystomus orientalisLCS2, P31
+cyanocollisP3, S31
+파랑새목 물총새과 - 물총새, 호반새
+292호반새Halcyon coromandaLCS41
+majorS41
+293청호반새Halcyon pileataLCS41
+
+새와 생명의 터24
+대한민국 조류목록
+파랑새목 물총새과 - 물총새, 호반새
+국내
+현황
+국제
+현황도래현황번식
+294물총새Alcedo atthisLCS3, R51
+bengalensis S3, R51
+코뿔새목 후투티과 - 후투티
+295후투티Upupa epopsLCP3, S3, W51
+epopsP3, S3, W51
+딱다구리목 딱다구리과 - 딱다구리, 개미잡이
+296개미잡이Jynx torquillaLCP4, WV20
+chinensisP4, WV20
+297아물쇠딱다구리Yungipicus canicapillusLCR41
+doerriesiR41
+298쇠딱다구리Yungipicus kizukiLCR11
+nipponR11
+299붉은배오색딱다구리Dendrocopos hyperthrusLCPV10
+subrufinusPV10
+300오색딱다구리Dendrocopos majorLCR1, W41
+japonicusR1, W41
+301큰오색딱다구리Dendrocopos leucotosLCR21
+leucotosR21
+울도큰오색딱다구리takahashiiR51
+제주큰오색딱다구리quelpartensisR41
+302크낙새Dryocopus javensisLCEXT1
+richardsiEXT1
+303까막딱다구리Dryocopus martiusLCR31
+martiusR31
+304청딱다구리Picus canusLCR21
+jessoensisR21
+
+새와 생명의 터25
+범주 1 - 파랑새목, 코뿔새목, 딱다구리목, 매목, 참새목
+매목 매과 - 매, 황조롱이, 비둘기조롱이
+국내
+현황
+국제
+현황도래현황번식
+305황조롱이Falco tinnunculusLCW3, P3, R41
+perpallidusW50
+interstinctusW3, P3, R41
+306비둘기조롱이Falco amurensisLCP40
+307쇠황조롱이Falco columbariusLCW5, P50
+insignis / pacificusW5, P50
+308새호리기Falco subbuteoLCP3, S41
+subbuteoP3, S41
+309헨다손매Falco cherrugENV10
+coatsi / milvipesV10
+310흰매Falco rusticolusLCV20
+311매Falco peregrinusLCR3, W4, P41
+calidusP50
+japonensisR3, W4, P51
+참새목 팔색조과 - 팔색조
+312팔색조Pitta nymphaVUS41
+313푸른날개팔색조Pitta moluccensisLCV20
+참새목 숲제비과 - 숲제비
+314회색숲제비Artamus fuscusLCV20
+참새목 할미새과 - 할미새사촌
+315검은할미새사촌Coracina melaschistosLCV20
+intermediaV20
+316할미새사촌Pericrocotus divaricatusLCP3, S51
+317류큐할미새사촌Pericrocotus tegimaeLCV20
+참새목 때까치과 - 때까치
+318칡때까치Lanius  tigrinusLCP4, S41
+319때까치Lanius bucephalusLCR2, P41
+bucephalusR2, P41
+
+새와 생명의 터26
+대한민국 조류목록
+참새목 때까치과 - 때까치
+국내
+현황
+국제
+현황도래현황번식
+320노랑때까치Lanius cristatusLCP3, S51
+홍때까치cristatusP40
+넓은이마홍때까치confususP30
+lucionensisP5, S51
+진홍때까치superciliosusV20
+321붉은등때까치Lanius collurioLCV20
+322긴꼬리때까치Lanius schachLCP5, WV1, SV11
+schachP5, WV1, SV11
+323재때까치Lanius borealisLCV20
+sibiricusV20
+사할린재때까치bianchiiV20
+mollisV20
+324초원때까치Lanius  pallidirostrisLCV20
+325물때까치Lanius sphenocercus LCP5, W5, RV22
+sphenocercusP5, W5, RV22
+참새목 꾀꼬리과 - 꾀꼬리
+326꾀꼬리Oriolus chinensisLCS2, P21
+diffususS2, P21
+참새목 바람까마귀과 - 바람까마귀
+327검은바람까마귀Dicrurus macrocercusLCP50
+cathoecusP50
+328회색바람까마귀Dicrurus leucophaeusLCPV10
+leucogenisPV10
+329바람까마귀Dicrurus hottentottusLCV10
+brevirostrisV10
+참새목 긴꼬리딱새과 - 긴꼬리딱새
+330북방긴꼬리딱새Terpsiphone inceiNRV10
+331
+긴꼬리딱새 †
+Terpsiphone atrocaudataNTS41
+atrocaudataS41
+
+새와 생명의 터27
+범주 1 - 참새목
+참새목 까마귀과 - 까마귀, 까치, 어치
+국내
+현황
+국제
+현황도래현황번식
+332어치Garrulus glandariusLCR11
+brandtiiR11
+333물까치Cyanopica cyanusLCR21
+cyanusR21
+334까치Pica picaLCR11
+sericaR11
+335잣까마귀Nucifraga caryocatactesLCR5, V21
+macrorhynchosR5, V21
+336갈까마귀Coloeus dauuricusLCW3, P40
+337집까마귀Corvus splendensLCV20
+insolens (?)V20
+338떼까마귀Corvus frugilegusLCW1, P20
+pastinatorW1, P20
+339까마귀Corvus coroneLCW3, R51
+orientalisW3, R51
+340큰부리까마귀Corvus macrorhynchosLCR1, W21
+japonensisR21
+mandshuricusR2, W21
+참새목 여새과 - 여새
+341황여새Bombycilla garrulusLCW4, P40
+garrulusW4, P40
+342홍여새Bombycilla japonicaNTW5, P40
+참새목 요정솔딱새과 - 회색머리노랑딱새
+343회색머리노랑딱새Culicicapa ceylonensisLCV20
+calochryseaV20
+참새목 박새과 - 박새, 곤줄박이
+344진박새Periparus aterLCR1, W11
+aterR1, W11
+제주진박새insularisDD0
+345노랑배진박새Pardaliparus venustulusLCP4, W41
+
+새와 생명의 터28
+대한민국 조류목록
+참새목 박새과 - 박새, 곤줄박이
+국내
+현황
+국제
+현황도래현황번식
+346곤줄박이Sittiparus variusLCR11
+variusR11
+utsurioensis *R41
+347쇠박새Poecile palustrisLCR11
+hellmayriR11
+348북방쇠박새Poecile montanusLCWV20
+baicalensisWV20
+349
+노랑배박새 †
+Parus majorLCV20
+kapustiniV20
+350
+박새 †
+Parus minorLCR1, W11
+minorR1, W11
+울도박새dageletensisR41
+참새목 스윈호오목눈이과 - 스윈호오목눈이
+351스윈호오목눈이Remiz consobrinusLCP3, W4, SV21
+참새목 수염오목눈이과 - 수염오목눈이
+352수염오목눈이Panurus biarmicusLCV20
+russicusV20
+참새목 종다리과 - 종다리
+353종다리Alauda arvensisLCW4, R51
+큰종다리pekinensisW40
+북방종다리lonnbergiW4, R51
+354극동종다리 *Alauda japonicaNRW3, R41
+intermediaP4, W4, R51
+japonicaR41
+355뿔종다리Galerida cristataLCV11
+coreensisV11
+356해변종다리Eremophila alpestrisLCV20
+flavaV20
+흰턱해변종다리brandtiV20
+357쇠종다리Calandrella dukhunensisLCP40
+358큰흰날개종다리Melanocorypha mongolicaLCPV20
+
+새와 생명의 터29
+범주 1 - 참새목
+참새목 종다리과 - 종다리
+국내
+현황
+국제
+현황도래현황번식
+359북방쇠종다리Alaudala cheleensisNRV10
+cheleensisV10
+참새목 직박구리과 - 직박구리
+360검은이마직박구리Pycnonotus sinensisLCS4, R41
+sinensisS4, R41
+361직박구리Hypsipetes amaurotisLCR1, P21
+amaurotisR1, P21
+참새목 제비과 - 제비
+362갈색제비Riparia ripariaLCP40
+ijimaeP40
+363옅은갈색제비Riparia dilutaLCPV20
+fohkienensisPV20
+364제비Hirundo rusticaLCP1, S2, WV11
+gutturalisP1, S2, WV21
+tytleriV20
+붉은배제비
+saturataDD0
+mandschuricaDD0
+365바위산제비Ptyonoprogne rupestrisLCPV20
+366흰턱제비Delichon urbicumLCP50
+lagopodumP50
+367흰털발제비Delichon dasypusLCP4, SV2, WV23
+dasypusP4, SV2, WV23
+368귀제비Cecropis dauricaLCP2, S31
+japonicaP2, S31
+참새목 휘파람새과 - 휘파람새, 숲새
+369
+섬휘파람새 †
+Horornis diphoneLCR3, W31
+cantansR3, W31
+canturiansDD0
+370휘파람새Horornis borealisLCP3, S4, WV21
+borealis *P3, S4, WV21
+371숲새Urosphena squamicepsLCP2, S31
+
+새와 생명의 터30
+대한민국 조류목록
+참새목 오목눈이과 - 오목눈이
+국내
+현황
+국제
+현황도래현황번식
+372오목눈이Aegithalos caudatusLCR11
+흰머리오목눈이caudatusW4, R51
+제주오목눈이trivirgatusR31
+magnusR11
+참새목 솔새과 - 솔새
+373연노랑솔새Phylloscopus trochilusLCPV20
+yakutensisPV20
+374검은다리솔새Phylloscopus collybitaLCV10
+tristisV10
+375노랑턱솔새Phylloscopus sibilatrixLCV20
+376솔새사촌Phylloscopus fuscatusLCP3, S4, WV1 1
+fuscatusP3, S4, WV1 1
+377노랑배솔새사촌Phylloscopus  occisinensisNRPV10
+378쇠긴다리솔새사촌Phylloscopus armandii LCPV10
+armandiiPV10
+379긴다리솔새사촌Phylloscopus schwarziLCP4, S51
+380노랑허리솔새Phylloscopus proregulusLCP3, S5, WV11
+381노랑눈썹솔새Phylloscopus inornatusLCP1, WV10
+382연노랑눈썹솔새Phylloscopus humeiLCP50
+humeiV20
+mandelliiP50
+383쇠솔새Phylloscopus borealisLCP30
+borealisP30
+kennicottiV20
+384솔새Phylloscopus examinandusLCP40
+385일본솔새Phylloscopus xanthodryasLCV10
+386버들솔새Phylloscopus plumbeitarsusLCP4, S51
+387되솔새Phylloscopus tenellipesLCP3, S31
+388사할린되솔새Phylloscopus borealoides LCP50
+389산솔새Phylloscopus coronatusLCS2, P31
+390북방동고비솔새Phylloscopus claudiaeLCPV20
+
+새와 생명의 터31
+범주 1 - 참새목
+참새목 솔새과 - 솔새
+국내
+현황
+국제
+현황도래현황번식
+391노랑배솔새Phylloscopus rickettiLCPV20
+참새목 개개비과 - 개개비
+392개개비Acrocephalus orientalisLCS2, P31
+393쇠개개비Acrocephalus bistrigicepsLCP3, SV11
+394풀쇠개개비Acrocephalus schoenobaenusLCPV20
+395우수리개개비Acrocephalus tangorumVUPV10
+396북방쇠개개비Acrocephalus argicolaLCV20
+agricola /
+septimus
+V20
+397큰부리개개비Iduna aedonLCP40
+rufescensP40
+398쇠덤불개개비Iduna caligataLCPV20
+참새목 섬개개비과 - 섬개개비, 개개비, 쥐발귀
+399점무늬가슴쥐발귀Locustella davidiNRV10
+davidiV10
+400쥐발귀개개비Locustella lanceolataLCP30
+hendersonii / 
+lanceolata
+P30
+401알락꼬리쥐발귀Locustella ochotensisLCP40
+402섬개개비Locustella pleskeiVUS31
+403북방개개비Locustella certhiolaLCP3, WV20
+certhiolaP30
+rubescensDD0
+minorDD0
+404큰개개비Locustella pryeriNTPV20
+sinensisPV20
+405붉은허리개개비Locustella fasciolataLCP40
+
+새와 생명의 터32
+대한민국 조류목록
+참새목 개개비사촌과 - 개개비사촌
+국내
+현황
+국제
+현황도래현황번식
+406개개비사촌Cisticola jundicisLCS3, R51
+brunnicepsS3, R51
+참새목 흰턱딱새과 - 흰턱딱새, 붉은머리오목눈이
+407비늘무늬덤불개개비Sylvia nisoriaLCV20
+merzbacheriV20
+408쇠흰턱딱새Sylvia currucaLCV20
+blythiV20
+halimodendriV20
+409붉은머리오목눈이Sinosuthora webbianaLCR11
+fulvicaudaR11
+참새목 동박새과 - 동박새
+410한국동박새Zosterops erythropleurusLCP30
+411동박새Zosterops japonicusLCR2, P41
+japonicusR2, P41
+작은동박새simplexP50
+참새목 상모솔새과 - 상모솔새
+412상모솔새Regulus regulusLCW2, P20
+japonensisW2, P20
+참새목 굴뚝새과 - 굴뚝새
+413굴뚝새Troglodytes troglodytesLCW2, R31
+dauricusW2, R31
+참새목 동고비과 - 동고비
+414동고비Sitta europaeaLCR11
+asiaticaV20
+amurensisR11
+붉은배동고비bedfordiEXT3
+415쇠동고비Sitta villosaLCWV10
+coreaWV10
+
+새와 생명의 터33
+범주 1 - 참새목
+참새목 나무발발이과 - 나무발발이
+국내
+현황
+국제
+현황도래현황번식
+416나무발발이Certhia familiarisLCR4, W51
+dauricaR4, W51
+참새목 찌르레기과 - 찌르레기
+417뿔찌르레기Acridotheres cristatellusLCPV20
+cristatellusPV20
+418붉은부리찌르레기Spodiopsar sericeusLCP4, S5, W51
+419찌르레기Spodiopsar cineraceusLCW3, R31
+420북방쇠찌르레기Agropsar sturninusLCP4, SV11
+421쇠찌르레기Agropsar philippensisLCP4, SV1, WV21
+422잿빛쇠찌르레기Sturnia sinensisLCV10
+423분홍찌르레기Pastor roseusLCV20
+424흰점찌르레기Sturnus vulgarisLCW4, P40
+poltaratskyiW4, P40
+참새목 지빠귀과 - 지빠귀
+425귤빛지빠귀Geokichla citrinaLCV20
+melli / courtoisiV20
+426흰눈썹지빠귀Geokichla sibiricaLCP4, SV20
+북방흰눈썹지빠귀
+sibiricaP4, SV20
+davisoniP50
+427호랑지빠귀Zoothera aureaLCP2, S2, R41
+toratugumiP2, S2, R41
+428되지빠귀Turdus hortulorumLCP2, S3, WV21
+429
+검은지빠귀 †
+Turdus cardisLCP40
+430대륙검은지빠귀Turdus mandarinusLCP5, SV1, WV21
+mandarinusP5, SV1, WV21
+431갈색지빠귀Turdus feaeVUPV20
+432흰눈썹붉은배지빠귀Turdus obscurusLCP20
+433흰배지빠귀Turdus pallidusLCS1, P2, R31
+
+새와 생명의 터34
+대한민국 조류목록
+참새목 지빠귀과 - 지빠귀
+국내
+현황
+국제
+현황도래현황번식
+434붉은배지빠귀Turdus chrysolausLCP40
+oriiV20
+chrysolausP40
+435검은목지빠귀Turdus atrogularisLCV10
+436붉은목지빠귀Turdus ruficollisNRP5, WV10
+437노랑지빠귀Turdus naumanniNRW2, P30
+438개똥지빠귀Turdus eunomusLCP2, W30
+439회색머리지빠귀Turdus pilarisLCV20
+440붉은날개지빠귀Turdus iliacus LCV20
+iliacusV20
+441큰점지빠귀Turdus mupinensisLCPV20
+참새목 솔딱새과 - 솔딱새, 딱새, 울새, 바다직박구리
+442제비딱새Muscicapa griseistictaLCP30
+443솔딱새Muscicapa sibiricaLCP40
+sibiricaP40
+444쇠솔딱새Muscicapa dauuricaLCP2, S41
+dauuricaP2, S41
+445꼬까딱새Muscicapa ferrugineaLCV20
+446주황가슴파랑딱새Cyornis glaucicomansNRV20
+447붉은가슴딱새Niltava davidiLCV20
+448큰유리새Cyanoptila cyanomelanaLCP2, S21
+intermediaP2, S21
+cyanomelanaP4, S50
+449하늘유리새Cyanoptila cumatilisNTV10
+450파랑딱새Eumyias thalassinusLCV10
+thalassinusV10
+451꼬까울새Erithacus rubeculaLCV20
+tataricusV20
+452쇠유리새Larvivora cyaneLCS2, P31
+cyaneS2, P31
+nechaeviDD0
+
+새와 생명의 터35
+범주 1 - 참새목
+참새목 솔딱새과 - 솔딱새, 딱새, 울새, 바다직박구리
+국내
+현황
+국제
+현황도래현황번식
+453울새Larvivora sibilansLCP30
+454붉은가슴울새Larvivora akahigeLCP5, WV2, SV20
+akahige0
+455흰눈썹울새Luscinia svecicaLCP5, WV20
+svecica0
+456진홍가슴Calliope calliopeLCP3, S4, WV21
+calliopeP3, S4, WV21
+큰진홍가슴camtschatkensisP50
+457유리딱새Tarsiger cyanurusLCP1, W4, SV20
+458흰눈썹황금새Ficedula zanthopygiaLCP3, S31
+459황금새Ficedula narcissinaLCP4, SV21
+narcissinaP3, SV21
+남방황금새owstoniV10
+460북방황금새Ficedula elisaeLCPV20
+461노랑딱새Ficedula mugimakiLCP30
+462서양흰꼬리딱새Ficedula parvaLCV10
+463흰꼬리딱새Ficedula albicillaLCP40
+464검은머리딱새Phoenicurus ochrurosLCV10
+rufiventrisV10
+465딱새Phoenicurus auroreusLCR1, W21
+auroreusR1, W21
+466부채꼬리바위딱새Phoenicurus fuliginosusLCV11
+fuliginosusV11
+467흰머리바위딱새Phoenicurus leucocephalusLCV20
+468바다직박구리Monticola solitarius LCS2, R41
+푸른바다직박구리pandooV20
+philippensisS2, R41
+469꼬까직박구리Monticola gularisLCP3, SV20
+470검은딱새Saxicola stejnegeriNRP2, S4, WV21
+471검은뺨딱새Saxicola ferreusLCV10
+haringtoniV10
+
+새와 생명의 터36
+대한민국 조류목록
+참새목 솔딱새과 - 솔딱새, 딱새, 울새, 바다직박구리
+국내
+현황
+국제
+현황도래현황번식
+472북방사막딱새Oenanthe oenantheLCV20
+oenantheV20
+473긴다리사막딱새Oenanthe isabellinaLCV20
+474검은꼬리사막딱새Oenanthe desertiLCV20
+desertiV20
+475검은등사막딱새Oenanthe pleschankaLCPV10
+pleschankaPV10
+var. vittataV20
+참새목 물까마귀과 - 물까마귀
+476물까마귀Cinclus pallasiiLCR31
+pallasiiR31
+참새목 참새과 - 참새
+477집참새Passer domesticus LCV20
+bactrianusV20
+478섬참새Passer rutilansLCR4, P51
+rutilansR4, P51
+479참새Passer montanusLCR1, P41
+saturatusR1, P41
+참새목 납부리새과 - 납부리새
+480얼룩무늬납부리새Lonchura punctulataLCV20
+topelaV20
+참새목 바위종다리과 - 바위종다리, 멧종다리
+481바위종다리Prunella collarisLCW4, P50
+erythropygiaW4, P50
+482멧종다리Prunella montanellaLCW20
+montanellaW20
+badiaW40
+483쇠바위종다리Prunella rubidaLCV20
+
+새와 생명의 터37
+범주 1 - 참새목
+참새목 할미새과 - 할미새, 밭종다리
+국내
+현황
+국제
+현황도래현황번식
+484물레새Dendronanthus indicusLCP4, S51
+485서양긴발톱할미새Motacilla flavaLCP50
+flavaV2?0
+thunbergiP50
+486긴발톱할미새Motacilla tschutschensisLCP2, WV20
+tschutschensisP30
+macronyxP40
+taivanaP3, WV20
+487노랑머리할미새Motacilla citreolaLCP50
+citreolaP50
+488노랑할미새Motacilla cinereaLCP2, S3, R51
+cinereaP2, S3, R51
+489알락할미새Motacilla albaLCP1, S2, W31
+albaV2?0
+흰이마알락할미새personataV20
+시베리아알락할미새baicalensisV10
+검은턱할미새ocularisP2, WV10
+백할미새lugensP3, W3, SV20
+leucopsisP2,S2, R51
+히말라야알락할미새alboidesV20
+490검은등할미새Motacilla grandisLCR31
+491큰밭종다리Anthus richardiLCP4, WV20
+492쇠밭종다리Anthus godlweskiiLCP50
+493풀밭종다리Anthus pratensisLCV20
+494나무밭종다리Anthus trivialisLCPV10
+trivialisPV10
+495힝둥새Anthus hodgsoniLCP1, W3, SV11
+hodgsoniP3, W3, SV11
+북방힝둥새yunnanensisP10
+496흰등밭종다리Anthus gustaviLCP40
+gustaviP30
+짙은등밭종다리menzbieriP50
+497한국밭종다리Anthus roseatusLCV20
+498붉은가슴밭종다리Anthus cervinusLCP3, WV10
+
+새와 생명의 터38
+대한민국 조류목록
+참새목 할미새과 - 할미새, 밭종다리
+국내
+현황
+국제
+현황도래현황번식
+499밭종다리Anthus rubescensLCP2, W30
+japonicusP2, W30
+rubescensV2?0
+500옅은밭종다리Anthus spinolettaLCV10
+blakistoniV10
+참새목 되새과 - 되새, 방울새, 솔잣새, 밀화부리
+501푸른머리되새Fringilla coelebsLCV20
+coelebsV20
+502되새Fringilla montifringillaLCP1, W10
+503콩새Coccothraustes coccothraustesLCP2, W20
+shulpiniP2, W20
+japonicusDD0
+504밀화부리Eophona migratoriaLCP3, S4, W41
+migratoriaP3, S4, W41
+505큰부리밀화부리Eophona personataLCP4, W50
+제주큰부리밀화부리personataW50
+magnirostrisP40
+506솔양진이Pinicola enucleatorLCV20
+kamtschatkensis (?)V20
+507멋쟁이Pyrrhula pyrrhulaLCW30
+cineraceaV20
+재색멋쟁이griseiventrisV10
+rosaceaW30
+508갈색양진이Leucosticte arctoaLCW40
+brunneonuchaW40
+509붉은양진이Carpodacus erythrinusLCP4, WV10
+grebnitskiiP4, WV10
+roseatusV20
+510긴꼬리홍양진이Carpodacus sibiricus LCP3, W30
+sibiricusDD0
+ussuriensisP3, W30
+511양진이Carpodacus roseusLCP3, W40
+roseusP3, W40
+
+새와 생명의 터39
+범주 1 - 참새목
+참새목 되새과 - 되새, 방울새, 솔잣새, 밀화부리
+국내
+현황
+국제
+현황도래현황번식
+512방울새Chloris sinicaLCW1, R21
+ussuriensisW1, R21
+울도방울새kawarahibaW30
+장박새minorDD0
+513홍방울새Acanthis flammeaLCW50
+flammeaW5
+514쇠홍방울새Acanthis hornemanniNRV20
+exilipesV20
+515솔잣새Loxia curvirostraLCW4, SV11
+tianschanicaV2?0
+japonicaW4, SV11
+516검은머리방울새Spinus spinusLCP1, W2,SV22
+참새목 긴발톱멧새과 - 긴발톱멧새, 흰멧새
+517긴발톱멧새Calcarius lapponicusLCW3, P40
+kamtschaticusW3, P40
+518흰멧새Plectrophenax nivalisLCWV10
+vlasowaeWV10
+참새목 멧새과 - 멧새
+519노랑멧새Emberiza citrinellaLCV20
+erythrogenysV20
+520흰머리멧새Emberiza leucocephalosLCP4, W50
+leucocephalosP4, W50
+frontoV20
+521동부산악멧새Emberiza godlewskiiLCV20
+godlewskiiV20
+522멧새Emberiza cioidesLCW2, R31
+북방멧새weigoldiW30
+castaneicepsR31
+제주멧새ciopsisV20
+523노랑수염멧새Emberiza hortulanaLCV20
+524흰배멧새Emberiza tristramiLCP3, S4, W51
+
+새와 생명의 터40
+대한민국 조류목록
+참새목 멧새과 - 멧새
+국내
+현황
+국제
+현황도래현황번식
+525붉은뺨멧새Emberiza fucataLCP4, W4, S51
+fucataP4, W4, S51
+526쇠붉은뺨멧새Emberiza pusillaLCP2, W40
+527노랑눈썹멧새Emberiza chrysophrysLCP30
+528쑥새Emberiza rusticaVUP2, W20
+529노랑턱멧새Emberiza elegansLCW1, R1, P21
+elegansW1, R1, P21
+530검은머리촉새Emberiza aureolaCRP40
+aureolaP50
+ornataP40
+531꼬까참새Emberiza rutilaLCP3, WV20
+532검은머리멧새Emberiza melanocephalaLCV10
+533붉은머리멧새Emberiza brunicepsLCV20
+534무당새Emberiza sulphurataVUP40
+535촉새Emberiza spodocephalaLCP1, W4, SV21
+spodocephalaP4, W50
+섬촉새personataP5, W50
+extremiorientis *P1, W4, SV21
+536검은멧새Emberiza variabilisLCP5, W50
+537북방검은머리쑥새Emberiza pallasiLCW2, P30
+pallasiDD0
+polarisW2, P30
+lydiaeDD0
+538쇠검은머리쑥새 †Emberiza yessoensisNTP4, W5, S51
+continentalisP4, W5, S51
+539검은머리쑥새Emberiza schoeniclusLCW30
+pyrrhulinaW30
+540흰정수리멧새Zonotrichia leucophrysLCV20
+gambeliiV20
+541노랑정수리멧새Zonotrichia atricapillaLCV20
+542초원멧새Passerculus sandwichensisLCV20
+anthinus (?)V20
+
+새와 생명의 터41
+범주 1 - 참새목 / 범주 2
+범주 2
+기러기목 오리과
+국내
+현황
+국제
+현황도래현황번식
+5432.2원앙사촌Tadorna cristataCRV20
+슴새목 알바트로스과
+5442.2알바트로스Phoebastria albatrusVUV20
+사다새목 저어새과
+5452.1따오기Nipponia nipponENW3, P50
+사다새목 사다새과
+5462.2큰사다새Pelecanus onocrotalusLCV20
+5472.2사다새Pelecanus crispusNTV20
+사막꿩목 사막꿩과
+5482.2사막꿩Syrrhaptes paradoxusLCV20
+파랑새목 물총새과
+5492.2뿔호반새Megaceryle lugubrisLCWV20
+pallidaWV20
+참새목 흰턱딱새과
+5502.2꼬리치레Rhopophilus pekinensis LCV24
+참새목 되새과
+5512.1흰죽지솔잣새Loxia leucopteraLCV20
+bifasciataV20
+
+새와 생명의 터42
+대한민국 조류목록
+범주 3
+슴새목 슴새과
+국내
+현황
+국제
+현황도래현황번식
+552사대양슴새Ardenna griseaNTV20
+도요목 바다오리과
+553작은바다쇠오리Alle alleLCV20
+polarisV20
+두견목 두견과
+554큰뻐꾸기사촌Centropus sinensisLCV20
+sinensisV20
+칼새목 칼새과
+555검은등칼새Apus apusLCV20
+pekinensisV20
+매목 매과
+556흰발톱황조롱이Falco naumanniLCV20
+참새목 까마귀과
+557붉은부리까마귀Pyrrhocorax pyrrhocoraxLCV20
+brachypusV20
+참새목 박새과
+558흰머리유리박새Cyanistes cyanusLCV20
+yenisseensisV20
+참새목 종다리과
+559큰부리종다리Melanocorypha bimaculataLCV20
+
+새와 생명의 터43
+범주 3 / 범주 4
+참새목 솔새과
+국내
+현황
+국제
+현황도래현황번식
+560연노랑허리솔새Phylloscopus yunnanensisLCV20
+참새목 딱새과
+561알락딱새Ficedula hypoleucaLCV20
+sibiricaV20
+범주 4
+수리목 수리과
+562검은뿔작은매Aviceda leuphotesLCV20
+syama (?)V20
+563뿔매Nisaetus nipalensisLCV20
+orientalisV20
+도요목 물떼새과
+564미국검은가슴물떼새Pluvialis dominicaLCV20
+도요목 도요과
+565캐나다흑꼬리도요Limosa haemasticaLCV20
+566긴부리좀도요Calidris mauriLCV20
+도요목 갈매기과
+567북미갈매기Larus delawarensisLCV20
+두견목 두견과
+568남방벙어리뻐꾸기Cuculus saturatusLCV20
+
+새와 생명의 터44
+대한민국 조류목록
+비둘기목 비둘기과
+571집비둘기Columba liviaLCR21
+var. domestica *R21
+범주 5
+참새목 딱새과
+국내
+현황
+국제
+현황도래현황번식
+569진푸른딱새Ficedula tricolorLCV20
+diversaV20
+570흰날개딱새Phoenicurus erythrogastrusLCV20
+grandisV20
+보류군
+기러기목 오리과
+-큰흰죽지Aythya valisineriaLCV20
+물떼새목 갈매기과
+-북극제비갈매기Sterna paradisaeaLCV20
+참새목 까마귀과
+-큰까마귀Corvus coraxLCV20
+kamtschaticusV20
+참새목 딱새과
+-서양딱새Phoenicurus phoenicurusLCV20
+phoenicurusV20
+
+새와 생명의 터45
+범주 4 / 범주 5 / 보류군 / 분류군 목차
+기러기목51종
+오리과오리, 기러기, 고니51종
+닭목
+3종
+꿩과꿩, 메추라기3종
+아비목4종
+아비과아비4종
+슴새목6종
+바다제비과바다제비1종
+슴새과슴새5종
+논병아리목5종
+논병아리과논병아리5종
+홍학목1종
+홍학과홍학1종
+황새목2종
+황새과황새2종
+사다새목21종
+저어새과저어새, 따오기3종
+왜가리과왜가리, 백로, 해오라기18종
+분류군 목차
+(범주 1)
+542 종
+
+새와 생명의 터46
+대한민국 조류목록
+가다랭이잡이목8종
+군함조과군함조2종
+얼가니과얼가니새3종
+가마우지과가마우지3종
+수리목28종
+물수리과물수리1종
+수리과수리, 매, 개구리매27종
+느시목1종
+느시과느시1종
+두루미목17종
+뜸부기과뜸부기, 물닭10종
+두루미과두루미7종
+도요목108종
+세가락메추라기과세가락메추라기1종
+검은머리물떼새과검은머리물떼새1종
+장다리물떼새과장다리물떼새2종
+물떼새과물떼새12종
+호사도요과호사도요1종
+물꿩과물꿩1종
+도요과도요43종
+제비물떼새과제비물떼새1종
+갈매기과갈매기, 제비갈매기32종
+도둑갈매기과도둑갈매기4종
+바다오리과바다오리10종
+
+새와 생명의 터47
+분류군 목차
+비둘기목8종
+비둘기과비둘기8종
+두견목10종
+두견과두견이, 뻐꾸기, 매사촌10종
+올빼미목11종
+가면올빼미과가면올빼미1종
+올빼미과올빼미, 부엉이, 소쩍새10종
+쏙독새목1종
+쏙독새과쏙독새1종
+칼새목5종
+칼새과칼새5종
+파랑새목4종
+파랑새과파랑새1종
+물총새과물총새3종
+코뿔새목1종
+후투티과후투티1종
+딱다구리목9종
+딱다구리과딱다구리, 개미잡이9종
+매목7종
+매과매, 황조롱이, 비둘기조롱이7종
+
+새와 생명의 터48
+대한민국 조류목록
+참새목231종
+팔색조과팔색조2종
+숲제비과숲제비1종
+할미새사촌과할미새사촌3종
+때까치과때까치8종
+꾀꼬리과꾀꼬리1종
+바람까마귀과바람까마귀3종
+긴꼬리딱새과긴꼬리딱새2종
+까마귀과까마귀, 까치, 어치9종
+여새과여새2종
+요정솔딱새과회색머리노랑딱새1종
+박새과박새, 곤줄박이7종
+스윈호오목눈이과스윈호오목눈이1종
+수염오목눈이과수염오목눈이1종
+종다리과종다리7종
+직박구리과직박구리2종
+제비과제비7종
+휘파람새과휘파람새, 숲새3종
+오목눈이과오목눈이1종
+솔새과솔새19종
+개개비개개비7종
+섬개개비과섬개개비, 개개비, 쥐발귀7종
+개개비사촌과개개비사촌1종
+흰턱딱새과흰턱딱새, 붉은머리오목눈이5종
+동박새과동박새2종
+상모솔새과상모솔새1종
+굴뚝새과굴뚝새1종
+동고비과동고비2종
+나무발발이과나무발발이1종
+찌르레기과찌르레기8종
+지빠귀과지빠귀17종
+
+새와 생명의 터49
+분류군 목차
+참새목
+솔딱새과솔딱새, 딱새, 울새, 바다직박구리34종
+물까마귀과물까마귀1종
+참새과참새3종
+납부리새과납부리새1종
+바위종다리과바위종다리, 멧종다리3종
+할미새과할미새, 밭종다리17종
+되새과되새, 방울새, 솔잣새,밀화부리16종
+긴발톱멧새과긴발톱멧새, 흰멧새2종
+멧새과멧새24종
+
+새와 생명의 터50
+대한민국 조류목록
+참고문헌
+강창완 외. (2009). 야생조류도감 제주의 새. 서울: 한그루.
+국립생물자원관. (2017). 2016-2017년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2016). 2015-2016년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2015). 2014-2015년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2014). 2014년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2013). 2013년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2012). 2012년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2011). 2011년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2010). 야생동물 서식실태 조사 및 관리 자원화 방안 연구. 국립생물자원관.
+국립생물자원관. (2010). 2010년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2009). 2009년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립생물자원관. (2008). 2008년도 겨울철 조류 동시 센서스. 국립생물자원관.
+국립환경과학원. (2007). 2007년도 겨울철 조류 동시 센서스. 국립환경과학원.
+국립환경과학원. (2006). 2006년도 겨울철 조류 동시 센서스. 국립환경과학원. 
+국립환경과학원. (2005). 2005년도 겨울철 조류 동시 센서스. 국립환경과학원.
+국립환경과학원. (2004). ‘99-‘04년 겨울철 조류 동시 센서스 종합보고서. 국립환경과학원.
+박종길. (2014). 야생조류 필드가이드. 서울: 자연과생태.
+원병오, 김화정. (2012). 한반도의 조류. 서울: 아카데미서적.
+이우신, 구태회, 박진영. (2014). 야외원색도감 한국의 새. 서울: LG상록재단.
+한국도요물떼새네트워크. (2015). 전국 도요물떼새 개체수 조사 보고서(2014). 한국도요물떼새네트워크 사무국.
+한국도요물떼새네트워크. (2013). 전국 도요물떼새 개체수 조사 보고서(2011-2012). 한국도요물떼새네트워크 사무국.
+한국도요물떼새네트워크. (2012). 전국 도요물떼새 개체수 조사 보고서. 한국도요물떼새네트워크 사무국.
+한국도요물떼새네트워크. (2011). 한국의 도요물떼새 서식지. 한국도요물떼새네트워크 사무국.
+Gill, F. & D. Donsker (Eds). 2017. IOC World Bird List (v7.3). doi: 10.14344/IOC.ML.7.3.
+BirdLife International. 2017. IUCN Red List for birds. Downloaded from http://www.birdlife.org on 
+30/12/2017.
+Moores, N., Choi H-A. & Seliger, B. 2017. Seabirds in the Inner Border Area of Korea - Goseong County, 
+Gangwon Province. A report on seabird research by Birds Korea and the Hanns Seidel Foundation 
+(Korea).
+Moores, N., Kim, A. & Kim R. 2014. Status of Birds, 2014. Birds Korea report on Bird Population Trends 
+and Conservation Status in the Republic of Korea. Published by Birds Korea, September 2014.
+Done in 0.77s.
