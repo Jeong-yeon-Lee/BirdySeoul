@@ -33,8 +33,10 @@ class ObservationRecordController {
 //            this.repository.saveAll(records)
 //    }
 
-    @GetMapping("/api/records")
-    fun getAllRecords(birder: String): MutableList<BirdingRecord> {
-        return repository.findByRecorder(birder)
+    @GetMapping("/api/records/{birder}")
+    fun getAllRecords(@PathVariable("birder") birder: String): ResponseEntity<List<BirdingRecord>> {
+        val result: MutableList<BirdingRecord> = mutableListOf()
+        result.addAll(repository.findByRecorder(birder))
+        return ResponseEntity.ok(result)
     }
 }
