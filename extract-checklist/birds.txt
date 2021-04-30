@@ -77,8 +77,7 @@ $ node index.js
 한국명 : 원앙사촌
 ============
 영명   : Cotton Pygmy-Goose
-학명   : Nettapus
-                    coromandelianus
+학명   : Nettapus coromandelianus
 ============
 영명   : Mandarin Duck
 학명   : Aix galericulata

@@ -12,7 +12,7 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
-import shop.birdyseoul.birdobservation.birders.BirderRepository
+import shop.birdyseoul.birdobservation.birders.database.BirderRepository
 import shop.birdyseoul.birdobservation.filters.JwtRequestFilter
 
 @EnableWebSecurity
@@ -32,6 +32,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
             .antMatchers(
                 "/api/authenticate",
                 "/api/register",
+                "/api/bird-list/init",
                 "/static/**",
                 "/*.json",
                 "/*.ico",
@@ -40,7 +41,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
                 "/*.txt",
                 "/"
             ).permitAll()
-            .antMatchers("/api/records/{birder}/**")
+            .antMatchers("/api/records/{birder}/**", "/api/record/create/{birder}")
             .access("@securityConfig.checkBirder(authentication,#birder)")
             .anyRequest().authenticated()
             .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)

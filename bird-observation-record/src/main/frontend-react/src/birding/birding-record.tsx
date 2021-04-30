@@ -12,6 +12,10 @@ export const BirdingRecord = (): ReactElement => {
         alert('저장되었습니다')
     }
 
+    const kakaoMapOption = {
+        level: 3
+    }
+
     return (
         <>
             <div
