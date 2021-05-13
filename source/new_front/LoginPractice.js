@@ -6,7 +6,7 @@ const LoginPractice=()=>{
     const onChangeUsername= e =>setUsername(e.target.value);
     const onChangePassword= e =>setPassword(e.target.value);
     const onClick =()=>{
-        alert(username+'님~~ 환영합니다!');
+        alert(username+'님~~ !!환영합니다!');
         setUsername('');
         setPassword('');
     };
