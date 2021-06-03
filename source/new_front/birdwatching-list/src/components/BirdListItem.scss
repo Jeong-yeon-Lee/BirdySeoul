@@ -1,0 +1,28 @@
+.BirdListItem{
+    padding:1rem;
+    display:flex;
+    align-items:center;
+    // &:nth-child(even){
+    //     background:#c4e7d063;
+    //     height:8px;
+    // }
+    .text{
+            margin-left:0.5rem;
+            flex:1;
+        }
+   
+    .remove{
+        display:flex;
+        align-items:center;
+        font-size:1.5rem;
+        color:#ff6b6b;
+        cursor: pointer;
+        &.hover{
+            color:#ff8787;
+        }
+    }
+
+    &+&{
+        border-top:1px solid #dee2e6;
+    }
+}

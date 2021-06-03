@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+body {
+  margin: 0;
+  padding:0;
+  background:#e9ecef;
+  font-family: 'Poor Story', cursive;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
